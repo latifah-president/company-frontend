@@ -1,14 +1,21 @@
 import React, { Component, } from 'react';
-import logo from './logo.svg';
+import { Route, } from 'react-router-dom';
+import LandingPage from './components/landingPage/LandingPage';
 import './App.css';
 
 class App extends Component  {
   render () {
     return (
     <div className="App">
-      
-      <div>Sanity check</div>
-    </div>
+      <Route 
+        exact path='/' 
+        render={props => 
+        <LandingPage 
+          {...props}
+          />
+        }
+      />
+     </div>
   )};
 }
 
