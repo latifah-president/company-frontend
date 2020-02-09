@@ -59,7 +59,7 @@
     font-size: 1.225rem;
     line-height: 1.5em;
     font-weight: 500;
-    margin-top: 2.5rem;
+    margin: 2.5rem 0 3.5rem;
     letter-spacing: 0.15rem;
    
   }
@@ -73,20 +73,18 @@
     line-height: 1.875rem;
     letter-spacing: 0.125rem;
     text-transform: uppercase;
-    border-width: 1px;
+    border: 1px solid white;
+    /* border-width: 1px;
     border-style: solid;
-    border-color: white;
+    border-color: white; */
     border-image: initial;
-    padding: 0.625rem 2rem;
+    padding: 1rem 2rem;
     text-decoration: none;
     background-color: #B0001E;
     background-repeat:no-repeat;
     /* border: 1px solid red; */
     cursor:pointer;
     overflow: hidden;
-    margin-top: 2rem;
-
-   
   }
 
   .content_cta-btn:hover {
