@@ -6,6 +6,7 @@ import {
     ServicesText, 
     ServiceBox,
     Service,
+    ServiceLink,
     ServiceBoxBgImage,
     ServiceBoxContent,
     BottomCtnIcon,
@@ -29,7 +30,9 @@ const Services = () => {
             </ServicesContent>
             <ServiceBox>
                 <Service>
+                    <ServiceLink href='/development'>
                     <ServiceBoxBgImage src={require('./../../../assets/web_development.jpg')} alt='Our services: Web design and development'/>
+                    </ServiceLink>
                 <ServiceBoxContent>
                     <header>
                         <ServiceBoxTitle>Web design and development</ServiceBoxTitle>
@@ -43,7 +46,9 @@ const Services = () => {
                 </Service>
 
                 <Service>
+                    <ServiceLink href='/development'>
                         <ServiceBoxBgImage src={require('./../../../assets/mobile_solutions.jpg')} alt='Our services: Mobile Solutions'/>
+                    </ServiceLink>
                     <ServiceBoxContent>
                         <header>
                             <ServiceBoxTitle>Mobile Solutions</ServiceBoxTitle>
@@ -58,7 +63,9 @@ const Services = () => {
                 </Service>
 
                 <Service>
+                    <ServiceLink href='/development'>
                         <ServiceBoxBgImage src={require('./../../../assets/ecommerce3.jpg')} alt='Our services: Custom E-Commerce Store'/>
+                    </ServiceLink>
                     <ServiceBoxContent>
                         <header>
                             <ServiceBoxTitle>Custom E-commerce Store</ServiceBoxTitle>
@@ -73,7 +80,9 @@ const Services = () => {
             </ServiceBox>
             <ServiceBox>
                 <Service>
+                <ServiceLink href='/marketing'>
                     <ServiceBoxBgImage src={require('./../../../assets/social_media.jpg')} alt='Our services: Socail Media'/>
+                </ServiceLink>
                 <ServiceBoxContent>
                     <header>
                         <ServiceBoxTitle>Social Media Management</ServiceBoxTitle>
@@ -87,7 +96,9 @@ const Services = () => {
                 </Service>
 
                 <Service>
+                    <ServiceLink href='/marketing'>
                         <ServiceBoxBgImage src={require('./../../../assets/seo_keyword.jpg')} alt='Our services: SEO and Keyword Ranking'/>
+                    </ServiceLink>
                     <ServiceBoxContent>
                         <header>
                             <ServiceBoxTitle>SEO and Keyboard Ranking</ServiceBoxTitle>
@@ -102,7 +113,9 @@ const Services = () => {
                 </Service>
 
                 <Service>
+                    <ServiceLink href='/marketing'>
                         <ServiceBoxBgImage src={require('./../../../assets/marketing.jpg')} alt='Our services: Full Scale Marketing Campaigns'/>
+                    </ServiceLink>
                     <ServiceBoxContent>
                         <header>
                             <ServiceBoxTitle>Full Scale Marketing Campaigns</ServiceBoxTitle>

@@ -55,6 +55,9 @@ export const Service = styled.section`
     /* border: 1px solid black; */
 `;
 
+export const ServiceLink = styled.a`
+    cursor: pointer;
+`;
 export const ServiceBoxBgImage = styled.img`
     width: 99.9%;
     height: 15rem;
