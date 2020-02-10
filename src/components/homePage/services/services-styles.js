@@ -2,9 +2,9 @@ import styled from 'styled-components';
 import web_design from './../../../assets/web_development.jpg';
 
 export const ServicesWrapper = styled.section`
-display: flex;
-flex-direction: column;
-align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     /* background: radial-gradient(ellipse at center,#585858 0,#232323 100%); */
     /* border: 1px solid red; */
 `;

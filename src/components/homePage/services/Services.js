@@ -35,7 +35,7 @@ const Services = () => {
                     </ServiceLink>
                 <ServiceBoxContent>
                     <header>
-                        <ServiceBoxTitle>Web design and development</ServiceBoxTitle>
+                        <ServiceBoxTitle>Web Design and Development</ServiceBoxTitle>
                     </header>
                     <ServiceBoxDes>
                             At some Digital agencies, website development is a second thought. 

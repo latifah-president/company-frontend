@@ -7,7 +7,7 @@ export const NavWrapper = styled.header`
     align-items: center;
     position: absolute;
     width: 100%;
-    z-index: 2;
+    z-index: 3;
     color: white;
     /* border: 1px solid red; */
 `;
