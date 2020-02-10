@@ -12,6 +12,7 @@ import {
     ServiceBoxTitle,
     ServiceBoxDes, 
 } from './services-styles'
+
 const Services = () => {
     return (
         <ServicesWrapper>
@@ -57,10 +58,10 @@ const Services = () => {
                 </Service>
 
                 <Service>
-                        <ServiceBoxBgImage src={require('./../../../assets/ecommerce3.jpg')} alt='Our services: Mobile Solutions'/>
+                        <ServiceBoxBgImage src={require('./../../../assets/ecommerce3.jpg')} alt='Our services: Custom E-Commerce Store'/>
                     <ServiceBoxContent>
                         <header>
-                            <ServiceBoxTitle>Custom E-commerce store</ServiceBoxTitle>
+                            <ServiceBoxTitle>Custom E-commerce Store</ServiceBoxTitle>
                         </header>
                         <ServiceBoxDes>
                         The E-commerce boom is sweeping the internet like a wave. 
@@ -72,11 +73,10 @@ const Services = () => {
             </ServiceBox>
             <ServiceBox>
                 <Service>
-                    <ServiceBoxBgImage src={require('./../../../assets/web_development.jpg')} alt='Our services: Web design and development'/>
+                    <ServiceBoxBgImage src={require('./../../../assets/social_media.jpg')} alt='Our services: Socail Media'/>
                 <ServiceBoxContent>
                     <header>
-                        <ServiceBoxTitle>Web design and development</ServiceBoxTitle>
-                    
+                        <ServiceBoxTitle>Social Media Management</ServiceBoxTitle>
                     </header>
                     <ServiceBoxDes>
                             At some Digital agencies, website development is a second thought. 
@@ -87,10 +87,10 @@ const Services = () => {
                 </Service>
 
                 <Service>
-                        <ServiceBoxBgImage src={require('./../../../assets/mobile_solutions.jpg')} alt='Our services: Mobile Solutions'/>
+                        <ServiceBoxBgImage src={require('./../../../assets/seo_keyword.jpg')} alt='Our services: SEO and Keyword Ranking'/>
                     <ServiceBoxContent>
                         <header>
-                            <ServiceBoxTitle>Mobile Solutions</ServiceBoxTitle>
+                            <ServiceBoxTitle>SEO and Keyboard Ranking</ServiceBoxTitle>
                         </header>
                         <ServiceBoxDes>
                             Our app development team has created countless high performance 
@@ -102,10 +102,10 @@ const Services = () => {
                 </Service>
 
                 <Service>
-                        <ServiceBoxBgImage src={require('./../../../assets/ecommerce3.jpg')} alt='Our services: Mobile Solutions'/>
+                        <ServiceBoxBgImage src={require('./../../../assets/marketing.jpg')} alt='Our services: Full Scale Marketing Campaigns'/>
                     <ServiceBoxContent>
                         <header>
-                            <ServiceBoxTitle>Custom E-commerce store</ServiceBoxTitle>
+                            <ServiceBoxTitle>Full Scale Marketing Campaigns</ServiceBoxTitle>
                         </header>
                         <ServiceBoxDes>
                         The E-commerce boom is sweeping the internet like a wave. 
