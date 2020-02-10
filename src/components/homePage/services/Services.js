@@ -7,6 +7,7 @@ import {
     ServicesText, 
     ServiceBox,
     ServiceBoxImage,
+    ServiceBoxBgImage,
     ServiceBoxContent,
     ServiceBoxHeader,
     BottomCtnIcon,
@@ -28,7 +29,9 @@ const Services = () => {
                 </ServicesText>
             </ServicesContent>
             <ServiceBox>
-                
+                <ServiceBoxImage>
+                    <ServiceBoxBgImage src={require('./../../../assets/web_development.jpg')} alt='Our services: Web design and development'/>
+                </ServiceBoxImage>
                 <ServiceBoxContent>
                     <ServiceBoxHeader>
                         <ServiceBoxTitle>Web design and development</ServiceBoxTitle>

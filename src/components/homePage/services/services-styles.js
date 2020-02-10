@@ -1,6 +1,10 @@
 import styled from 'styled-components';
+import web_design from './../../../assets/web_development.jpg';
 
 export const ServicesWrapper = styled.section`
+display: flex;
+flex-direction: column;
+align-items: center;
     /* background: radial-gradient(ellipse at center,#585858 0,#232323 100%); */
     /* border: 1px solid red; */
 `;
@@ -10,7 +14,8 @@ export const ServicesContent = styled.article`
     flex-direction: column;
     align-items: center;
     margin-top: 5rem;
-    /* border: 1px solid black; */
+    margin-bottom: 5em;
+    border: 1px solid black;
 `;
 
 export const ServicesHeader = styled.header`
@@ -39,15 +44,34 @@ export const ServicesText = styled.h5`
 `;
 
 export const ServiceBox = styled.article`
-    margin-top: 2rem;
+    display: flex;
+    padding: 0 3rem 5rem 3rem;
+    justify-content: center;
+    /* justify-content: space-around; */
+    width: 80%;
+    /* flex-direction: column;
+    flex-wrap: nowrap; */
+    margin-top: 2rem auto 0 auto;
     border: 1px solid orange;
 `;
 
-export const ServiceBoxImage = styled.section`
-    border: 1px solid red;
+export const ServiceBoxImage = styled.div`
+    width: 30%;
 `;
 
+export const ServiceBoxBgImage = styled.img`
+    /* width: 10%; */
+    height: 15rem;
+    border-radius: .5rem;
+    box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+
+`;
 export const ServiceBoxContent = styled.section`
+    display: flex;
+    flex-direction: column;
+    
+    width: 50%;
+    margin-left: 2.5rem;
     border: 1.5px solid green;
 `;
 export const ServiceBoxHeader = styled.header`
