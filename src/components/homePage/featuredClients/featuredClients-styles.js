@@ -45,9 +45,13 @@ export const Card = styled.div`
     /* align-items: center; */
     width: 100%;
     position: relative;
-    /* height: 300px; */
     height: 250px;
   box-shadow: 0 16px 10px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+  &:hover {
+    -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.13);
+  }
 
   background: url(${excercise}) center center no-repeat;;
 -webkit-background-size: cover;
@@ -99,5 +103,6 @@ export const ProjectTitle = styled.h2`
 export const ProjectText = styled.p`
     color: #FFFFFF;
     font-weight: 500;
+    line-height: 1.7rem;
     /* border: 1px solid white; */
 `;

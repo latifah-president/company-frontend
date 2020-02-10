@@ -29,10 +29,9 @@ const FeaturedClients = () => {
                     <CardContent>
                         <ProjectTitle>Client One</ProjectTitle>
                         <ProjectText>
-                        Blind and visually impaired people can get expert fitness 
-                        and wellness advice from Tyler Merren, a blind Personal Trainer 
-                        {/* and Paralympic Athlete. Get clearly described exercises in accessible 
-                        formats, nutrition advice, equipment recommendations, a supportive community to encourage you in your fitness goals, and much more!  */}
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam mattis, 
+                        velit vitae mattis convallis, eros felis sollicitudin urna, a ultricies 
+                        leo felis sit amet justo. 
                         </ProjectText>
                     </CardContent>
                 </Card>
@@ -42,10 +41,9 @@ const FeaturedClients = () => {
                     <CardContent>
                         <ProjectTitle>Client Two</ProjectTitle>
                         <ProjectText>
-                        Blind and visually impaired people can get expert fitness 
-                        and wellness advice from Tyler Merren, a blind Personal Trainer 
-                        {/* and Paralympic Athlete. Get clearly described exercises in accessible 
-                        formats, nutrition advice, equipment recommendations, a supportive community to encourage you in your fitness goals, and much more!  */}
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam mattis, 
+                            velit vitae mattis convallis, eros felis sollicitudin urna, a ultricies 
+                            leo felis sit amet justo. 
                         </ProjectText>
                     </CardContent>
                 </Card>
