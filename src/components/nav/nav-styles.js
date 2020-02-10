@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { accentColor, } from './../global-styles';
 
-export const NavWrapper = styled.nav`
+export const NavWrapper = styled.header`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -8,16 +9,9 @@ export const NavWrapper = styled.nav`
     width: 100%;
     z-index: 2;
     color: white;
-
     /* border: 1px solid red; */
 `;
 
-export const NavContainer = styled.div`
-        margin: 1rem auto;
-        width: 100%;
-        
-        /* border: 1px solid orange; */
-`;
 export const Logo = styled.img`
     width: 20%;
     /* border: 1px solid red; */
@@ -28,13 +22,12 @@ export const NavLinks = styled.div`
     flex-direction: row;
     justify-content: space-between;
     width: 80%;
-    margin: auto;
     font-family: 'Montserrat' sans-serif;
-    /* align-items: center; */
+    margin: 1rem auto;
     /* border: 1px solid red; */
 `;
 
-export const LinkContainer = styled.div`
+export const LinkContainer = styled.nav`
     width: 60%; 
     margin-left: 5rem;
     display: flex;
@@ -46,5 +39,11 @@ export const LinkContainer = styled.div`
     .link {
         text-decoration: none;
         color: white;
+        padding: 0 1rem .5rem;
+        /* border: 1px solid white; */
     }
+
+    .activeRoute {
+    border-bottom: 1.5px solid ${accentColor};
+ }
 `;

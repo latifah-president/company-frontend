@@ -1,7 +1,7 @@
 .App h1 {
   font-family: 'Roboto', sans-serif;
   font-size: 4rem;
-  color: white;
+  /* color: white; */
 }
 
 h4 {
@@ -12,6 +12,9 @@ h1, h2, h3, h4, h5 {
   font-family: 'Roboto';
 }
 
+p {
+  font-family: 'Montserrat';
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
