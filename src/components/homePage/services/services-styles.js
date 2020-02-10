@@ -15,11 +15,7 @@ export const ServicesContent = styled.article`
     align-items: center;
     margin-top: 5rem;
     margin-bottom: 5em;
-    border: 1px solid black;
-`;
-
-export const ServicesHeader = styled.header`
-    /* border: 1px solid green; */
+    /* border: 1px solid black; */
 `;
 
 export const ServicesTitle = styled.h2`
@@ -28,7 +24,6 @@ export const ServicesTitle = styled.h2`
     font-weight: 700;
     letter-spacing: .3rem;
     line-height: 1.5rem;
-    /* margin-top: 30px; */
     /* border: 1px solid teal; */
 `;
 
@@ -45,37 +40,36 @@ export const ServicesText = styled.h5`
 
 export const ServiceBox = styled.article`
     display: flex;
-    padding: 0 3rem 5rem 3rem;
-    justify-content: center;
-    /* justify-content: space-around; */
+    justify-content: space-around;
     width: 80%;
-    /* flex-direction: column;
-    flex-wrap: nowrap; */
-    margin-top: 2rem auto 0 auto;
-    border: 1px solid orange;
+    flex-wrap: nowrap;
+    margin: 2rem auto 2rem auto;
+    /* border: 1px solid orange; */
 `;
 
-export const ServiceBoxImage = styled.div`
+export const Service = styled.section`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 30%;
+    /* border: 1px solid black; */
 `;
 
 export const ServiceBoxBgImage = styled.img`
-    /* width: 10%; */
+    width: 99.9%;
     height: 15rem;
     border-radius: .5rem;
-    box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 16px 10px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
 
 `;
 export const ServiceBoxContent = styled.section`
     display: flex;
     flex-direction: column;
-    
-    width: 50%;
-    margin-left: 2.5rem;
-    border: 1.5px solid green;
-`;
-export const ServiceBoxHeader = styled.header`
-    /* border: 2px solid brown; */
+    align-items: center;
+    justify-content: space-around;
+    line-height: 1.5rem;
+    z-index: 1;
+    /* border: 1.5px solid green; */
 `;
 
 export const BottomCtnIcon = styled.div`
@@ -83,14 +77,19 @@ export const BottomCtnIcon = styled.div`
 `;
 
 export const ServiceBoxTitle = styled.h4`
- color: #3C4858;
+    color: #3C4858;
     font-weight: 700;
-    font-size: 1.2rem;
-    line-height: 1.5rem;
-    /* border: 1px solid green; */
-`;
+    font-size: 1.5rem;
+    /* border: 1px solid orange; */
+ `;
 
-export const ServiceBoxDes = styled.h4`
+export const ServiceBoxDes = styled.p`
    color: #999;
-    /* border: 1px solid salmon; */
+   font-weight: 550;
+   font-size: 1rem;
+   margin-top: 0rem;
+   margin-bottom: 3rem;
+   line-height: 1.9rem;
+   width: 90%;
+   /* border: 1px solid salmon; */
 `;
