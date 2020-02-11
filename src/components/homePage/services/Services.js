@@ -22,10 +22,10 @@ const Services = () => {
                     <ServicesTitle>Why Our Services Are The Best</ServicesTitle>
                 </header>
                 <ServicesText>
-                Insuring that when our clients trust us with their projects, 
-                it feels like they are trusting a friend,and a partner, while 
-                also obtaining the power of working with a team of experienced developers 
-                and problem solvers.
+                    When our clients trust us with their projects, 
+                    it feels like they are trusting a friend,and a partner, while 
+                    also obtaining the power of working with a team of experienced developers 
+                    and problem solvers.
                 </ServicesText>
             </ServicesContent>
             <ServiceBox>
@@ -70,10 +70,10 @@ const Services = () => {
                         <header>
                             <ServiceBoxTitle>Custom E-commerce Store</ServiceBoxTitle>
                         </header>
-                        <ServiceBoxDes>
-                        The E-commerce boom is sweeping the internet like a wave. 
-                        Allot of people have a dream of owning and running their own store. 
-                        Here at Cloud5 we can make that dream a reality.
+                            <ServiceBoxDes>
+                            The E-commerce boom is sweeping the internet like a wave. 
+                            Allot of people have a dream of owning and running their own store. 
+                            Here at Cloud5 we can make that dream a reality.
                         </ServiceBoxDes>
                     </ServiceBoxContent>
                 </Service>
@@ -101,7 +101,7 @@ const Services = () => {
                     </ServiceLink>
                     <ServiceBoxContent>
                         <header>
-                            <ServiceBoxTitle>SEO and Keyboard Ranking</ServiceBoxTitle>
+                            <ServiceBoxTitle>SEO and Keyword Ranking</ServiceBoxTitle>
                         </header>
                         <ServiceBoxDes>
                             Our app development team has created countless high performance 
@@ -121,9 +121,9 @@ const Services = () => {
                             <ServiceBoxTitle>Full Scale Marketing Campaigns</ServiceBoxTitle>
                         </header>
                         <ServiceBoxDes>
-                        The E-commerce boom is sweeping the internet like a wave. 
-                        Allot of people have a dream of owning and running their own store. 
-                        Here at Cloud5 we can make that dream a reality.
+                            The E-commerce boom is sweeping the internet like a wave. 
+                            Allot of people have a dream of owning and running their own store. 
+                            Here at Cloud5 we can make that dream a reality.
                         </ServiceBoxDes>
                     </ServiceBoxContent>
                 </Service>

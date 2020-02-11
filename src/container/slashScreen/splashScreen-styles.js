@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 // import bg from '../../assets/elia-clerici-XIrIWKCQykg-unsplash.jpg';
-import { blackColor } from '../../components/global-styles';
+import { blackColor } from '../../global-styles';
 
 
 

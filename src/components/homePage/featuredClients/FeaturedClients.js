@@ -12,7 +12,7 @@ const FeaturedClients = () => {
             <FeatureCardArea>
                 <Card>
                     <Overlay></Overlay>
-                    <CardBackground src={require('./../../../assets/excercise2.jpg')} alt='ReVision Training with Tyler Merren'/>
+                    <CardBackground src={require('./../../../assets/excercise2.jpg')} alt='Featured Client: ReVision Training with Tyler Merren'/>
                     <CardContent>
                         <ProjectTitle>ReVision Training with Tyler Merren</ProjectTitle>
                         <ProjectText>
@@ -25,19 +25,19 @@ const FeaturedClients = () => {
                 </Card>
                 <Card>
                     <Overlay></Overlay>
-                    <CardBackground src={require('./../../../assets/client1.jpg')} alt='Client One Placeholder Image'/>
+                    <CardBackground src={require('./../../../assets/featured_client1.png')} alt='Featured Client: Gold Crude Research'/>
                     <CardContent>
-                        <ProjectTitle>Client One</ProjectTitle>
+                        <ProjectTitle>Gold Crude Research</ProjectTitle>
                         <ProjectText>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam mattis, 
-                        velit vitae mattis convallis, eros felis sollicitudin urna, a ultricies 
-                        leo felis sit amet justo. 
+                            GoldCrudeResearch was initially established in 2007 as GoldCrudeAdvisory, a provider of premium advisory 
+                            {/* services in the commodities and forex space. After acquiring a forex signals provider for the technology expertise,
+                            GoldCrudeResearch expanded its portfolio of services to include trading signals for commodities, forex, and indices. */}
                         </ProjectText>
                     </CardContent>
                 </Card>
                 <Card>
                     <Overlay></Overlay>
-                    <CardBackground src={require('./../../../assets/client2.jpg')} alt='Client Two Placeholder Image'/>
+                    <CardBackground src={require('./../../../assets/featured_client2.png')} alt='Featured Client: News Nation'/>
                     <CardContent>
                         <ProjectTitle>Client Two</ProjectTitle>
                         <ProjectText>

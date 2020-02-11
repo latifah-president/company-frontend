@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 // import bg from '../../assets/elia-clerici-XIrIWKCQykg-unsplash.jpg';
-import { blackColor } from '../global-styles';
+import { blackColor } from '../../global-styles';
 
 
 
@@ -40,9 +40,9 @@ export const Overlay = styled.div`
 //This is the wrapper for all the info after splash screen
 export const ContentSection = styled.main`
   /* padding: 0 1rem; */
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
   background-color: #FFF;
   /* background-image: linear-gradient(to right top, #e5eafe, #c0c8e3, #9ca7c9, #7987b0, #556997); */
-  /* border: 1px solid orange; */
+  border: 1px solid orange;
 `;

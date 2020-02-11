@@ -10,8 +10,11 @@ const Nav = () => {
                 <NavLinks>
                 <Logo src={require('./../../assets/Cloud_5_logo_white.png')} alt='cloud 5 logo' />
                     <LinkContainer >
-                        <NavLink className='link' activeClassName='activeRoute' to='/'>
+                        <NavLink className='link' activeClassName='activeRoute' exact to='/'>
                             Home
+                        </NavLink>
+                        <NavLink className='link' activeClassName='activeRoute' to='/about'>
+                            About Us
                         </NavLink>
                         <NavLink className='link' activeClassName='activeRoute' to='/contact'>
                             Contact Us
@@ -19,12 +22,18 @@ const Nav = () => {
                         <NavLink className='link' activeClassName='activeRoute' to='/services'>
                             Services
                         </NavLink>
+                        <NavLink className='link' activeClassName='activeRoute' to='/specialproject'>
+                            Special Projects
+                        </NavLink>
                         <NavLink className='link' activeClassName='activeRoute' to='/portfolio'>
                             Portfolio
                         </NavLink>
-                        <NavLink className='link' activeClassName='activeRoute' to='/login'>
-                            Command Center
+                        <NavLink className='link' activeClassName='activeRoute' to='/careers'>
+                            Careers
                         </NavLink>
+                        {/* <NavLink className='link' activeClassName='activeRoute' to='/login'>
+                            Command Center Login
+                        </NavLink> */}
                     </LinkContainer>
                     
                 </NavLinks>
