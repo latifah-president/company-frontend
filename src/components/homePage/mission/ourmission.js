@@ -1,25 +1,22 @@
 import React from 'react';
+import {Wrapper, Content, DarkTitle, LightText} from './../../../global-styles';
 import { MissionWrapper, MissionContent, MissionTitle, MissionHeader, MissionText, MissionImage, } from './ourMission-styles';
 
 const OurMission = () => {
     return (
-        <MissionWrapper>
-            <MissionContent>
-                <MissionHeader>
-                    <MissionTitle>Our Mission</MissionTitle>
-                </MissionHeader>
-                <MissionText>
-                        Cloud5 was created by innovative and creative thinkers that wanted to mesh the freelance market with the large scale reach of a corporation.
-                </MissionText>
-                <MissionText>
-                    Insuring that when our clients trust us with their projects, it feels like they are trusting a friend, and a partner, 
-                    while also obtaining the power of working with a team of experienced developers and problem solvers.
-                    Founded in February 2018 by Dailan Cooper and Arielle Felix. Cloud5 has grown into a fast paced, 
-                    creative, and multifaceted platform where backyard barbecue ideas become reality.
-                </MissionText>
-            </MissionContent>
-            <MissionImage>content</MissionImage>
-        </MissionWrapper>
+        <Wrapper>
+            <Content>
+                <header>
+                    <DarkTitle>Our Mission</DarkTitle>
+                </header>
+                <LightText>
+                    Cloud5 was created with the idea that innovative and creative thinkers will change the game. 
+                    We wanted to integrate the freelance market with the reach and capabilities of a corporation. 
+                    The success of our company is shown with the success of the clients we serve, and we don’t stop until its perfect!
+
+                </LightText>
+            </Content>
+        </Wrapper>
         
     )
 }

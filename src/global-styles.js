@@ -42,17 +42,29 @@ const ImageHeader = styled.header`
 
 const Content = styled.article`
     display: flex;
-    /* flex-direction: column;
-    align-items: center; */
+    flex-direction: column;
+    align-items: center;
     margin-top: 5rem;
-    margin-bottom: 5em;
-    border: 1px solid black;
+    margin-bottom: 2rem;
+    /* border: 1px solid black; */
+`;
+
+const LightText = styled.h5`
+    color: #999;
+    font-size: 1.2rem;
+    line-height: 1.75rem;
+    margin-top: 1.8rem;
+    font-family: 'Roboto';
+    width: 50%;
+    font-weight: 300;
+    /* border: 1px solid orange; */
 `;
 
 export {
     Wrapper,
     ImageHeader,
     Content,
+    LightText,
     blackColor,
     accentColor,
     grayGradient,
