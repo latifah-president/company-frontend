@@ -96,7 +96,7 @@ const ThreeByThreeSec = styled.section`
     width: 80%;
     flex-wrap: nowrap;
     margin: 2rem auto 2rem auto;
-    border: 1px solid orange;
+    /* border: 1px solid orange; */
 `;
 
 const Card = styled.section`
