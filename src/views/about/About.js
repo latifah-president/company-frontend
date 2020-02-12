@@ -1,4 +1,5 @@
 import React from 'react';
+import LazyLoad from 'react-lazy-load';
 import Aux from './../../HOC/Aux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faTwitter, faLinkedinIn, faGithub, faFacebookF} from '@fortawesome/fontawesome-free-brands';
@@ -24,7 +25,11 @@ const About = () => {
         <Aux>
             <ImageHeader >
                 <OverlayLight></OverlayLight>
-                <HeaderImage src={require('./../../assets/about_image.jpg')}/>
+                <LazyLoad  
+                    debounce={false}
+                    offsetVertical={500}>
+                        <HeaderImage src={require('./../../assets/about_image.jpg')}/>
+                </LazyLoad>
             </ImageHeader>
                 <Wrapper>
                     <Content>
