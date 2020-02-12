@@ -1,31 +1,31 @@
-import React, {Component } from 'react';
+import React from 'react';
 import Aux from './../../HOC/Aux';
-import {Wrapper, ImageHeader, Content, DarkTitle, LightTex, LightText, ThreeByThreeSec, Card, CardImage, CardContent, CardTitle, SmallSubTitle, LightParagraph, SmallCardDes} from './../../global-styles';
-import Layout from './../../components/Layout/Layout';
-import {dailan} from './../../assets/Dailan-Cooper-img.jpg';
-import {katie} from './../../assets/Kathryn Domako.jpg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faTwitter, faLinkedinIn, faGithub, faFacebookF} from '@fortawesome/fontawesome-free-brands';
+import {
+    Wrapper, 
+    ImageHeader, 
+    Content, DarkTitle, 
+    ThreeByThreeSec, 
+    Card, 
+    CardImage,
+    CardContent,
+    SmallSubTitle,
+    SmallCardDes,
+    LightText,
+    HeaderImage,
+    OverlayLight,
+    Icons,
+} from './../../global-styles';
 
-// class About extends Component {
-//     constructor(props) {
-//         super(props)
-//     }
-//     render() {
-//         console.log(this.props.title, 'about props')
-//         return (
-//             // <Layout>
-//             //     thisis the title
-//             // </Layout>
-//         <div>{this.props.title}</div>
-//         )
-//     }
-// };
 
-const About = (props) => {
-    console.log(props, 'props from about')
+const About = () => {
     return (
-        // <Wrapper>
         <Aux>
-            <ImageHeader about></ImageHeader>
+            <ImageHeader >
+                <OverlayLight></OverlayLight>
+                <HeaderImage src={require('./../../assets/about_image.jpg')}/>
+            </ImageHeader>
                 <Wrapper>
                     <Content>
                         <header>
@@ -37,11 +37,6 @@ const About = (props) => {
                         <LightText>  
                             In February of 2018 Dailan and Arielle Cooper created a business based on the concept that anyone can change any game, with simply an idea. Cloud5 has been successful because of our affordability, creative freethinkers, youthful excitement, and the drive to overachieve while beating the deadline! When you work with Cloud5, you get access to the most innovative tools and services in the IT industry.
                         </LightText>
-                       
-                        {/* <LightText>
-                        </LightText>
-                        <LightText>
-                        </LightText> */}
                         {/* <LightText>
                             Offering services such as websites, apps, and e-commerce stores has been our solution this far, and it’s working. But what else can we be doing? Moving into 2020 we asked ourselves, are we doing everything we can to help our clients fully succeed? we have transitioned into offering new services this year to make Cloud5 the complete package when building your business. Services such as social media management and all other marketing needs are now available. Together, we are creating the future. There is no need to be spending time looking for company after company with different services that will help you, when all you need is Cloud5. You should be spending that time using your passion for your business where it is actually needed. Every client should be growing as fast as we are!
                         </LightText> */}
@@ -61,10 +56,8 @@ const About = (props) => {
                             We are based out of the new and fast paced IT paradise of Austin, Texas. But don’t think that we can’t work all over the world, remember that corporate reach? We have worked with clients all over the country, there is no geographical limit on the ideas that can come to life! We have a powerhouse team including CEO Dailan Cooper, CTO Latifah President, CMO Kathryn Domako, and a dedicated team ready to create the future. 
                         </LightText>
                         <LightText>
-                        Our team includes over 60 developers with at least 5 years of experience, a marketing team committed to the vision of each and every client, and a growing sales team ready to overcome every challenge thrown their way.
-
+                            Our team includes over 60 developers with at least 5 years of experience, a marketing team committed to the vision of each and every client, and a growing sales team ready to overcome every challenge thrown their way.
                         </LightText>
-                        {/* <div style={{ border: '2px solid green' }}> */}
                         <ThreeByThreeSec>
                             <Card>
                                 <CardImage src={require('./../../assets/Dailan-Cooper-img.jpg')} alt='Our CEO: Dailan Cooper'/>
@@ -72,6 +65,10 @@ const About = (props) => {
                                     <header>
                                         <SmallSubTitle>Dailan Cooper</SmallSubTitle>
                                         <SmallCardDes >Chief Executive Officer</SmallCardDes>
+                                        {/* <Icons>
+                                            <FontAwesomeIcon icon={faFacebookF}  className='facebook'/>
+                                            <FontAwesomeIcon icon={faLinkedinIn}  className='linkedin'/>
+                                        </Icons> */}
                                     </header>
                                 </CardContent>
                             </Card>
@@ -93,16 +90,10 @@ const About = (props) => {
                                     </header>
                                 </CardContent>
                             </Card>
-                        </ThreeByThreeSec>
-                        {/* </div> */}
-                        
-                    </Content>
-                    
+                        </ThreeByThreeSec>                        
+                    </Content>                   
                 </Wrapper>
         </Aux>
-            
-            
-        // </Wrapper>
     )
 }
 

@@ -1,7 +1,7 @@
 import React, { Component, } from 'react';
 import { Route, } from 'react-router-dom';
 import Nav from './components/nav/Nav';
-import Layout from './components/Layout/Layout';
+import Footer from './components/Footer/Footer';
 import LandingPage from './components/landingPage/LandingPage';
 import HomePage from './components/homePage/HomePage';
 import AboutPage from './views/about/About';
@@ -31,7 +31,7 @@ class App extends Component  {
             />
           }
         />
-        
+        <Footer/>
      </div>
   )};
 }
