@@ -27,7 +27,7 @@ const About = () => {
                 <LazyLoad  
                     debounce={false}
                     offsetVertical={500}>
-                        <HeaderImage src={require('./../../assets/about_image.jpg')}/>
+                        <HeaderImage src={require('./../../assets/about_image.jpg')} alt='About Us'/>
                 </LazyLoad>
             </ImageHeader>
                 <Wrapper>
