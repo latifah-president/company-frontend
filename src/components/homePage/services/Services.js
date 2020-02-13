@@ -1,4 +1,5 @@
 import React from 'react';
+import LazyLoad from 'react-lazy-load'
 import { 
     ServicesWrapper, 
     ServicesContent, 
@@ -29,9 +30,11 @@ const Services = () => {
             </ServicesContent>
             <ServiceBox>
                 <Service>
-                    <ServiceLink href='/development'>
-                    <ServiceBoxBgImage src={require('./../../../assets/web_development.jpg')} alt='Our services: Web design and development'/>
-                    </ServiceLink>
+                    {/* <ServiceLink href='/development'> */}
+                    <LazyLoad>
+                        <ServiceBoxBgImage src={require('./../../../assets/web_development.jpg')} alt='Our services: Web design and development'/>
+                    </LazyLoad>
+                    {/* </ServiceLink> */}
                 <ServiceBoxContent>
                     <header>
                         <ServiceBoxTitle>Web Design and Development</ServiceBoxTitle>
@@ -45,9 +48,12 @@ const Services = () => {
                 </Service>
 
                 <Service>
-                    <ServiceLink href='/development'>
-                        <ServiceBoxBgImage src={require('./../../../assets/mobile_solutions.jpg')} alt='Our services: Mobile Solutions'/>
-                    </ServiceLink>
+                    {/* <ServiceLink href='/development'> */}
+                    <LazyLoad>
+                    <ServiceBoxBgImage src={require('./../../../assets/mobile_solutions.jpg')} alt='Our services: Mobile Solutions'/>
+
+                    </LazyLoad>
+                    {/* </ServiceLink> */}
                     <ServiceBoxContent>
                         <header>
                             <ServiceBoxTitle>Mobile Solutions</ServiceBoxTitle>
@@ -62,9 +68,12 @@ const Services = () => {
                 </Service>
 
                 <Service>
-                    <ServiceLink href='/development'>
-                        <ServiceBoxBgImage src={require('./../../../assets/ecommerce3.jpg')} alt='Our services: Custom E-Commerce Store'/>
-                    </ServiceLink>
+                    {/* <ServiceLink href='/development'> */}
+                    <LazyLoad>
+                    <ServiceBoxBgImage src={require('./../../../assets/ecommerce3.jpg')} alt='Our services: Custom E-Commerce Store'/>
+
+                    </LazyLoad>
+                    {/* </ServiceLink> */}
                     <ServiceBoxContent>
                         <header>
                             <ServiceBoxTitle>Custom E-commerce Store</ServiceBoxTitle>
@@ -79,9 +88,12 @@ const Services = () => {
             </ServiceBox>
             <ServiceBox>
                 <Service>
-                <ServiceLink href='/marketing'>
-                    <ServiceBoxBgImage src={require('./../../../assets/social_media.jpg')} alt='Our services: Socail Media'/>
-                </ServiceLink>
+                {/* <ServiceLink href='/marketing'> */}
+                <LazyLoad>
+                <ServiceBoxBgImage src={require('./../../../assets/social_media.jpg')} alt='Our services: Socail Media'/>
+
+                </LazyLoad>
+                {/* </ServiceLink> */}
                 <ServiceBoxContent>
                     <header>
                         <ServiceBoxTitle>Social Media Management</ServiceBoxTitle>
@@ -95,9 +107,12 @@ const Services = () => {
                 </Service>
 
                 <Service>
-                    <ServiceLink href='/marketing'>
-                        <ServiceBoxBgImage src={require('./../../../assets/seo_keyword.jpg')} alt='Our services: SEO and Keyword Ranking'/>
-                    </ServiceLink>
+                    {/* <ServiceLink href='/marketing'> */}
+                    <LazyLoad>
+                    <ServiceBoxBgImage src={require('./../../../assets/seo_keyword.jpg')} alt='Our services: SEO and Keyword Ranking'/>
+
+                    </LazyLoad>
+                    {/* </ServiceLink> */}
                     <ServiceBoxContent>
                         <header>
                             <ServiceBoxTitle>SEO and Keyword Ranking</ServiceBoxTitle>
@@ -112,9 +127,12 @@ const Services = () => {
                 </Service>
 
                 <Service>
-                    <ServiceLink href='/marketing'>
+                    {/* <ServiceLink href='/marketing'> */}
+                        <LazyLoad>
                         <ServiceBoxBgImage src={require('./../../../assets/marketing.jpg')} alt='Our services: Full Scale Marketing Campaigns'/>
-                    </ServiceLink>
+
+                        </LazyLoad>
+                    {/* </ServiceLink> */}
                     <ServiceBoxContent>
                         <header>
                             <ServiceBoxTitle>Full Scale Marketing Campaigns</ServiceBoxTitle>

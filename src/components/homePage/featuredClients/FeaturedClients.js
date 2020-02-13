@@ -41,9 +41,8 @@ const FeaturedClients = () => {
                     <CardContent>
                         <ProjectTitle>News Nation</ProjectTitle>
                         <ProjectText>
-                        Stay connected with top stories from India and around the World.
-
-Personalize your experience by choosing to see topics such as Nation, World, Technology, Sports and Entertainment in My News section.
+                        Always keep abreast of the latest in news with News Nation. 
+                        Stay connected with top stories from India and around the World. 
                         </ProjectText>
                     </CardContent>
                 </Card>

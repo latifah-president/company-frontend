@@ -1,4 +1,5 @@
 import React from 'react';
+import LazyLoad from 'react-lazy-load';
 import Overlay from './../Overlay';
 import {  HomeWrapper, } from './splashScreen-styles';
 import './splashScreen.css';
@@ -7,8 +8,18 @@ const LandingPage = () => {
     return (
     <HomeWrapper>
             <div className='cf'>
+                <LazyLoad
+                    debounce={false}
+                    offsetVertical={500}
+                >
                 <img className="bottom" src={require("./../../assets/austin-skyline.png" )} alt='Austin Skyline'/>
-                <img className="top" src={require('./../../assets/future-cityscape.png')} alt='Future City'/>
+                </LazyLoad>
+                <LazyLoad  
+                    debounce={false}
+                    offsetVertical={500}
+                >
+                    <img className="top" src="https://live.staticflickr.com/3160/2909480660_59042ebacf_b.jpg" alt='Future City'/>
+                </LazyLoad>
                 <Overlay/>
             </div> 
         <header className='content'>
