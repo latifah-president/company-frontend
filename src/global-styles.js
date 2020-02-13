@@ -96,7 +96,7 @@ const ThreeByThreeSec = styled.section`
     width: 80%;
     flex-wrap: nowrap;
     margin: 2rem auto 2rem auto;
-    border: 1px solid orange;
+    /* border: 1px solid orange; */
 `;
 
 const Card = styled.section`
@@ -105,7 +105,7 @@ const Card = styled.section`
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    border: 1px solid pink;
+    /* border: 1px solid pink; */
 `;
 
 
@@ -171,28 +171,19 @@ export const Icons = styled.section`
     display: flex;
     justify-content: space-around;
     align-items: center;
-    /* width: 100%; */
     margin-top: .5rem;
     /* border: 1px solid red; */
     .facebook {
         text-align: center;
         background-color: #3B5998;
         font-size: 1.3rem;
-        /* position: absolute; */
         color: white;
         padding: .5rem;
         border: 1px solid #3B5998;
         
         /* border: 1px solid #0876B4; */
         border-radius: .3rem;
-        /* text-align: center;
-        background-color: #3B5998;
-        font-size: 1.3rem;
-        /* position: absolute; */
-        /* color: white;
-        padding: .5rem;
         
-        border-radius: 50%; */ 
     }
     .linkedin {
         text-align: center;
@@ -213,9 +204,36 @@ export const Icons = styled.section`
         border: 1px solid #55ACEE;
         border-radius: 50%;
     }
-
-   
 `;
+
+export const WhiteTitle = styled.h2`
+    color: #FFFFFF;
+    font-size: 2.25rem;
+    font-weight: 700;
+    letter-spacing: .3rem;
+    line-height: 1.5rem;
+`;
+
+export const SmallWhiteTitle = styled.h2`
+    color: #FFFFFF;
+    font-size: 1rem;
+    font-weight: 700;
+    /* letter-spacing: .3rem; */
+    line-height: 1.5rem;
+`;
+
+export const SmallWhiteText = styled.h6`
+    color: #FFFFFF;
+    display: inline-block;
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+`;
+
+
 export {
     Wrapper,
     ImageHeader,

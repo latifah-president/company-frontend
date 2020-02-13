@@ -39,11 +39,11 @@ const FeaturedClients = () => {
                     <Overlay></Overlay>
                     <CardBackground src={require('./../../../assets/featured_client2.png')} alt='Featured Client: News Nation'/>
                     <CardContent>
-                        <ProjectTitle>Client Two</ProjectTitle>
+                        <ProjectTitle>News Nation</ProjectTitle>
                         <ProjectText>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam mattis, 
-                            velit vitae mattis convallis, eros felis sollicitudin urna, a ultricies 
-                            leo felis sit amet justo. 
+                        Stay connected with top stories from India and around the World.
+
+Personalize your experience by choosing to see topics such as Nation, World, Technology, Sports and Entertainment in My News section.
                         </ProjectText>
                     </CardContent>
                 </Card>

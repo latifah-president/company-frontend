@@ -1,7 +1,7 @@
 import React from 'react';
 import Aux from './../../HOC/Aux';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faTwitter, faLinkedinIn, faGithub, faFacebookF} from '@fortawesome/fontawesome-free-brands';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import {faTwitter, faLinkedinIn, faGithub, faFacebookF} from '@fortawesome/fontawesome-free-brands';
 import {
     Wrapper, 
     ImageHeader, 
@@ -15,7 +15,6 @@ import {
     LightText,
     HeaderImage,
     OverlayLight,
-    Icons,
 } from './../../global-styles';
 
 

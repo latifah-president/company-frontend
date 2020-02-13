@@ -6,7 +6,8 @@ import {
     AdvantagesBox, 
     AdvantagesBoxTitle, 
     AdvantagesBoxText,
-} from './advantages-styles'
+} from './advantages-styles';
+
 const Advantages = () => {
     return (
         <AdvantagesWrapper>
@@ -33,7 +34,7 @@ const Advantages = () => {
                 </AdvantagesBoxText>
             </AdvantagesBox>
             <AdvantagesBox>
-                <AdvantagesBoxTitle>Industry Leading Prices</AdvantagesBoxTitle>
+                <AdvantagesBoxTitle>Taking On The Complicated Projects</AdvantagesBoxTitle>
                 <AdvantagesBoxText>
                     If you’ve been turned away by everyone else in 
                     the market place because they feel like your project is to complicated.
