@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import web_design from './../../../assets/web_development.jpg';
 
 export const ServicesWrapper = styled.section`
     display: flex;

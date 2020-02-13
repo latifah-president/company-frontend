@@ -10,7 +10,6 @@ import {
     ServiceLink,
     ServiceBoxBgImage,
     ServiceBoxContent,
-    BottomCtnIcon,
     ServiceBoxTitle,
     ServiceBoxDes, 
 } from './services-styles'
