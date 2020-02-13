@@ -83,6 +83,7 @@ export const ServiceBoxTitle = styled.h4`
     color: #3C4858;
     font-weight: 700;
     font-size: 1.5rem;
+    margin-top: 1.5rem;
     /* border: 1px solid orange; */
  `;
 

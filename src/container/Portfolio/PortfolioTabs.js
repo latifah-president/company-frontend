@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import Aux from './../../HOC/Aux';
 import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap';
 import classnames from 'classnames';
-import {accentColor, LightText, SmallWhiteTitle, } from './../../global-styles';
+import {accentColor, LightText, SmallDarkTitle, } from './../../global-styles';
 import {TabsWrapper, TabContainer, Tabs, TabsContent, } from './portfolio-styles';
 import './portfolio.css';
 
@@ -13,36 +14,65 @@ const PortfolioTabs = (props) => {
     console.log('toggling')
   }
 
-  return (     
+  return (   
+<Aux>
+
+
       <TabsWrapper>
         <TabContainer>
-           
-            <Tabs onClick={ () => {toggle('1')}}>
+            <div onClick={ () => {toggle('1')}} className={activeTab === '1' ? 'activeTab' : 'tabs'} >
+                {/* <SmallDarkTitle>Shopify</SmallDarkTitle> */}
+                Shopify
+            </div>
+            <div onClick={ () => {toggle('2')}} className={activeTab === '2' ? 'activeTab' : 'tabs'}>
+                WordPress
+            </div>
+            <div onClick={() => {toggle('3')}} className={activeTab === '3' ? 'activeTab' : 'tabs'}>
+                HTML
+            </div>
+            <div onClick={() => {toggle('4')}} className={activeTab === '4' ? 'activeTab' : 'tabs'}>
+                Core PHP
+            </div>
+            <div onClick={() => {toggle('5')}} className={activeTab === '5' ? 'activeTab' : 'tabs'}>
+                App Design and Develoment
+            </div>
+            <div onClick={() => {toggle('6')}} className={activeTab === '6' ? 'activeTab' : 'tabs'}>
+                Web Develoment
+            </div>
+            <div onClick={() => {toggle('7')}} className={activeTab === '7' ? 'activeTab' : 'tabs'}>
+                Android Develoment
+            </div>
+            <div onClick={() => {toggle('8')}} className={activeTab === '8' ? 'activeTab' : 'tabs'}>
+                IOS Develoment
+            </div>
+            {/* <Tabs className={activeTab === '1' ? 'activeTab div1' : 'inActive'} onClick={ () => {toggle('1')}}>
                 Shopify
             </Tabs>
-            <Tabs onClick={ () => {toggle('2')}}>
+            <Tabs onClick={ () => {toggle('2')}} className={activeTab === '2' ? 'activeTab div2' : 'inActive'}>
                 WordPress
             </Tabs>
-            <Tabs onClick={() => {toggle('3')}}>
+            <Tabs onClick={() => {toggle('3')}} className={activeTab === '3' ? 'activeTab div3' : 'inActive'}>
                 HTML
             </Tabs>
-            <Tabs onClick={() => {toggle('4')}}>
+            <Tabs onClick={() => {toggle('4')}} className={activeTab === '4' ? 'activeTab div4' : 'inActive'}>
                 Core PHP
             </Tabs>
-            <Tabs onClick={() => {toggle('5')}}>
+            <Tabs onClick={() => {toggle('5')}} className={activeTab === '5' ? 'activeTab div5' : 'inActive'}>
                 App Design and Develoment
             </Tabs>
-            <Tabs onClick={() => {toggle('6')}}>
+            <Tabs onClick={() => {toggle('6')}} className={activeTab === '6' ? 'activeTab div6' : 'inActive'}>
                 Web Develoment
             </Tabs>
-            <Tabs onClick={() => {toggle('7')}}>
+            <Tabs onClick={() => {toggle('7')}} className={activeTab === '7' ? 'activeTab div7' : 'inActive'}>
                 Android Develoment
             </Tabs>
-            <Tabs onClick={() => {toggle('8')}}>
+            <Tabs onClick={() => {toggle('8')}} className={activeTab === '8' ? 'activeTab div8' : 'inActive'}>
                 IOS Develoment
-            </Tabs>
+            </Tabs> */}
         </TabContainer>
-        <TabsContent className={activeTab === '1' ? 'active' : 'inActive'}>
+         
+      </TabsWrapper>
+            <TabsContent className={activeTab === '1' ? 'active' : 'inActive'}>
             <h3  >Active 1</h3>
         </TabsContent>
         <TabsContent className={activeTab === '2' ? 'active' : 'inActive'}>
@@ -65,8 +95,8 @@ const PortfolioTabs = (props) => {
         </TabsContent>
         <TabsContent className={activeTab === '8' ? 'active' : 'inActive'}>
             <h3  >Active 8</h3>
-        </TabsContent>       
-      </TabsWrapper>
+        </TabsContent>
+        </Aux>
     // <div>
     //   <Nav tabs>
     //     <NavItem>

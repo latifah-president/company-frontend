@@ -4,6 +4,7 @@ const blackColor = "#000";
 const accentColor = '#B0001E';
 const grayGradient = 'radial-gradient(ellipse at center,#585858 0,#232323 100%)';
 const whiteColor = '#FFFFFF';
+const darkColor = '#3C4858';
 
 export const OverlayDark = styled.div`
     position: absolute;
@@ -234,7 +235,16 @@ export const SmallWhiteText = styled.h6`
     margin: 0;
 `;
 
-
+export const SmallDarkTitle = styled.h6`
+    color: ${darkColor};
+    display: inline-block;
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+`;
 export {
     Wrapper,
     ImageHeader,
@@ -246,4 +256,5 @@ export {
     accentColor,
     grayGradient,
     whiteColor,
+    darkColor,
 }

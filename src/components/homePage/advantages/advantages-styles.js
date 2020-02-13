@@ -23,6 +23,7 @@ export const AdvatagesTitle = styled.h2`
     font-weight: 700;
     letter-spacing: .3rem;
     line-height: 1.5rem;
+    margin-top: 1.5rem;
 `;
 
 export const AdvantagesBox = styled.section`
@@ -31,7 +32,7 @@ export const AdvantagesBox = styled.section`
     flex-direction: column;
     align-items: center;
     flex-wrap: nowrap;
-    padding: 0 1rem;
+    padding: 1rem;
     border: .8px solid  #FFFFFF;
 `;
 
