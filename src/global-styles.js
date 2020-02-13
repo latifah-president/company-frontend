@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 
 const blackColor = "#000";
-const accentColor = '#B0001E'
-const grayGradient = 'radial-gradient(ellipse at center,#585858 0,#232323 100%)'
+const accentColor = '#B0001E';
+const grayGradient = 'radial-gradient(ellipse at center,#585858 0,#232323 100%)';
+const whiteColor = '#FFFFFF';
 
 export const OverlayDark = styled.div`
     position: absolute;
@@ -207,7 +208,7 @@ export const Icons = styled.section`
 `;
 
 export const WhiteTitle = styled.h2`
-    color: #FFFFFF;
+    color: ${whiteColor};
     font-size: 2.25rem;
     font-weight: 700;
     letter-spacing: .3rem;
@@ -215,7 +216,7 @@ export const WhiteTitle = styled.h2`
 `;
 
 export const SmallWhiteTitle = styled.h2`
-    color: #FFFFFF;
+    color: ${whiteColor};
     font-size: 1rem;
     font-weight: 700;
     /* letter-spacing: .3rem; */
@@ -223,7 +224,7 @@ export const SmallWhiteTitle = styled.h2`
 `;
 
 export const SmallWhiteText = styled.h6`
-    color: #FFFFFF;
+    color: ${whiteColor};
     display: inline-block;
     font-size: 14px;
     font-family: "Roboto", sans-serif;
@@ -244,4 +245,5 @@ export {
     blackColor,
     accentColor,
     grayGradient,
+    whiteColor,
 }
