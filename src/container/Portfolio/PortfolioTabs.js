@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import Aux from './../../HOC/Aux';
 import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap';
 import classnames from 'classnames';
-import {accentColor, LightText, SmallDarkTitle, } from './../../global-styles';
-import {TabsWrapper, TabContainer, Tabs, TabsContent, } from './portfolio-styles';
+import {accentColor, LightText, SmallDarkTitle, ThreeByThreeSec, CardImage, CardDes, CardDesLink } from './../../global-styles';
+import {TabsWrapper, TabContainer, Tabs, TabsContent, PortfolioCard, TabsCardSection, } from './portfolio-styles';
 import './portfolio.css';
 
 const PortfolioTabs = (props) => {
@@ -45,41 +45,33 @@ const PortfolioTabs = (props) => {
             <div onClick={() => {toggle('8')}} className={activeTab === '8' ? 'activeTab' : 'tabs'}>
                 IOS Develoment
             </div>
-            {/* <Tabs className={activeTab === '1' ? 'activeTab div1' : 'inActive'} onClick={ () => {toggle('1')}}>
-                Shopify
-            </Tabs>
-            <Tabs onClick={ () => {toggle('2')}} className={activeTab === '2' ? 'activeTab div2' : 'inActive'}>
-                WordPress
-            </Tabs>
-            <Tabs onClick={() => {toggle('3')}} className={activeTab === '3' ? 'activeTab div3' : 'inActive'}>
-                HTML
-            </Tabs>
-            <Tabs onClick={() => {toggle('4')}} className={activeTab === '4' ? 'activeTab div4' : 'inActive'}>
-                Core PHP
-            </Tabs>
-            <Tabs onClick={() => {toggle('5')}} className={activeTab === '5' ? 'activeTab div5' : 'inActive'}>
-                App Design and Develoment
-            </Tabs>
-            <Tabs onClick={() => {toggle('6')}} className={activeTab === '6' ? 'activeTab div6' : 'inActive'}>
-                Web Develoment
-            </Tabs>
-            <Tabs onClick={() => {toggle('7')}} className={activeTab === '7' ? 'activeTab div7' : 'inActive'}>
-                Android Develoment
-            </Tabs>
-            <Tabs onClick={() => {toggle('8')}} className={activeTab === '8' ? 'activeTab div8' : 'inActive'}>
-                IOS Develoment
-            </Tabs> */}
         </TabContainer>
          
       </TabsWrapper>
             <TabsContent className={activeTab === '1' ? 'active' : 'inActive'}>
-            <h3  >Active 1</h3>
+            {/* <ThreeByThreeSec  > */}
+                <PortfolioCard style={{border: 'none'}}>
+                    <CardImage src={require('./../../assets/shopify_ex1.png')}/>
+                    <CardDesLink href='https://luxxlyco.com/' style={{width: '65%'}}>Luxxlyco</CardDesLink>
+                </PortfolioCard>
+            {/* </ThreeByThreeSec> */}
         </TabsContent>
         <TabsContent className={activeTab === '2' ? 'active' : 'inActive'}>
-            <h3  >Active 2</h3>
+            <TabsCardSection>
+                <PortfolioCard style={{border: 'none'}} >
+                        <CardImage src={require('./../../assets/wordpress-ex1.png')}/>
+                        <CardDesLink href='http://www.fullscalemedia.com/' style={{width: '65%'}}>Full Scale Media</CardDesLink>
+                </PortfolioCard>
+
+                <PortfolioCard >
+                        <CardImage src={require('./../../assets/picadilly-group.png')}/>
+                        <CardDesLink href='https://www.piccadillygroup.com/' style={{width: '65%'}}>Piccadilly Group</CardDesLink>
+                </PortfolioCard>
+            </TabsCardSection>
+           
         </TabsContent>
         <TabsContent className={activeTab === '3' ? 'active' : 'inActive'}>
-            <h3  >Active 3</h3>
+          
         </TabsContent>
         <TabsContent className={activeTab === '4' ? 'active' : 'inActive'}>
             <h3  >Active 4</h3>

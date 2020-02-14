@@ -96,7 +96,7 @@ const ThreeByThreeSec = styled.section`
     display: flex;
     justify-content: space-around;
     width: 80%;
-    flex-wrap: nowrap;
+    /* flex-wrap: nowrap; */
     margin: 2rem auto 2rem auto;
     /* border: 1px solid orange; */
 `;
@@ -107,13 +107,13 @@ const Card = styled.section`
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    /* border: 1px solid pink; */
+    /* border: 4px solid pink; */
 `;
 
 
 
 export const CardImage = styled.img`
-    width: 65%;
+    /* width: 65%; */
     height: 15rem;
     border-radius: .5rem;
     box-shadow: 0 16px 10px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
@@ -244,6 +244,18 @@ export const SmallDarkTitle = styled.h6`
     width: 100%;
     text-align: center;
     margin: 0;
+`;
+
+export const CardDesLink = styled.a`
+    color: #999;
+    font-weight: 550;
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    line-height: 1.9rem;
+    /* width: 100%; */
+    text-align: center;
+    /* border: 1px solid red; */
 `;
 export {
     Wrapper,

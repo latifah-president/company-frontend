@@ -1,5 +1,24 @@
-import styled from 'styled-components';
+import styled, {keyframes, } from 'styled-components';
 import {grayGradient, whiteColor, accentColor} from './../../global-styles';
+
+const slideInRight = keyframes`
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+`;
 
 export const TabsWrapper = styled.section`
     width: 75%;
@@ -47,27 +66,44 @@ export const Tabs = styled.div`
 
 } */
     color: ${whiteColor};
-    /* border-top: none;
-    border-left: none;
-    border-right: 1px solid pink;
-    border-bottom: 1px solid pink;
-    border-bottom-right-radius: .5rem; */
     background-color: ${accentColor};
 
     /* border: 1px solid pink; */
     height: 60px;
     text-align: center;
-    /* border-radius: .5rem; */
-
-    /* background: green; */
 `;
 
 export const TabsContent = styled.section`
+    width: 80%;
+    padding: 3rem 6.5rem;
+    height: 700px;
     /* margin-top: 10rem; */
     /* display: none; */
     /* color: green;
     display: ${props => props.active ? 'block' : 'none' }; */
-    border: 1px solid teal;
+    /* border: 2px solid teal; */
 
 
 `;
+
+export const TabsCardSection = styled.article`
+    display: flex;
+    justify-content: space-between;
+
+`;
+export const PortfolioCard = styled.section`
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border: 1px solid pink; */
+    animation: ${slideInRight} .7s ease-in-out forwards;
+
+    display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-between;
+width: 30%;
+`;
+
