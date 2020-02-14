@@ -26,7 +26,7 @@ const Portfolio = () => {
                 <LazyLoad  
                     debounce={false}
                     offsetVertical={500}>
-                        <HeaderImage src={require('./../../assets/portfolio_header.jpg')} alt='About Us'/>
+                        <HeaderImage src={require('./../../assets/portfolio_header.jpg')} alt='Our Portfolio'/>
                 </LazyLoad>
             </ImageHeader>
                 <Wrapper>
