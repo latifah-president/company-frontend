@@ -21,7 +21,6 @@ const PortfolioTabs = (props) => {
       <TabsWrapper>
         <TabContainer>
             <div onClick={ () => {toggle('1')}} className={activeTab === '1' ? 'activeTab' : 'tabs'} >
-                {/* <SmallDarkTitle>Shopify</SmallDarkTitle> */}
                 Shopify
             </div>
             <div onClick={ () => {toggle('2')}} className={activeTab === '2' ? 'activeTab' : 'tabs'}>
@@ -49,12 +48,10 @@ const PortfolioTabs = (props) => {
          
       </TabsWrapper>
             <TabsContent className={activeTab === '1' ? 'active' : 'inActive'}>
-            {/* <ThreeByThreeSec  > */}
                 <PortfolioCard style={{border: 'none'}}>
                     <CardImage src={require('./../../assets/shopify_ex1.png')}/>
                     <CardDesLink href='https://luxxlyco.com/' style={{width: '65%'}}>Luxxlyco</CardDesLink>
                 </PortfolioCard>
-            {/* </ThreeByThreeSec> */}
         </TabsContent>
         <TabsContent className={activeTab === '2' ? 'active' : 'inActive'}>
             <TabsCardSection>

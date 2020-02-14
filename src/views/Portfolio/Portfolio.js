@@ -34,14 +34,26 @@ const Portfolio = () => {
                         <header>
                             <DarkTitle>Portfolio</DarkTitle>
                         </header> 
-                        <LightText >
-                            Cloud5 take pride in the products that we build. 
+                        <LightText style={{width: '100%'}}>
+                            We let our work speak for itself! Take a look at some of  
+                            the projects we've completed for our clients.
+
+                            {/* Cloud5 takes pride in the products that we build. 
                             We offer unlimited revisions in most cases because we value 
                             our client’s dreams and we want to make sure the quality of 
-                            our work is presented successfully across the board.
+                            our work is presented successfully across the board. */}
                         </LightText>                    
                     </Content>
-
+                    
+                    <Content>
+                        <header>
+                            <DarkTitle>Marketing</DarkTitle>
+                        </header>
+                        <LightText style={{width: '83%'}}>
+                        We’re really good at working with our clients to increase their brand awareness and maximize their profitability and sales.
+                        </LightText>
+                    
+                    </Content>
                     <Content>
                         <header>
                             <DarkTitle>Web Development</DarkTitle>
@@ -51,7 +63,7 @@ const Portfolio = () => {
                         </LightText>
                     
                     </Content>
-                    <TabComponent/>
+                    {/* <TabComponent/> */}
                 </Wrapper>
         </Aux>
     )
