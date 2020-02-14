@@ -33,7 +33,7 @@ const SpecialProjects = () => {
                                 <CardContent>
                                     <SmallSubTitle>Cloud5 Hub</SmallSubTitle>
                                     <LightText style={{width: '70%'}}>
-                                        Cloud5 has partnered up with Saveenah, a womens online clothing store. 
+                                        Cloud5 has partnered up with Savena, a womens online clothing store. 
                                         Our aim is to build a platform that can empower other small businesses 
                                         to flex their reach and create their own marketplace.
                                     </LightText>

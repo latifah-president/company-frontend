@@ -10,15 +10,15 @@ const LandingPage = () => {
             <div className='cf'>
                 <LazyLoad
                     debounce={false}
-                    offsetVertical={500}
+                    offsetVertical={800}
                 >
                 <img className="bottom" src={require("./../../assets/austin-skyline.png" )} alt='Austin Skyline'/>
                 </LazyLoad>
                 <LazyLoad  
                     debounce={false}
-                    offsetVertical={500}
+                    offsetVertical={800}
                 >
-                    <img className="top" src="https://live.staticflickr.com/3160/2909480660_59042ebacf_b.jpg" alt='Future City'/>
+                    <img className="top" src={require("./../../assets/future-cityscape.png" )} alt='Future City'/>
                 </LazyLoad>
                 <Overlay/>
             </div> 
