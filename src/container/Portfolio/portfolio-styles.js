@@ -1,5 +1,5 @@
 import styled, {keyframes, } from 'styled-components';
-import {grayGradient, whiteColor, accentColor} from './../../global-styles';
+import {whiteColor, accentColor} from './../../global-styles';
 
 const slideInRight = keyframes`
   to {
@@ -28,11 +28,6 @@ export const TabsWrapper = styled.section`
 `;
 
 export const TabContainer = styled.section`
-    /* display: flex;
-    justify-content: space-between; */
-    /* padding: 1rem 0; */
-    /* border: 2px solid orange; */
-  /* height: 100px; */
     border-radius: .5rem;
     /* background-color: ${accentColor}; */
 

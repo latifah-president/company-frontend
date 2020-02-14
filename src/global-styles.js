@@ -81,7 +81,7 @@ const Content = styled.article`
     /* border: 1px solid black; */
 `;
 
-const LightText = styled.h5`
+const LightText = styled.p`
     color: #999;
     font-size: 1.2rem;
     line-height: 1.75rem;

@@ -35,7 +35,7 @@ const Nav = () => {
                         <NavLink className='link' activeClassName='activeRoute' to='/contact'>
                             Contact Us
                         </NavLink>
-                        <DropDownMenu aria-expanded='false' aria-haspopup="true" className={openMenu ? 'open' : ''}>
+                        <DropDownMenu aria-expanded='false' aria-haspopup="true" className={openMenu ? 'open' : ''} onClick={ () => {toggle()}}>
                         {/* <NavLink  className='link' activeClassName='activeRoute' to='/services'> */}
                             Services
                            

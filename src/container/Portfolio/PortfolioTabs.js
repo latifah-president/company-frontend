@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 import Aux from './../../HOC/Aux';
-import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap';
-import classnames from 'classnames';
-import {accentColor, LightText, SmallDarkTitle, ThreeByThreeSec, CardImage, CardDes, CardDesLink } from './../../global-styles';
-import {TabsWrapper, TabContainer, Tabs, TabsContent, PortfolioCard, TabsCardSection, } from './portfolio-styles';
+import {CardImage, CardDesLink } from './../../global-styles';
+import {TabsWrapper, TabContainer, TabsContent, PortfolioCard, TabsCardSection, } from './portfolio-styles';
 import './portfolio.css';
 
-const PortfolioTabs = (props) => {
+const PortfolioTabs = () => {
   const [activeTab, setActiveTab] = useState('1');
 
   const toggle = tab => {

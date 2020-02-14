@@ -7,7 +7,6 @@ import {
     ServicesText, 
     ServiceBox,
     Service,
-    ServiceLink,
     ServiceBoxBgImage,
     ServiceBoxContent,
     ServiceBoxTitle,
