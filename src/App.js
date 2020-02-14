@@ -5,6 +5,7 @@ import Footer from './components/Footer/Footer';
 import LandingPage from './components/landingPage/LandingPage';
 import AboutPage from './views/about/About';
 import PortfolioPage from './views/Portfolio/Portfolio';
+import SpecialProjectsPage from './views/Special Projects/SpecialProjects';
 import './App.css';
 
 //Contaners  folder will hold statefull data
@@ -35,6 +36,14 @@ class App extends Component  {
           exact path='/portfolio' 
           render={props => 
           <PortfolioPage 
+            {...props}
+            />
+          }
+        />
+         <Route 
+          exact path='/specialprojects' 
+          render={props => 
+          <SpecialProjectsPage 
             {...props}
             />
           }

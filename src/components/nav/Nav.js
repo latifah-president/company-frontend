@@ -21,7 +21,7 @@ const Nav = () => {
                         <NavLink className='link' activeClassName='activeRoute' to='/services'>
                             Services
                         </NavLink>
-                        <NavLink className='link' activeClassName='activeRoute' to='/specialproject'>
+                        <NavLink className='link' activeClassName='activeRoute' to='/specialprojects'>
                             Special Projects
                         </NavLink>
                         <NavLink className='link' activeClassName='activeRoute' to='/portfolio'>
