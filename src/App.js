@@ -6,6 +6,7 @@ import LandingPage from './components/landingPage/LandingPage';
 import AboutPage from './views/about/About';
 import PortfolioPage from './views/Portfolio/Portfolio';
 import SpecialProjectsPage from './views/Special Projects/SpecialProjects';
+import MarketingPage from './views/Marketing/Marketing';
 import './App.css';
 
 //Contaners  folder will hold statefull data
@@ -44,6 +45,14 @@ class App extends Component  {
           exact path='/specialprojects' 
           render={props => 
           <SpecialProjectsPage 
+            {...props}
+            />
+          }
+        />
+          <Route 
+          exact path='/marketing' 
+          render={props => 
+          <MarketingPage 
             {...props}
             />
           }

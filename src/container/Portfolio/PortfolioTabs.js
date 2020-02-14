@@ -16,8 +16,6 @@ const PortfolioTabs = (props) => {
 
   return (   
 <Aux>
-
-
       <TabsWrapper>
         <TabContainer>
             <div onClick={ () => {toggle('1')}} className={activeTab === '1' ? 'activeTab' : 'tabs'} >
