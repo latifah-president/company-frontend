@@ -25,7 +25,7 @@ const LandingPage = () => {
         <header className='content'>
             <h1 className='content_title'>Cloud5 Innovation <br/> <span className='content_tag'>Creating the future.</span></h1>
             <h4 className='content_body'>
-            Welcome to the first, and the only Digital Innovation Agency in the world. 
+            Welcome to the first, and the only <br/> Digital Innovation Agency in the world. 
             <br/>Let’s build something amazing together.
 
                 {/* Welcome to the most innovative Digital Creations Agency in the US. 
