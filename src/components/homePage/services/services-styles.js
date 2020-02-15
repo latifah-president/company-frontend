@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import web_design from './../../../assets/web_development.jpg';
 
 export const ServicesWrapper = styled.section`
     display: flex;
@@ -65,6 +64,7 @@ export const ServiceBoxBgImage = styled.img`
     box-shadow: 0 16px 10px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
 
 `;
+
 export const ServiceBoxContent = styled.section`
     display: flex;
     flex-direction: column;
@@ -83,6 +83,7 @@ export const ServiceBoxTitle = styled.h4`
     color: #3C4858;
     font-weight: 700;
     font-size: 1.5rem;
+    margin-top: 1.5rem;
     /* border: 1px solid orange; */
  `;
 

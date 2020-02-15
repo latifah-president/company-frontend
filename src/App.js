@@ -1,10 +1,11 @@
 import React, { Component, } from 'react';
 import { Route, } from 'react-router-dom';
 import Nav from './components/nav/Nav';
-import Layout from './components/Layout/Layout';
+import Footer from './components/Footer/Footer';
 import LandingPage from './components/landingPage/LandingPage';
-import HomePage from './components/homePage/HomePage';
 import AboutPage from './views/about/About';
+import PortfolioPage from './views/Portfolio/Portfolio';
+import SpecialProjectsPage from './views/Special Projects/SpecialProjects';
 import './App.css';
 
 //Contaners  folder will hold statefull data
@@ -31,7 +32,23 @@ class App extends Component  {
             />
           }
         />
-        
+         <Route 
+          exact path='/portfolio' 
+          render={props => 
+          <PortfolioPage 
+            {...props}
+            />
+          }
+        />
+         <Route 
+          exact path='/specialprojects' 
+          render={props => 
+          <SpecialProjectsPage 
+            {...props}
+            />
+          }
+        />
+        <Footer/>
      </div>
   )};
 }

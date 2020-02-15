@@ -44,5 +44,5 @@ export const ContentSection = styled.main`
   flex-direction: column; */
   background-color: #FFF;
   /* background-image: linear-gradient(to right top, #e5eafe, #c0c8e3, #9ca7c9, #7987b0, #556997); */
-  border: 1px solid orange;
+  /* border: 1px solid orange; */
 `;

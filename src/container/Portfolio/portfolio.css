@@ -1,0 +1,33 @@
+ 
+    .active {
+        display: block;
+        border-top: none;
+    
+        /* border-bottom: white; */
+    }
+    
+    .activeTab {
+        /* border-left: none;
+        border-right: 1px solid #3B4858;
+        border-bottom: 1px solid #3B4858; */
+        /* border-bottom-right-radius: .5rem;
+        border-top-right-radius: .2rem; */
+        border-radius: 1rem;
+        /* border-bottom: 1px solid #B0001E;
+        border-right: 1px solid #B0001E; */
+        padding: 1rem .2rem;
+        /* border-bottom-right-radius: .5rem; */
+        color: white;
+        background-color: #B0001E;
+    }
+    .inActive {
+        display: none;
+    }
+
+    .tabs {
+        cursor: pointer;
+        color: #3B4858;
+        background-color: white;
+        height: 60px;
+        padding: 1rem .2rem;
+    }

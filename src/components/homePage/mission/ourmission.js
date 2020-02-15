@@ -1,6 +1,5 @@
 import React from 'react';
-import {Wrapper, Content, DarkTitle, LightText} from './../../../global-styles';
-import { MissionWrapper, MissionContent, MissionTitle, MissionHeader, MissionText, MissionImage, } from './ourMission-styles';
+import {Wrapper, Content, DarkTitle, LightText} from '../../../global-styles';
 
 const OurMission = () => {
     return (
@@ -10,10 +9,9 @@ const OurMission = () => {
                     <DarkTitle>Our Mission</DarkTitle>
                 </header>
                 <LightText>
-                    Cloud5 was created with the idea that innovative and creative thinkers will change the game. 
-                    We wanted to integrate the freelance market with the reach and capabilities of a corporation. 
-                    The success of our company is shown with the success of the clients we serve, and we don’t stop until its perfect!
-
+                    We strive to insure that we deliver the best service possible to our clients. 
+                    We are a one stop shop for everything you need to conceptualize, build, market, and launch your ideas into the market place. 
+                    Offering a first class experience to anyone that chooses to work with us.
                 </LightText>
             </Content>
         </Wrapper>
