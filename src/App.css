@@ -31,3 +31,9 @@ p {
     transform: rotate(360deg);
   }
 }
+
+.colorpicker {
+  color: #38468080;
+  color: #ffffffa1;
+  color: #ffffff81;
+}

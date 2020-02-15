@@ -1,17 +1,10 @@
 import React from 'react';
 import LazyLoad from 'react-lazy-load';
 import Aux from './../../HOC/Aux';
-import TabComponent from './../../container/Portfolio/PortfolioTabs';
 import {
     Wrapper, 
     ImageHeader, 
     Content, DarkTitle, 
-    ThreeByThreeSec, 
-    Card, 
-    CardImage,
-    CardContent,
-    SmallSubTitle,
-    SmallCardDes,
     LightText,
     HeaderImage,
     OverlayLight,

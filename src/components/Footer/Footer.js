@@ -27,7 +27,7 @@ const Footer = () => {
                             <SmallWhiteText style={{textAlign: 'left', marginBottom: '.5rem', fontWeight: '550'}}>Visit Us At The Office</SmallWhiteText>
                             <SmallWhiteText style={{lineHeight: '1.5rem', textAlign: 'left'}}>
                                 <address style={{fontStyle: 'normal'}}>
-                                9005 Alderman Dr. <br/> Austin, TX 78747 <br/>
+                                701 Brazos St. <br/> Austin, TX 78701 <br/>
                                 </address>
                                 Mon-Fri, 9:30-4:00
                             </SmallWhiteText>

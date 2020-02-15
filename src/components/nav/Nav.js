@@ -1,9 +1,26 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { NavLink } from 'react-router-dom';
-import { NavWrapper, NavLinks, LinkContainer, Logo } from './nav-styles';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { 
+    NavWrapper, 
+    NavLinks, 
+    LinkContainer, 
+    Logo,
+    DropDownMenu,
+    DropDown,
+    ListItem 
+} from './nav-styles';
 
 
 const Nav = () => {
+    const [openMenu, setOpenMenu] = useState(false);
+
+  const toggle = () => {
+    setOpenMenu(!openMenu);
+    console.log('toggling', openMenu)
+  }
+
     return (
         <NavWrapper>
                 <NavLinks>
@@ -18,9 +35,26 @@ const Nav = () => {
                         <NavLink className='link' activeClassName='activeRoute' to='/contact'>
                             Contact Us
                         </NavLink>
-                        <NavLink className='link' activeClassName='activeRoute' to='/services'>
+                        <DropDownMenu aria-expanded='false' aria-haspopup="true" className={openMenu ? 'open' : ''} onClick={ () => {toggle()}}>
+                        {/* <NavLink  className='link' activeClassName='activeRoute' to='/services'> */}
                             Services
-                        </NavLink>
+                           
+                        {/* </NavLink> */}
+
+                        <FontAwesomeIcon icon={faChevronDown} className='chevron' onClick={ () => {toggle()}}/>
+                        {openMenu ?                    
+                        <DropDown>
+                            <ListItem>
+                                <NavLink className='dropdownLink' to='/marketing'>Marketing</NavLink>
+                            </ListItem>
+                            <ListItem>
+                                <NavLink  className='dropdownLink' to='/webdevelopment'>Web Development</NavLink>
+                            </ListItem>
+                        </DropDown> : null}
+     
+                        </DropDownMenu>
+                       
+
                         <NavLink className='link' activeClassName='activeRoute' to='/specialprojects'>
                             Special Projects
                         </NavLink>
