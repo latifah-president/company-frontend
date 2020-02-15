@@ -1,8 +1,8 @@
 import React from 'react';
-import Services from './services/Services';
-import Advantages from './advantages/Advantages';
-import FeaturedClients from './featuredClients/FeaturedClients';
-import Mission from './mission/ourmission';
+import Services from './Services/Services';
+import Advantages from './Advantages/Advantages';
+import FeaturedClients from './FeaturedClients/FeaturedClients';
+import Mission from './Mission/ourmission';
 import {MainContent, } from './homepage-styles';
 
 const HomePage = () => {
