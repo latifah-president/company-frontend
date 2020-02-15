@@ -108,7 +108,7 @@ const Card = styled.section`
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    border: 1px solid pink;
+    /* border: 1px solid pink; */
 `;
 
 
