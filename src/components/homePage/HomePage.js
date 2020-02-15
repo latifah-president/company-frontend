@@ -3,7 +3,8 @@ import Services from './Services/Services.js';
 import Advantages from './Advantages/Advantages.js';
 import FeaturedClients from './FeaturedClients/FeaturedClients.js';
 import SpecialProjects from './SpecialProjects/SpecialProjects.js';
-import Mission from './Mission/Ourmission';
+import Mission from './Mission/ourmission';
+import Different from './Different/Different';
 import {MainContent, } from './homepage-styles';
 
 const HomePage = () => {
@@ -11,7 +12,8 @@ const HomePage = () => {
         <MainContent>
              <Mission/>
             <Services/>
-            <Advantages/>
+            {/* <Advantages/> */}
+            <Different/>
             <FeaturedClients/>
             <SpecialProjects/>
         </MainContent>
