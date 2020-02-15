@@ -5,6 +5,7 @@ const accentColor = '#B0001E';
 const grayGradient = 'radial-gradient(ellipse at center,#585858 0,#232323 100%)';
 const whiteColor = '#FFFFFF';
 const darkColor = '#3C4858';
+const lightGrayColor = '#999';
 
 export const OverlayDark = styled.div`
     position: absolute;
@@ -107,7 +108,7 @@ const Card = styled.section`
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    /* border: 4px solid pink; */
+    border: 1px solid pink;
 `;
 
 
@@ -269,4 +270,5 @@ export {
     grayGradient,
     whiteColor,
     darkColor,
+    lightGrayColor,
 }
