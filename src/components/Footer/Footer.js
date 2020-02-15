@@ -10,7 +10,7 @@ const Footer = () => {
             <FooterWrapper>
                 <ThreeByThreeSec >
                     <FooterCard>
-                        <SmallWhiteTitle style={{borderBottom: '1.5px solid #FFFFFF', paddingBottom: '0 .4rem'}}>About</SmallWhiteTitle>
+                        <SmallWhiteTitle style={{paddingBottom: '0 .4rem'}}>About</SmallWhiteTitle>
                         <SmallWhiteText style={{textAlign: 'left', lineHeight: '1.5rem', width: '90%'}}>
                             Cloud5 was created with the idea that innovative and creative thinkers will change the game. <br/>
                             We wanted to integrate the freelance market with the reach and capabilities of a corporation. <br/>
