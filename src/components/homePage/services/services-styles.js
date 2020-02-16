@@ -119,7 +119,7 @@ export const Service = styled.section`
     @media only screen and (min-width: ${smrtphn}) {
         
         /* margin-bottom: 1.5rem; */
-        border: 1px solid black;
+        /* border: 1px solid black; */
     }
 
     @media only screen and (min-width: ${laptop}) {

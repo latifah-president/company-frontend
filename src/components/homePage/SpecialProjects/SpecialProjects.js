@@ -11,6 +11,7 @@ import {
     SmallSubTitle,
     AboutImage,
     ThreeColumnGrid,
+    TwoColumnGrid,
 } from './../../../global-styles';
 
 const SpecialProjects = () => {
@@ -29,8 +30,8 @@ const SpecialProjects = () => {
 
                         {/* <ThreeByThreeSec> */}
                             <Card >
-                            <ThreeColumnGrid>
-                                <AboutImage style={{width: '100%'}} src={require('./../../../assets/saveenah_wireframe.jpg')} alt='Saveenah Wireframe'/>
+                            {/* <TwoColumnGrid> */}
+                                <AboutImage   src={require('./../../../assets/saveenah_wireframe.jpg')} alt='Saveenah Wireframe'/>
                                 <CardContent>
                                     <SmallSubTitle>Cloud5 Hub</SmallSubTitle>
                                     <LightText style={{width: '70%'}}>
@@ -39,7 +40,7 @@ const SpecialProjects = () => {
                                         to flex their reach and create their own marketplace.
                                     </LightText>
                                 </CardContent>
-                                </ThreeColumnGrid>
+                                {/* </TwoColumnGrid> */}
                             </Card>
                             {/* <Card> */}
                                 {/* <CardContent>
