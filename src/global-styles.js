@@ -42,6 +42,13 @@ export const DarkTitle = styled.h2`
     letter-spacing: .3rem;
     line-height: 1.5rem;
     /* border: 1px solid teal; */
+    @media only screen and (min-width: ${smrtphn}) {
+        width: 100%;
+        text-align: center;
+        /* border: 1px solid teal; */
+        line-height: 3rem;
+    }
+    
 `;
 
 
@@ -50,8 +57,11 @@ const Wrapper = styled.main`
     flex-direction: column;
     align-items: center;
     margin: 1.5rem 1rem 0 1rem;
-    border: 1px solid orange;
-
+    /* border: 1px solid orange; */
+    @media only screen and (min-width: ${smrtphn}) {
+        justify-content: center;
+    }
+    
    
 `;
 
@@ -97,6 +107,9 @@ const LightText = styled.p`
     font-family: 'Roboto';
     width: 50%;
     font-weight: 300;
+    @media only screen and (min-width: ${smrtphn}) {
+        width: 80%;
+    }
     /* border: 1px solid orange; */
 `;
 
@@ -104,9 +117,11 @@ const ThreeByThreeSec = styled.section`
     display: flex;
     justify-content: space-around;
     width: 80%;
-    /* flex-wrap: nowrap; */
     margin: 2rem auto 2rem auto;
     /* border: 1px solid orange; */
+    @media only screen and (min-width: ${smrtphn}) {
+        flex-direction: column;
+    }
 `;
 
 const Card = styled.section`

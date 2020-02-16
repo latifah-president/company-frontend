@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {smrtphn, } from './../../../global-styles';
 
 export const ServicesWrapper = styled.section`
     display: flex;
@@ -24,6 +25,12 @@ export const ServicesTitle = styled.h2`
     letter-spacing: .3rem;
     line-height: 1.5rem;
     /* border: 1px solid teal; */
+    @media only screen and (min-width: ${smrtphn}) {
+        width: 80%;
+        align-self: center;
+        /* border: 1px solid teal; */
+
+    }
 `;
 
 export const ServicesText = styled.h5`
@@ -44,6 +51,9 @@ export const ServiceBox = styled.article`
     flex-wrap: nowrap;
     margin: 2rem auto 2rem auto;
     /* border: 1px solid orange; */
+    @media only screen and (min-width: ${smrtphn}) {
+       flex-direction: column;
+    }
 `;
 
 export const Service = styled.section`
@@ -52,6 +62,11 @@ export const Service = styled.section`
     align-items: center;
     width: 30%;
     /* border: 1px solid black; */
+    @media only screen and (min-width: ${smrtphn}) {
+        width: 100%;
+        margin-bottom: 1.5rem;
+        /* border: 1px solid teal; */
+    }
 `;
 
 export const ServiceLink = styled.a`
@@ -73,6 +88,7 @@ export const ServiceBoxContent = styled.section`
     line-height: 1.5rem;
     z-index: 1;
     /* border: 1.5px solid green; */
+   
 `;
 
 export const BottomCtnIcon = styled.div`

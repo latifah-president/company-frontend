@@ -42,7 +42,7 @@ export const NavWrapper = styled.header`
 
     @media only screen and (min-width: ${smrtphn}) {
         flex-direction: flex-end;
-        border: 1px solid orange;
+        /* border: 1px solid orange; */
     }
 
 `;
