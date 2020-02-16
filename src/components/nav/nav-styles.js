@@ -37,7 +37,7 @@ export const NavWrapper = styled.header`
 
     @media only screen and (max-width: ${tablet}) {
         flex-direction: flex-end;
-        border: 1px solid white;
+        /* border: 1px solid white; */
     }
 
     @media only screen and (min-width: ${smrtphn}) {
@@ -77,7 +77,7 @@ export const LinkContainer = styled.nav`
     /* border: 1px solid green; */
     @media only screen and (max-width: ${tablet}) {
         display: none;
-        border: 1px solid red;    
+        /* border: 1px solid red;     */
 }
 
     .link {
@@ -142,7 +142,7 @@ export const DropDownMenu = styled.button`
 `;
 
 export const Menu = styled.button`
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: none;
     z-index: 6;
 
@@ -151,7 +151,7 @@ export const Menu = styled.button`
     }
     @media only screen and (max-width: ${tablet}) {
         display: block;
-        border: 1px solid red;
+        /* border: 1px solid red; */
         background: none;
         color: ${whiteColor};
         font-size: 1.5rem;    
@@ -160,7 +160,7 @@ export const Menu = styled.button`
 `;
 
 export const MobileMenu = styled.nav`
-    border: 1px solid green;
+    /* border: 1px solid green; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -202,7 +202,7 @@ export const MobileLinks = styled.section`
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 
 `;
 
@@ -215,5 +215,5 @@ export const CloseMenu = styled.button`
     color: ${darkColor};
     font-size: 1.5rem; 
     z-index: 5;
-    border: 2px solid green;
+    /* border: 2px solid green; */
 `;

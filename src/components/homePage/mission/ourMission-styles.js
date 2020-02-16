@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const MissionWrapper = styled.section`
     display: flex;
     /* flex-direction: column; */
-    border: 2px solid green;
+    /* border: 2px solid green; */
 `;
 
 export const MissionContent = styled.article`
@@ -24,11 +24,11 @@ export const MissionTitle = styled.h2`
 export const MissionText = styled.p`
     width: 90%;
     font-size: 1.2rem;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
 `;
 
 export const MissionImage = styled.div`
-    border: 1px solid salmon;
+    /* border: 1px solid salmon; */
     width: 50%;
     height: 20%;
 `;

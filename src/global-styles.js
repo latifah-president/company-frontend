@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
 
 const blackColor = "#000";
 const accentColor = '#B0001E';
@@ -11,6 +11,26 @@ const overlayColor = '#6378cc80';
 //MEDIA QUERIES SIZES
 const smrtphn = '375px'; //iphone 6 size
 const tablet = '1227px';
+const laptop = '1440px';
+
+const slideInRight = keyframes`
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+`;
 
 export const OverlayDark = styled.div`
     position: absolute;
@@ -53,15 +73,20 @@ export const DarkTitle = styled.h2`
 
 
 const Wrapper = styled.main`
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 1.5rem 1rem 0 1rem;
+    margin: 1.5rem 1rem 0 1rem; */
     /* border: 1px solid orange; */
     @media only screen and (min-width: ${smrtphn}) {
         justify-content: center;
     }
-    
+     @media only screen and (min-width: ${laptop}) {
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1.5rem 1rem 0 1rem;
+     }
    
 `;
 
@@ -121,16 +146,39 @@ const ThreeByThreeSec = styled.section`
     /* border: 1px solid orange; */
     @media only screen and (min-width: ${smrtphn}) {
         flex-direction: column;
+        margin: 0 auto
+    }
+
+    @media only screen and (min-width: ${laptop}) {
+        /* border: 1px solid black; */
+
     }
 `;
 
 const Card = styled.section`
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
-    /* border: 1px solid pink; */
+    width: 100%; */
+    @media only screen and (min-width: ${laptop}) {
+        /* flex-direction: row; */
+        /* border: 1px solid orange; */
+        display: grid;
+grid-template-columns: repeat(2, 1fr);
+/* justify-items: center; */
+/* grid-template-rows: repeat(5, 1fr); */
+grid-column-gap: 20px;
+/* grid-row-gap: 0px; */
+border: 1px solid pink;
+width: 80%;
+
+    }
+
+    @media only screen and (min-width: ${smrtphn}) { 
+   
+ border: 1px solid red;
+    }
 `;
 
 
@@ -140,6 +188,20 @@ export const CardImage = styled.img`
     height: 15rem;
     border-radius: .5rem;
     box-shadow: 0 16px 10px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+    @media only screen and (min-width: ${smrtphn}) {
+        /* border: 1px solid green; */
+        margin-top: 2rem;
+        /* text-align: center; */
+        width: 40%;
+    }
+
+    @media only screen and (min-width: ${laptop}) {
+        /* border: 1px solid green; */
+        margin-top: 2rem;
+        /* text-align: center; */
+        /* width: 20%; */
+        /* border: 1px solid brown; */
+    }
 `;
 
 export const CardContent = styled.section`
@@ -169,6 +231,10 @@ export const CardDes = styled.p`
     line-height: 1.9rem;
     width: 100%;
 /* border: 1px solid salmon; */
+
+@media only screen and (min-width: ${smrtphn}) {
+    width: 80%;
+}
 `;
 
 export const SmallSubTitle = styled.h4`
@@ -280,6 +346,120 @@ export const CardDesLink = styled.a`
     text-align: center;
     /* border: 1px solid red; */
 `;
+
+export const ImageWithSubTitle = styled.section`
+    /* display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-template-rows: repeat(5, 1fr);
+grid-column-gap: 10px; 
+ grid-row-gap: 0px; */
+/* display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-template-rows: repeat(2, 1fr);
+grid-column-gap:1 0px;
+grid-row-gap: 10px; */
+@media only screen and (min-width: ${smrtphn}) {
+    /* display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-template-rows: 1fr;
+grid-column-gap: 20px;
+grid-row-gap: 20px; */
+display: flex;
+flex-direction: column;
+    width: 100%;
+    /* border: 1px solid black; */
+}
+@media only screen and (min-width: ${laptop}) {
+    display: flex;
+flex-direction: column;
+width: 100%;
+/* border: 1px solid orange; */
+}
+
+`;
+
+export const ThreeColumnGrid = styled.section`
+    /* grid-template-columns: repeat(2, 1fr); 
+grid-template-rows: repeat(5, 1fr);
+grid-column-gap: 20px;
+grid-row-gap: 0px;
+width: 50%; */
+
+
+@media only screen and (min-width: ${smrtphn}) {
+    display: grid;
+grid-template-columns: repeat(1, 1fr);
+grid-template-rows: repeat(1, 1fr);
+grid-column-gap: 20px;
+grid-row-gap: 20px;
+width: 70%;
+margin: 0 auto;
+/* border: 2px solid teal; */
+color: red;
+}
+
+@media only screen and (min-width: ${laptop}) {
+ 
+    display: flex;
+  justify-content: space-between;
+/* border: 3px solid brown; */
+display: grid;
+ grid-template-columns: repeat(3, 1fr);
+grid-column-gap: 20px;
+grid-row-gap: 0px;  
+ width: 90%;
+
+} 
+
+
+`;
+
+export const AboutImage = styled.img`
+       
+        border-radius: .5rem;
+    box-shadow: 0 16px 10px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+
+    @media only screen and (min-width: ${smrtphn}) {
+        width: 90%;
+        margin: 0 auto
+        /* border: 1px solid orange; */
+    }
+    @media only screen and (min-width: ${laptop}) {
+        /* border: 1px solid red; */
+        width: 60%;
+        margin: 0 auto;
+        /* width: 30%; */
+        border-radius: .5rem;
+    box-shadow: 0 16px 10px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+    }
+`;
+
+export const PortfolioCard = styled.section`
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border: 1px solid pink; */
+  
+    @media only screen and (min-width: ${smrtphn}) {
+        margin-top: 1rem;
+        /* width: 70%; */
+        /* border: 1px solid pink; */
+    }
+    @media only screen and (min-width:${laptop}) {
+        margin-top: rem;
+        animation: ${slideInRight} .7s ease-in-out forwards;
+
+display: flex;
+/* flex-direction: column; */
+align-items: center;
+justify-content: space-between;
+/* border: 1px solid black; */
+/* width: 50%; */
+    }
+    
+`;
 export {
     Wrapper,
     ImageHeader,
@@ -296,4 +476,5 @@ export {
     overlayColor,
     smrtphn,
     tablet,
+    laptop,
 }

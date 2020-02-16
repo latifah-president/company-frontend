@@ -32,7 +32,7 @@ const MobileNav = (props) => {
                             Marketing
                         </NavLink>
                         <NavLink className='link' activeClassName='activeRoute' to='/webdevelopment'>
-                            Web Development
+                            Development
                         </NavLink>
                         {/* <DropDownMenu aria-expanded='false' aria-haspopup="true" className={openMenu ? 'open' : ''} onClick={ () => {toggle()}}>
                             Services

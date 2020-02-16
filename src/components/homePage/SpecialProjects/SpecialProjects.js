@@ -8,7 +8,9 @@ import {
     CardImage, 
     CardContent, 
     Card, 
-    SmallSubTitle
+    SmallSubTitle,
+    AboutImage,
+    ThreeColumnGrid,
 } from './../../../global-styles';
 
 const SpecialProjects = () => {
@@ -25,11 +27,10 @@ const SpecialProjects = () => {
                             We don’t just work with clients we have our own ideas.
                         </LightText>
 
-                        <ThreeByThreeSec>
-                            <Card>
-                                <CardImage src={require('./../../../assets/saveenah_wireframe.jpg')} alt='Saveenah Wireframe'/>
-                            </Card>
-                            <Card>
+                        {/* <ThreeByThreeSec> */}
+                            <Card >
+                            <ThreeColumnGrid>
+                                <AboutImage style={{width: '100%'}} src={require('./../../../assets/saveenah_wireframe.jpg')} alt='Saveenah Wireframe'/>
                                 <CardContent>
                                     <SmallSubTitle>Cloud5 Hub</SmallSubTitle>
                                     <LightText style={{width: '70%'}}>
@@ -38,8 +39,19 @@ const SpecialProjects = () => {
                                         to flex their reach and create their own marketplace.
                                     </LightText>
                                 </CardContent>
+                                </ThreeColumnGrid>
                             </Card>
-                        </ThreeByThreeSec>
+                            {/* <Card> */}
+                                {/* <CardContent>
+                                    <SmallSubTitle>Cloud5 Hub</SmallSubTitle>
+                                    <LightText style={{width: '70%'}}>
+                                        Cloud5 has partnered up with Savena, a womens online clothing store. 
+                                        Our aim is to build a platform that can empower other small businesses 
+                                        to flex their reach and create their own marketplace.
+                                    </LightText>
+                                </CardContent> */}
+                            {/* </Card> */}
+                        {/* </ThreeByThreeSec> */}
         
             </Content>
         </Wrapper>

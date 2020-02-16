@@ -1,6 +1,7 @@
 import React from 'react';
 import LazyLoad from 'react-lazy-load';
 import Aux from './../../HOC/Aux';
+import './../../App.css';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import {faTwitter, faLinkedinIn, faGithub, faFacebookF} from '@fortawesome/fontawesome-free-brands';
 import {
@@ -16,6 +17,9 @@ import {
     LightText,
     HeaderImage,
     OverlayLight,
+    ImageWithSubTitle,
+    ThreeColumnGrid, 
+    AboutImage
 } from './../../global-styles';
 
 
@@ -62,30 +66,28 @@ const About = () => {
                         <LightText>
                             Our team includes over 60 developers with at least 5 years of experience, a marketing team committed to the vision of each and every client, and a growing sales team ready to overcome every challenge thrown their way.
                         </LightText>
-                        <ThreeByThreeSec>
-                            <Card>
+                        {/* <ThreeColumnGrid> */}
+                        {/* <ThreeByThreeSec> */}
+                            {/* <Card style={{width: '100%'}}>
+                                <ImageWithSubTitle>
                                 <CardImage src={require('./../../assets/Dailan-Cooper-img.jpg')} alt='Our CEO: Dailan Cooper'/>
-                                <CardContent>
+
                                     <header>
                                         <SmallSubTitle>Dailan Cooper</SmallSubTitle>
                                         <SmallCardDes >Chief Executive Officer</SmallCardDes>
-                                        {/* <Icons>
+                                        <Icons>
                                             <FontAwesomeIcon icon={faFacebookF}  className='facebook'/>
                                             <FontAwesomeIcon icon={faLinkedinIn}  className='linkedin'/>
-                                        </Icons> */}
+                                        </Icons>
                                     </header>
-                                </CardContent>
-                            </Card>
-                            <Card>
-                                <CardImage src={require('./../../assets/Kathryn Domako.jpg')} alt='Our CMO: Kathryn Domako'/>
+
                                 <CardContent>
+                                <CardImage src={require('./../../assets/Kathryn Domako.jpg')} alt='Our CMO: Kathryn Domako'/>
                                     <header>
                                         <SmallSubTitle>Kathryn Domako</SmallSubTitle>
                                         <SmallCardDes >Chief Marketing Officer</SmallCardDes>
                                     </header>
                                 </CardContent>
-                            </Card>
-                            <Card>
                                 <CardImage src={require('./../../assets/Latifah.jpg')} alt='Our CTO: Latifah President'/>
                                 <CardContent>
                                     <header>
@@ -93,8 +95,49 @@ const About = () => {
                                         <SmallCardDes >Chief Technology Officer</SmallCardDes>
                                     </header>
                                 </CardContent>
-                            </Card>
-                        </ThreeByThreeSec>                        
+                                </ImageWithSubTitle>
+                            </Card> */}
+                            <ThreeColumnGrid className='threecolumgrid'>
+                                <ImageWithSubTitle>
+                                <AboutImage src={require('./../../assets/Dailan-Cooper-img.jpg')} alt='Our CEO: Dailan Cooper'/>
+                                <CardContent>
+                                <header>
+                                        <SmallSubTitle>Dailan Cooper</SmallSubTitle>
+                                        <SmallCardDes >Chief Executive Officer</SmallCardDes>
+                                        
+                                    </header>
+                                </CardContent>
+</ImageWithSubTitle>
+<ImageWithSubTitle>
+                                <AboutImage src={require('./../../assets/Kathryn Domako.jpg')} alt='Our CMO: Kathryn Domako'/>
+                                <CardContent>
+                                    <header>
+                                        <SmallSubTitle>Kathryn Domako</SmallSubTitle>
+                                        <SmallCardDes >Chief Marketing Officer</SmallCardDes>
+                                    </header>
+                                </CardContent> 
+                                </ImageWithSubTitle>
+                            {/* <ImageWithSubTitle> 
+                                <CardImage src={require('./../../assets/Kathryn Domako.jpg')} alt='Our CMO: Kathryn Domako'/>
+                                <CardContent>
+                                    <header>
+                                        <SmallSubTitle>Kathryn Domako</SmallSubTitle>
+                                        <SmallCardDes >Chief Marketing Officer</SmallCardDes>
+                                    </header>
+                                </CardContent> 
+                             </ImageWithSubTitle> */}
+                             
+                            <ImageWithSubTitle>
+                                <AboutImage src={require('./../../assets/Latifah.jpg')} alt='Our CTO: Latifah President'/>
+                                <CardContent>
+                                    <header>
+                                        <SmallSubTitle>Latifah President</SmallSubTitle>
+                                        <SmallCardDes >Chief Technology Officer</SmallCardDes>
+                                    </header>
+                                </CardContent>
+                            </ImageWithSubTitle>
+                            </ThreeColumnGrid>
+                        {/* </ThreeByThreeSec>                         */}
                     </Content>                   
                 </Wrapper>
         </Aux>
