@@ -1,5 +1,29 @@
-import styled from 'styled-components';
-import { accentColor, whiteColor, darkColor} from '../../global-styles';
+import styled, {keyframes} from 'styled-components';
+import { accentColor, whiteColor, darkColor, overlayColor, tablet, smrtphn} from '../../global-styles';
+
+const slideInRight = keyframes`
+    {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+`;
 
 export const NavWrapper = styled.header`
     display: flex;
@@ -7,9 +31,20 @@ export const NavWrapper = styled.header`
     /* align-items: center; */
     position: absolute;
     width: 100%;
-    z-index: 3;
+    z-index: 5;
     color: white;
     /* border: 1px solid red; */
+
+    @media only screen and (max-width: ${tablet}) {
+        flex-direction: flex-end;
+        border: 1px solid white;
+    }
+
+    @media only screen and (min-width: ${smrtphn}) {
+        flex-direction: flex-end;
+        border: 1px solid orange;
+    }
+
 `;
 
 export const Logo = styled.img`
@@ -25,6 +60,12 @@ export const NavLinks = styled.section`
     font-family: 'Montserrat' sans-serif;
     margin: 1rem 1.7rem;
     /* border: 1px solid orange; */
+    .close {
+        display: none;
+    }
+    .open {
+        display: block;
+    }
 `;
 
 export const LinkContainer = styled.nav`
@@ -34,6 +75,10 @@ export const LinkContainer = styled.nav`
     justify-content: space-around;
     align-items: center;
     /* border: 1px solid green; */
+    @media only screen and (max-width: ${tablet}) {
+        display: none;
+        border: 1px solid red;    
+}
 
     .link {
         text-decoration: none;
@@ -94,4 +139,81 @@ export const DropDownMenu = styled.button`
      /* border: 2px solid orange; */
  }
 
+`;
+
+export const Menu = styled.button`
+    border: 1px solid red;
+    display: none;
+    z-index: 6;
+
+    .close {
+        display: none;
+    }
+    @media only screen and (max-width: ${tablet}) {
+        display: block;
+        border: 1px solid red;
+        background: none;
+        color: ${whiteColor};
+        font-size: 1.5rem;    
+}
+
+`;
+
+export const MobileMenu = styled.nav`
+    border: 1px solid green;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Montserrat' sans-serif;
+    left: 53rem;
+    top: 0;
+    height: 91.2vh;
+    animation: ${slideInRight} 1s ease-in-out forwards;
+    padding-top: 1.5rem;
+    /* margin: 1rem 1.7rem; */
+    position: absolute;
+    background: ${whiteColor};
+    /* top: 10rem; */
+    z-index: 4;
+
+    width: 50%;
+    .link {
+        text-decoration: none;
+        color: ${darkColor};
+        padding: 0 1rem .5rem;
+
+        /* border: 1px solid white; */
+    }
+    .activeRoute {
+    border-bottom: 1.5px solid ${accentColor};
+ }
+    @media only screen and (min-width: ${smrtphn}) {
+        left: 17rem;
+        height: 56.2rem;
+
+    }
+`;
+
+export const MobileLinks = styled.section`
+    margin-top: 5rem;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+
+`;
+
+export const CloseMenu = styled.button`
+    color: pink;
+    background: none;
+    position: absolute;
+    /* top: 3.8rem; */
+    right: 2rem;
+    color: ${darkColor};
+    font-size: 1.5rem; 
+    z-index: 5;
+    border: 2px solid green;
 `;

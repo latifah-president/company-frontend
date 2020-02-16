@@ -5,5 +5,5 @@ export const MainContent = styled.div`
 flex-direction: column;
 align-items: center; */
     /* z-index: 2; */
-    /* border: 4px solid red; */
+    border: 4px solid red;
 `;

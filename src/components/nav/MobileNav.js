@@ -1,41 +1,24 @@
 import React, {useState} from 'react';
 import { NavLink } from 'react-router-dom';
-import MobileNav from './MobileNav';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faChevronDown, faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
-import { 
-    NavWrapper, 
-    NavLinks, 
-    LinkContainer, 
-    Logo,
-    DropDownMenu,
-    DropDown,
-    ListItem,
-    Menu,
-    CloseMenu, 
-} from './nav-styles';
+import { faTimes,  } from '@fortawesome/free-solid-svg-icons';
+import {MobileMenu, MobileLinks, CloseMenu} from './nav-styles';
 
-
-const Nav = (props) => {
-    const [openMenu, setOpenMenu] = useState(false);
-    //FOR MOBILE
+const MobileNav = (props) => {
     const [openNav, setopenNav] = useState(false);
-
-  const toggle = () => {
-    setOpenMenu(!openMenu);
-    console.log('toggling', openMenu)
-  }
-
-
-  const toggleMobileNav = () => {
-      setopenNav(!openNav);
-      // console.log('toggling', openMenu)
-    }
+//click close menu 
+//turn props.open to false
+   
+    console.log('mobile props', props)
     return (
-        <NavWrapper>
-                <NavLinks>
-                <Logo src={require('./../../assets/Cloud_5_logo_white.png')} alt='cloud 5 logo' />
-                    <LinkContainer >
+        
+        <MobileMenu >
+          
+          {/* {props.openNav ?    <CloseMenu  >
+                <FontAwesomeIcon icon={faTimes}/>
+            </CloseMenu> : null} */}
+            <MobileLinks>
+           
                         <NavLink className='link' activeClassName='activeRoute' exact to='/'>
                             Home
                         </NavLink>
@@ -45,11 +28,15 @@ const Nav = (props) => {
                         <NavLink className='link' activeClassName='activeRoute' to='/contact'>
                             Contact Us
                         </NavLink>
-                        <DropDownMenu aria-expanded='false' aria-haspopup="true" className={openMenu ? 'open' : ''} onClick={ () => {toggle()}}>
-                        {/* <NavLink  className='link' activeClassName='activeRoute' to='/services'> */}
+                        <NavLink className='link' activeClassName='activeRoute' to='/marketing'>
+                            Marketing
+                        </NavLink>
+                        <NavLink className='link' activeClassName='activeRoute' to='/webdevelopment'>
+                            Web Development
+                        </NavLink>
+                        {/* <DropDownMenu aria-expanded='false' aria-haspopup="true" className={openMenu ? 'open' : ''} onClick={ () => {toggle()}}>
                             Services
                            
-                        {/* </NavLink> */}
 
                         <FontAwesomeIcon icon={faChevronDown} className='chevron' onClick={ () => {toggle()}}/>
                         {openMenu ?                    
@@ -62,7 +49,7 @@ const Nav = (props) => {
                             </ListItem>
                         </DropDown> : null}
      
-                        </DropDownMenu>
+                        </DropDownMenu> */}
                        
 
                         <NavLink className='link' activeClassName='activeRoute' to='/specialprojects'>
@@ -74,26 +61,14 @@ const Nav = (props) => {
                         <NavLink className='link' activeClassName='activeRoute' to='/careers'>
                             Careers
                         </NavLink>
+                        </MobileLinks>
+                        
                         {/* <NavLink className='link' activeClassName='activeRoute' to='/login'>
                             Command Center Login
                         </NavLink> */}
-                    </LinkContainer> 
-
-                    {openNav ? 
-                    //MAKE CLOSE MENU FADE IN 
-                    <CloseMenu onClick={() => {toggleMobileNav()}}> <FontAwesomeIcon icon={faTimes}/></CloseMenu> : 
-                     <Menu onClick={() => {toggleMobileNav()}} role='menu' aria-expanded={openNav}  aria-controls='mobile nav'>
-                     <FontAwesomeIcon  icon={ faBars }/>
-                     
-                 </Menu>
-                    }
-                   
-                      {openNav ? <MobileNav open={openNav} aria-label='mobile navigation' id='mobile nave'/> : null}
-                      {/* <MobileNav/> */}
-                </NavLinks>
-        </NavWrapper>
+                        {/* </MobileLinks> */}
+                </MobileMenu> 
     )
-}
+};
 
-
-export default Nav;
+export default MobileNav;

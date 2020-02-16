@@ -6,7 +6,7 @@ export const FeaturedWrapper = styled.section`
     flex-direction: column;
     align-items: center;
     margin-bottom: 5rem;
-    /* border: 1px solid red; */
+    border: 1px solid red;
 `;
 
 
@@ -25,8 +25,19 @@ export const FeatureCardArea = styled.section`
     grid-template-rows: repeat(2);
     grid-gap: 50px;
     margin-bottom: .5rem;
-    /* border: 3px solid green; */
     width: 80%;
+
+    @media only screen and (max-width: 900px) {
+        /* display: flex;
+        flex-direction: column; */
+        display: grid;
+grid-template-columns: repeat(1, 1fr);
+grid-template-rows: repeat(1, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 30px;
+/* width: 50%; */
+        border: 3px solid black;
+    }
 `;
 export const FeaturedTitle = styled.h2`
     color: #3B4858;

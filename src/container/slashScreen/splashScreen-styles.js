@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 // import bg from '../../assets/elia-clerici-XIrIWKCQykg-unsplash.jpg';
-import { blackColor } from '../../global-styles';
+import { blackColor, tablet } from '../../global-styles';
 
 
 
@@ -11,6 +11,11 @@ export const HomeWrapper = styled.section`
     display: flex;
     flex-direction: column;
     /* border: 1px solid red; */
+
+    @media only screen and (max-width: ${tablet}) {
+        /* margin-bottom: -20rem; */
+        /* border: 2px solid hotpink; */
+    }
 `;
 export const Overlay = styled.div`
      /* position: absolute;

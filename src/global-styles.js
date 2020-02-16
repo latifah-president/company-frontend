@@ -6,6 +6,11 @@ const grayGradient = 'radial-gradient(ellipse at center,#585858 0,#232323 100%)'
 const whiteColor = '#FFFFFF';
 const darkColor = '#3C4858';
 const lightGrayColor = '#999';
+const overlayColor = '#6378cc80';
+
+//MEDIA QUERIES SIZES
+const smrtphn = '375px'; //iphone 6 size
+const tablet = '1227px';
 
 export const OverlayDark = styled.div`
     position: absolute;
@@ -45,7 +50,9 @@ const Wrapper = styled.main`
     flex-direction: column;
     align-items: center;
     margin: 1.5rem 1rem 0 1rem;
-    /* border: 1px solid orange; */
+    border: 1px solid orange;
+
+   
 `;
 
 const ImageHeader = styled.header`
@@ -271,4 +278,7 @@ export {
     whiteColor,
     darkColor,
     lightGrayColor,
+    overlayColor,
+    smrtphn,
+    tablet,
 }
