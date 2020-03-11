@@ -1,51 +1,48 @@
 import styled, {keyframes} from 'styled-components';
 import { blackColor, } from '../../global-styles';
-import { smrtphn, } from './../../Global_Styles/global-styles';
+import { tablet, tabletsm, smrtphn, darkBlueColor, whiteColor} from './../../Global_Styles/global-styles';
 
 
 
 const pulse = keyframes`
   0% {
-	color: #051E3E;
+	color: ${whiteColor};
 	}
-	10% {
-		color: #051E3E;
+	20% {
+		color: ${whiteColor};
 	}
-	30% {
-		color: white;
-	}
-	50% {
-		color: #051E3E;
+	40% {
+		color: ${whiteColor};
 	}
 	60% {
-		color: #051E3E;
+		color: ${whiteColor};
 	}
 	80% {
-		color: white;
+		color: ${whiteColor};
 	}
 	100% {
-		color: #051E3E;
+		color: ${whiteColor};
 	}
 `;
 
 const spin = keyframes`
  0% { 
-  content:"DREAMS"; 
+  content: 'DREAMS'; 
 }
-20% {
-  content: 'BUSINESSES'
+30% {
+  content: 'BUSINESSES';
 }
 40% {
-  content: 'BRANDS'
+  content: 'BRANDS';
 }
 60% {
-  content: ' GROWTH'
+  content: ' GROWTH';
 }
 80% {
-  content: 'PROFITS'
+  content: 'PROFITS';
 }
 100% {
-  content: 'LONGEVITY'
+  content: 'LONGEVITY';
 }
 `;
 
@@ -53,45 +50,76 @@ const spin = keyframes`
 
 
 export const HomeWrapper = styled.section`
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: ${darkBlueColor};
+  justify-content: center;
+  align-items: center;
     /* border: 1px solid red; */
-/* 
-    @media only screen and (max-width: ${smrtphn}) {
-      color: blue;
-    } */
+
 `;
 
-export const Tag = styled.section`
+export const Tag = styled.header`
    display: flex;
     flex-direction: column;
-    align-items: center;
-    animation: ${props => props.bottom ? 'spin 5s linear' : null};
-    #hi:after {
-	content: "";
-	animation:${spin} 5s linear;
+    width: 50%;
+    line-height: 1rem;
+   
+  
+
+#bottom {
+  -webkit-animation-name: ${pulse};
+  -webkit-animation-duration: 7s;
+  -webkit-animation-timing-function: infinite;
+  -webkit-animation-fill-mode: forwards;
+  animation: ${pulse} 7s forwards infinite;
+
 }
+    #bottom:after {
+  content: 'Dreams';
+  -webkit-animation-name: ${spin};
+  -webkit-animation-duration: 7s;
+  -webkit-animation-timing-function: infinite;
+  -webkit-animation-fill-mode: forwards;
+  animation:${spin} 7s forwards infinite;
+   
+}
+border: 1px solid red;
+
+@media only screen and (max-width: ${tablet}) {
+        width: 90%;
+        /* border: 1px solid black; */
+    }
+    @media only screen and (max-width: ${smrtphn}) {
+        width: 90%;
+       
+        /* border: 1px solid green; */
+    }
 `;
-// export const Tag = styled.header`
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     animation: ${props => props.bottom ? 'spin 5s linear' : null};
-//     #hi:after {
-// 	content: "";
-// 	animation:${spin} 5s linear;
-// }
-// `;
 
 export const TagLineContent = styled.h1`
    letter-spacing: .3rem;
     text-transform: uppercase;
-    display: inline;
+    
     margin:0px;
     line-height:30px;
-    font-size: 5rem; 
+    font-size: 6.5rem;
+    margin-top: ${props => props.bottom ? '5rem' : null};
+    @media only screen and (max-width: ${tabletsm}) {
+        font-size: 5rem;
+        line-height: 10px;
+        /* border: 1px solid orange; */
+    }
+   
+    @media only screen and (max-width: ${smrtphn}) {
+        font-size: 3rem;
+        margin-top: ${props => props.bottom ? '2rem' : null};
+        align-self: center;
+        /* border: 1px solid green; */
+    }
 `;
+
 export const Overlay = styled.div`
         &:before {
         background: ${blackColor}

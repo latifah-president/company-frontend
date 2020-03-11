@@ -7,7 +7,7 @@ import {
     NavWrapper, 
     NavLinks, 
     LinkContainer, 
-    Logo,
+    // Logo,
     DropDownMenu,
     DropDown,
     ListItem,
@@ -30,7 +30,7 @@ const Nav = (props) => {
 //     }
     return (
         <NavWrapper>
-                        <Logo src={require('./../../assets/Cloud_5_logo_white.png')} alt='cloud 5 logo' />
+                        {/* <Logo src={require('./../../assets/Cloud_5_logo_white.png')} alt='cloud 5 logo' /> */}
 
                 <NavLinks>
                     <LinkContainer >

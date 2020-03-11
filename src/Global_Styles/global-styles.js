@@ -16,8 +16,10 @@ const darkBlueColor = '#1eb6ff'
 //MEDIA QUERIES SIZES
 // min-width do something when the screen is greater than or equal to 375px
 //max-width do something when the screen is less than or equal to 375px
+const tablet = '1024px';
+const tabletsm = '750px'
 const smrtphn = '375px'; 
-const tablet = '600px';
+
 const laptop = '1440px';
 
 const pulse = keyframes`
@@ -385,8 +387,10 @@ export {
     smrtphn,
     laptop,
     tablet,
+    tabletsm,
     accentColor,
     grayGradient,
     overlayColor,
     blackColor,
+    darkBlueColor
 }
