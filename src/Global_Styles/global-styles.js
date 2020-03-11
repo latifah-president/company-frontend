@@ -1,7 +1,7 @@
 import styled, {keyframes} from 'styled-components';
 
 const blackColor = "#000";
-const accentColor = '#B0001E';
+// const accentColor = '#B0001E';
 const grayGradient = 'radial-gradient(ellipse at center,#585858 0,#232323 100%)';
 const whiteColor = '#FFFFFF';
 const darkColor = '#3C4858';
@@ -12,7 +12,10 @@ const paraFont = 'Robot'
 
 //NEW SITE
 
-const darkBlueColor = '#1eb6ff'
+const darkBlueColor = '#2594e8';
+const accentColor = '#25e87a';
+const orangeColor = '#ff691e';
+
 //MEDIA QUERIES SIZES
 // min-width do something when the screen is greater than or equal to 375px
 //max-width do something when the screen is less than or equal to 375px
@@ -24,22 +27,22 @@ const laptop = '1440px';
 
 const pulse = keyframes`
   0% {
-	color: ${whiteColor};
+	color: ${accentColor};
 	}
 	20% {
-		color: ${whiteColor};
+		color: ${accentColor};
 	}
 	40% {
-		color: ${whiteColor};
+		color: ${accentColor};
 	}
 	60% {
-		color: ${whiteColor};
+		color: ${accentColor};
 	}
 	80% {
-		color: ${whiteColor};
+		color: ${accentColor};
 	}
 	100% {
-		color: ${whiteColor};
+		color: ${accentColor};
 	}
 `;
 
@@ -392,5 +395,6 @@ export {
     grayGradient,
     overlayColor,
     blackColor,
-    darkBlueColor
+    darkBlueColor,
+    orangeColor
 }

@@ -1,30 +1,31 @@
 import styled, {keyframes} from 'styled-components';
 import { blackColor, } from '../../global-styles';
-import { tablet, tabletsm, smrtphn, darkBlueColor, whiteColor} from './../../Global_Styles/global-styles';
+import { tablet, tabletsm, smrtphn, darkBlueColor, whiteColor, accentColor, orangeColor} from '../../Global_Styles/global-styles';
 
 
 
 const pulse = keyframes`
   0% {
-	color: ${whiteColor};
+	color: ${accentColor};
 	}
 	20% {
-		color: ${whiteColor};
+		color: ${accentColor};
 	}
 	40% {
-		color: ${whiteColor};
+		color: ${accentColor};
 	}
 	60% {
-		color: ${whiteColor};
+		color: ${accentColor};
 	}
 	80% {
-		color: ${whiteColor};
+		color: ${accentColor};
 	}
 	100% {
-		color: ${whiteColor};
+		color: ${accentColor};
 	}
 `;
 
+/*TODO: FIX ANIMATION TIMING BETWEEN DREAMS AND BUSINESSES */
 const spin = keyframes`
  0% { 
   content: 'DREAMS'; 
@@ -65,15 +66,18 @@ export const Tag = styled.header`
     flex-direction: column;
     width: 50%;
     line-height: 1rem;
-   
+   /* color: ${whiteColor}; */
   
 
+
+/* border: 1px solid red; */
 #bottom {
   -webkit-animation-name: ${pulse};
   -webkit-animation-duration: 7s;
   -webkit-animation-timing-function: infinite;
   -webkit-animation-fill-mode: forwards;
   animation: ${pulse} 7s forwards infinite;
+  
 
 }
     #bottom:after {
@@ -85,8 +89,7 @@ export const Tag = styled.header`
   animation:${spin} 7s forwards infinite;
    
 }
-border: 1px solid red;
-
+ 
 @media only screen and (max-width: ${tablet}) {
         width: 90%;
         /* border: 1px solid black; */
@@ -101,15 +104,17 @@ border: 1px solid red;
 export const TagLineContent = styled.h1`
    letter-spacing: .3rem;
     text-transform: uppercase;
-    
+    color: ${whiteColor};
     margin:0px;
     line-height:30px;
     font-size: 6.5rem;
     margin-top: ${props => props.bottom ? '5rem' : null};
+    border-bottom: ${props => props.bottom ? null : `1rem solid ${orangeColor}`};
+    padding-bottom: ${props => props.bottom ? null : '3rem'};
     @media only screen and (max-width: ${tabletsm}) {
-        font-size: 5rem;
+        font-size: 4.5rem;
         line-height: 10px;
-        /* border: 1px solid orange; */
+        border: 1px solid orange;
     }
    
     @media only screen and (max-width: ${smrtphn}) {

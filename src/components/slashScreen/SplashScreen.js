@@ -1,8 +1,9 @@
 import React from 'react';
-import Overlay from './../Overlay'
+import Overlay from '../../container/Overlay'
 // import {  HomeWrapper, Tag, TagLineContent} from './../../Global_Styles/global-styles';
 import { HomeWrapper, Tag, TagLineContent} from './splashScreen-styles';
-import './splashScreen.css'
+import './splashScreen.css';
+
 const LandingPage = () => {
     return (
     <HomeWrapper>

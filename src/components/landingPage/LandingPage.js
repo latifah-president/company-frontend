@@ -1,6 +1,6 @@
 import React from 'react';
 import HomePage from './../homePage/HomePage';
-import SplashScreen from './../../container/slashScreen/SplashScreen';
+import SplashScreen from './../slashScreen/SplashScreen';
 import { LandingPageWrapper, ContentSection } from './LandingPage-Styles';
 
 const LandingPage = () => {
