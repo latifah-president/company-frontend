@@ -1,19 +1,14 @@
 import React, {useState} from 'react';
-import LazyLoad from 'react-lazy-load';
 import Aux from './../../HOC/Aux';
 import {
-    Wrapper, 
     ImageHeader, 
-    Content, DarkTitle, 
-    LightText,
+    Content,  
     HeaderImage,
     OverlayLight,
-    SmallSubTitle,
-    Card,
-    CardTitle,
-    accentColor,
+   
     SmallCardDes
 } from './../../global-styles';
+import {SmallSubTitle, Wrapper, DarkTitle, LightText,} from './../../Global_Styles/global-styles';
 import {PackageArea, PackageAmount, PriceCard, AmountContent, PackageDetails, ExpandButton} from './marketing-styles';
 
 
@@ -27,36 +22,32 @@ const Marketing = () => {
         <Aux>
             <ImageHeader >
                 <OverlayLight></OverlayLight>
-                <LazyLoad  
-                    debounce={false}
-                    offsetVertical={500}>
                         <HeaderImage src={require('./../../assets/marketing-strategy.jpeg')} alt='Our Portfolio'/>
-                </LazyLoad>
+               
             </ImageHeader>
                 <Wrapper>
                     <Content>
                         <header>
                             <DarkTitle>Marketing</DarkTitle>
                         </header> 
-                        <LightText style={{width: '100%'}}>
-                            We’re really good at working with our clients to increase 
-                            their brand awareness and maximize their profitability and sales.
+                        <LightText >
+                        Do you need marketing to grow your business? The answer is ALWAYS yes. Marketing can be anything from a tweet to deciding what to name a product. Cloud5 is dedicated to taking the crazy world of digital marketing and making it simple for you. You can stop focusing all your time on what to post, when to post it, and is it even reaching the right people? Our team of strategists, SEO specialists, and social media managers are ready and prepared to take 
+                        your vision and have your entire online presence match that. To get more information on exactly how we can help you, keep scrolling. 
                         </LightText>                    
                     </Content>
             
                     <Content>
-                        <header>
+                        {/* <header>
                             <DarkTitle>Marketing Packages</DarkTitle>
-                        </header> 
-                        <LightText >
-                           At Cloud5 we offer a variety of packages to fit any client's projects. 
-                           Whether you're looking for Social Media Management, SEO and Keyword Ranking, or a Full Scale 
-                           Marketing Campaign, we have it all!                       All of our packages are completely customizable; we work
-                           with clients to build the best packages for their needs.
-                        </LightText>
+                        </header>  */}
+                      
                         <SmallSubTitle style={{fontSize: '1.5rem'}}>
                             Social Media Management Packages
                         </SmallSubTitle>
+                        <LightText >
+                        There are four available packages depending on your needs and wants. We are ready to help scale your business on whatever timeline you have created. We will take on the stress of posts, blogs, advertising, customer service and much more. Take a look below at our simple lay out of each 
+                        package and send us a message at any point to get started or answer any questions you may have. 
+                        </LightText>
                         <PackageArea>                       
                             <PriceCard > 
                                 <AmountContent>
@@ -123,7 +114,7 @@ const Marketing = () => {
                                 </SmallCardDes>
                                 <PackageAmount style={{color: 'white'}}> <small >$</small> 7000</PackageAmount>
                             </AmountContent>
-<                               PackageDetails>
+<                               PackageDetails >
                                     <ul>
                                         <li>Daily posts a day per account</li>
                                         <li>Create on brand content</li>
@@ -153,7 +144,7 @@ const Marketing = () => {
                                 </SmallCardDes>
                                 <PackageAmount style={{color: 'white'}}> <small >$</small> 8500</PackageAmount>
                             </AmountContent>
-<                               PackageDetails>
+<                               PackageDetails >
                                     <ul>
                                         <li><b>10</b> Daily posts a day per account</li>
                                         <li>Create on brand content</li>
@@ -176,22 +167,26 @@ const Marketing = () => {
                                 </PackageDetails>
                             </PriceCard>
                         </PackageArea>
-                    </Content>
 
-                       {/* SEO PACKAGES */}
+                        {/* SEO PACKAGES */}
                        <Content>
                         <SmallSubTitle style={{fontSize: '1.5rem'}}>
                             SEO Packages
                         </SmallSubTitle>
-                        <PackageArea seo>                       
+                        <LightText>
+                            The complicated world that is search engine optimization just got a lot easier. Our team of experts is ready to take all the necessary steps to make your business rank higher when customers need your services. Who is searching for you, who’s your competition, and how can you beat them are all questions that we want to answer for you. So, answer a few questions for 
+                            us by clicking below and we can get started on making your online presence one to remember. 
+                        </LightText>
+                        <PackageArea seo> 
+
                             <PriceCard > 
                                 <AmountContent>
                                 <SmallCardDes style={{fontSize: '1rem', color: 'white', fontWeight: '500'}}>
                                         SEO Plus
                                     </SmallCardDes>
-                                    <PackageAmount style={{color: 'white'}}> <small >$</small> 2500</PackageAmount>
+                                    <PackageAmount style={{color: 'white'}}> <small >$</small> 5500</PackageAmount>
                                 </AmountContent>
-<                               PackageDetails>
+<                               PackageDetails seo>
                                     <ul>
                                         <li><b>10</b> keywords</li>
                                         <li>on page SEO</li>
@@ -214,7 +209,7 @@ const Marketing = () => {
                                 </SmallCardDes>
                                 <PackageAmount style={{color: 'white'}}> <small >$</small> 3500</PackageAmount>
                             </AmountContent>
-<                               PackageDetails>
+<                               PackageDetails seo>
                                     <ul>
                                         <li><b>20</b> keywords</li>
                                         <li>on page SEO</li>
@@ -236,7 +231,7 @@ const Marketing = () => {
                                 </SmallCardDes>
                                 <PackageAmount style={{color: 'white'}}> <small >$</small> 7000</PackageAmount>
                             </AmountContent>
-                            <PackageDetails>
+                            <PackageDetails seo>
                                     <ul>    
                                         <li><b>20</b> keywords</li>
                                         <li>on page SEO</li>
@@ -255,6 +250,9 @@ const Marketing = () => {
 
                         </PackageArea>
                     </Content>
+                    </Content>
+
+                       
                 </Wrapper>
         </Aux>
     )

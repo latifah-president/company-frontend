@@ -1,12 +1,9 @@
 import styled from 'styled-components';
-import {darlColor, darkColor, lightGrayColor, accentColor, whiteColor} from  './../../global-styles';
+import {darkColor, lightGrayColor, accentColor, } from  './../../global-styles';
+import {smrtphn,  } from './../../Global_Styles/global-styles'
 
 export const PackageArea = styled.section`
-    /* display: 'flex';
-    justify-content: space-around;
-    flex-direction: column;  */
-    /* width: 100%; */
-    /* border: 1px solid red; */
+  
 margin-top: 1.5rem;
     display: grid;
 grid-template-columns: ${props => props.seo ? 'repeat(3, 1fr)' : 'repeat(4, 1fr)'};
@@ -38,7 +35,17 @@ grid-template-columns: ${props => props.seo ? 'repeat(3, 1fr)' : 'repeat(4, 1fr)
              display: none;
          }
      }
-  
+ 
+
+      
+     @media only screen and (max-width: ${smrtphn})  {
+         /* display in a column */
+        display: grid;
+grid-template-columns: 1fr;
+grid-column-gap: 0px;
+grid-row-gap: 20px;
+/* grid-auto-columns: auto; */
+}
 `;
 
 export const PriceCard = styled.section`
@@ -74,7 +81,12 @@ color: white;
 width: 60%;
 border-radius: 1rem;
 margin-top: 1.5rem;
+padding: 1rem;
+height: 120px;
     /* border: 1px solid black; */
+    /* @media only screen and (max-width: ${smrtphn})  {
+        height: 120px;
+    } */
 `;
 
 export const PackageDetails = styled.section`
@@ -85,6 +97,11 @@ export const PackageDetails = styled.section`
      box-shadow: 0 16px 10px -12px rgba(0, 0, 0, 0.56), 
     0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
     /* border: 1px solid orange; */
+    @media only screen and (max-width: ${smrtphn})  {
+        width: ${props => props.seo ? '100%' : '75%'};
+        /* border: 1px solid orange; */
+
+    }
 `;
 
 export const ExpandButton = styled.button`
@@ -93,5 +110,9 @@ export const ExpandButton = styled.button`
     margin-bottom: 1rem;
     height: 50px;
     width: 40%;
+
+    @media only screen and (max-width: ${smrtphn})  {
+        font-size: 1rem;
+    }
 `;
 

@@ -12,20 +12,18 @@ const FeaturedClients = () => {
             <FeatureCardArea>
                 <Card>
                     <Overlay></Overlay>
-                    <CardBackground src={require('./../../../assets/excercise2.jpg')} alt='Featured Client: ReVision Training with Tyler Merren'/>
+                    <CardBackground src={require('./../../../assets/excercise2.jpg')} alt='Featured Client 1'/>
                     <CardContent>
                         <ProjectTitle>ReVision Training with Tyler Merren</ProjectTitle>
                         <ProjectText>
                         Blind and visually impaired people can get expert fitness 
                         and wellness advice from Tyler Merren, a blind Personal Trainer 
-                        {/* and Paralympic Athlete. Get clearly described exercises in accessible 
-                        formats, nutrition advice, equipment recommendations, a supportive community to encourage you in your fitness goals, and much more!  */}
                         </ProjectText>
                     </CardContent>
                 </Card>
                 <Card>
                     <Overlay></Overlay>
-                    <CardBackground src={require('./../../../assets/featured_client1.png')} alt='Featured Client: Gold Crude Research'/>
+                    <CardBackground src={require('./../../../assets/featured_client1.png')} alt='Featured Client 2'/>
                     <CardContent>
                         <ProjectTitle>Gold Crude Research</ProjectTitle>
                         <ProjectText>
@@ -37,7 +35,7 @@ const FeaturedClients = () => {
                 </Card>
                 <Card>
                     <Overlay></Overlay>
-                    <CardBackground src={require('./../../../assets/featured_client2.png')} alt='Featured Client: News Nation'/>
+                    <CardBackground src={require('./../../../assets/featured_client2.png')} alt='Featured Client 3'/>
                     <CardContent>
                         <ProjectTitle>News Nation</ProjectTitle>
                         <ProjectText>

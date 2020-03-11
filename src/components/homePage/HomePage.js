@@ -1,5 +1,4 @@
 import React from 'react';
-import Advantages from './Advantages/Advantages.js';
 import FeaturedClients from './FeaturedClients/FeaturedClients.js';
 import SpecialProjects from './SpecialProjects/SpecialProjects.js';
 import Mission from './Mission/ourmission';
@@ -12,7 +11,6 @@ const HomePage = () => {
         <MainContent>
              <Mission/>
             <Services/>
-            {/* <Advantages/> */}
             <Different/>
             <FeaturedClients/>
             <SpecialProjects/>

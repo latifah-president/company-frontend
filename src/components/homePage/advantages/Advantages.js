@@ -1,21 +1,21 @@
 import React from 'react';
 import {
     AdvantagesWrapper,
-    AdvantagesContent, 
     AdvatagesTitle, 
     AdvantagesBox, 
     AdvantagesBoxTitle, 
     AdvantagesBoxText,
 } from './advantages-styles';
-
+import {ThreeColumnGrid, ContentArea, } from './../../../Global_Styles/global-styles'
 const Advantages = () => {
     return (
         <AdvantagesWrapper>
             <header>
                 <AdvatagesTitle>Why Choose Us?</AdvatagesTitle>
             </header>
-            <AdvantagesContent>
-            <AdvantagesBox>
+            <ThreeColumnGrid>
+                <ContentArea>
+                <AdvantagesBox>
                 <AdvantagesBoxTitle>Unlimited Revisions</AdvantagesBoxTitle>
                 <AdvantagesBoxText>
                     In most cases, Cloud5 offers free unlimited revisions to your project. 
@@ -24,7 +24,9 @@ const Advantages = () => {
                     This way we guaranty that you’ll get your money’s worth.
                 </AdvantagesBoxText>
             </AdvantagesBox>
-            <AdvantagesBox>
+                </ContentArea>
+          <ContentArea>
+          <AdvantagesBox>
                 <AdvantagesBoxTitle>Industry Leading Prices</AdvantagesBoxTitle>
                 <AdvantagesBoxText>
                     They say it pays well to be the best. 
@@ -33,7 +35,10 @@ const Advantages = () => {
                     and don’t tell anyone, but sometimes we’re even willing to price match.
                 </AdvantagesBoxText>
             </AdvantagesBox>
-            <AdvantagesBox>
+          </ContentArea>
+           
+           <ContentArea>
+           <AdvantagesBox>
                 <AdvantagesBoxTitle>Taking On The Complicated Projects</AdvantagesBoxTitle>
                 <AdvantagesBoxText>
                     If you’ve been turned away by everyone else in 
@@ -42,7 +47,9 @@ const Advantages = () => {
                     turn away prospects with crazy ideas, in fact, those are exactly the type of client’s we love.
                 </AdvantagesBoxText>
             </AdvantagesBox>
-            </AdvantagesContent>
+           </ContentArea>
+           
+            </ThreeColumnGrid>
         </AdvantagesWrapper>
     )
 };

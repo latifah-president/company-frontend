@@ -1,10 +1,10 @@
 import React from 'react';
-import {Wrapper, Content, DarkTitle, LightText} from '../../../global-styles';
+import {Wrapper, ContentArea, DarkTitle, LightText, } from './../../../Global_Styles/global-styles';
 
 const OurMission = () => {
     return (
         <Wrapper>
-            <Content>
+            <ContentArea>
                 <header>
                     <DarkTitle>Our Mission</DarkTitle>
                 </header>
@@ -13,7 +13,7 @@ const OurMission = () => {
                     We are a one stop shop for everything you need to conceptualize, build, market, and launch your ideas into the market place. 
                     Offering a first class experience to anyone that chooses to work with us.
                 </LightText>
-            </Content>
+            </ContentArea>
         </Wrapper>
         
     )

@@ -1,10 +1,16 @@
 import React from 'react';
-import {Wrapper, Content, DarkTitle, LightText, lightGrayColor} from '../../../global-styles';
+import {
+    Wrapper, 
+    LightText,
+    ContentArea, 
+    DarkTitle, 
+} from './../../../Global_Styles/global-styles';
+
 
 const Different = () => {
     return (
         <Wrapper>
-            <Content>
+            <ContentArea>
                 <header>
                     <DarkTitle>What Makes Us Different</DarkTitle>
                 </header>
@@ -25,7 +31,7 @@ const Different = () => {
                  focused on getting the project built, your choosing a team that cares about Tech and how it effects the world. When you want it done the right way we’re the team to call.
                   Because if we’re going to help you build something, its going to be great.
              </LightText>
-            </Content>
+            </ContentArea>
         </Wrapper>
         
     )

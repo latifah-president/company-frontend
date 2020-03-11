@@ -1,60 +1,28 @@
 import React from 'react';
 import {
     Wrapper, 
-    Content, 
+    ContentArea, 
     DarkTitle, 
     LightText, 
-    ThreeByThreeSec, 
-    CardImage, 
-    CardContent, 
-    Card, 
-    SmallSubTitle,
-    AboutImage,
-    ThreeColumnGrid,
-    TwoColumnGrid,
-} from './../../../global-styles';
+    SmallImageCard,
+} from './../../../Global_Styles/global-styles';
 
 const SpecialProjects = () => {
     return (
         <Wrapper>
-            <Content>
+            <ContentArea>
                 <header>
                     <DarkTitle>Upcoming Special Projects</DarkTitle>
                 </header>
-                
+                    <ContentArea horizontal reverse>
                         <LightText>
-                            Most Agencies only provide marketing, most development firms only provide development.
-                            We call ourselves a digital Innovation agency because we do everything!
-                            We don’t just work with clients we have our own ideas.
+                                Most Agencies only provide marketing, most development firms only provide development.
+                                We call ourselves a digital Innovation agency because we do everything!
+                                We don’t just work with clients we have our own ideas.
                         </LightText>
-
-                        {/* <ThreeByThreeSec> */}
-                            <Card >
-                            {/* <TwoColumnGrid> */}
-                                <AboutImage   src={require('./../../../assets/saveenah_wireframe.jpg')} alt='Saveenah Wireframe'/>
-                                <CardContent>
-                                    <SmallSubTitle>Cloud5 Hub</SmallSubTitle>
-                                    <LightText style={{width: '70%'}}>
-                                        Cloud5 has partnered up with Savena, a womens online clothing store. 
-                                        Our aim is to build a platform that can empower other small businesses 
-                                        to flex their reach and create their own marketplace.
-                                    </LightText>
-                                </CardContent>
-                                {/* </TwoColumnGrid> */}
-                            </Card>
-                            {/* <Card> */}
-                                {/* <CardContent>
-                                    <SmallSubTitle>Cloud5 Hub</SmallSubTitle>
-                                    <LightText style={{width: '70%'}}>
-                                        Cloud5 has partnered up with Savena, a womens online clothing store. 
-                                        Our aim is to build a platform that can empower other small businesses 
-                                        to flex their reach and create their own marketplace.
-                                    </LightText>
-                                </CardContent> */}
-                            {/* </Card> */}
-                        {/* </ThreeByThreeSec> */}
-        
-            </Content>
+                        <SmallImageCard src={require('./../../../assets/saveenah_wireframe.jpg')} alt='Saveenah Wireframe'/>
+                    </ContentArea>
+            </ContentArea>
         </Wrapper>
     )
 };

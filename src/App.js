@@ -1,12 +1,22 @@
 import React, { Component, } from 'react';
-import { Route, } from 'react-router-dom';
+import { Route, Switch, } from 'react-router-dom';
 import Nav from './components/nav/Nav';
+import MobileNav from './components/nav/MobileNav';
 import Footer from './components/Footer/Footer';
 import LandingPage from './components/landingPage/LandingPage';
 import AboutPage from './views/about/About';
 import PortfolioPage from './views/Portfolio/Portfolio';
 import SpecialProjectsPage from './views/Special Projects/SpecialProjects';
 import MarketingPage from './views/Marketing/Marketing';
+import DevelopmentPage from './views/Development/Development';
+import ContactPage from './views/Contact/Contact';
+import CareersPage from './views/Careers/Careers';
+import AgentPage from './views/Careers/Sections/Agent/Agent';
+import SMMPage from './views/Careers/Sections/SMM/SMM';
+import SeoManagerPage from './views/Careers/Sections/SEOManager/SeoManager';
+import SalesRepPage from './views/Careers/Sections/SalesRep/SalesRep';
+import AssistantPage from './views/Careers/Sections/Assistant/Assistant';
+import GrowthPage from './views/Growth/Growth';
 import './App.css';
 
 //Contaners  folder will hold statefull data
@@ -17,6 +27,8 @@ class App extends Component  {
     return (
     <div className="App">
       <Nav/>
+      <MobileNav/>
+      <Switch>
       <Route 
         exact path='/' 
         render={props => 
@@ -57,7 +69,80 @@ class App extends Component  {
             />
           }
         />
-        {/* <Footer/> */}
+         <Route 
+          exact path='/development' 
+          render={props => 
+          <DevelopmentPage 
+            {...props}
+            />
+          }
+        />
+           <Route 
+          exact path='/careers' 
+          render={props => 
+          <CareersPage 
+            {...props}
+            />
+          }
+        />
+           <Route 
+          exact path='/careers/agent' 
+          render={props => 
+          <AgentPage 
+            {...props}
+            />
+          }
+        />
+           <Route 
+          exact path='/careers/smm' 
+          render={props => 
+          <SMMPage 
+            {...props}
+            />
+          }
+        />
+           <Route 
+          exact path='/careers/seo' 
+          render={props => 
+          <SeoManagerPage 
+            {...props}
+            />
+          }
+        />
+           <Route 
+          exact path='/careers/salesrep' 
+          render={props => 
+          <SalesRepPage 
+            {...props}
+            />
+          }
+        />
+          <Route 
+          exact path='/careers/assistant' 
+          render={props => 
+          <AssistantPage 
+            {...props}
+            />
+          }
+        />
+           <Route 
+          exact path='/contact' 
+          render={props => 
+          <ContactPage 
+            {...props}
+            />
+          }
+        />
+           <Route 
+          exact path='/growth' 
+          render={props => 
+          <GrowthPage 
+            {...props}
+            />
+          }
+        />
+        </Switch>
+        <Footer/>
      </div>
   )};
 }

@@ -1,73 +1,112 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faMapMarkerAlt, faPhone, } from '@fortawesome/free-solid-svg-icons';
-import { ThreeByThreeSec, SmallWhiteTitle, SmallWhiteText, } from './../../global-styles';
-import { FooterWrapper, FooterCard, ContactUs, AddressContent, FooterLinks, PhoneNumber, } from './footer-styles';
+import {faMapMarkerAlt, faPhone, faEnvelope} from '@fortawesome/free-solid-svg-icons';
+import {
+    SmallWhiteTitle, 
+    SmallWhiteText,
+    Wrapper,
+} from './../../Global_Styles/global-styles';
+import { FooterWrapper, FooterCard, ContactUs, AddressContent, FooterLinks, PhoneNumber, NewsLetterForm, NewsLetter, } from './footer-styles';
+import {ContactFormLabel, } from './../../container/Forms/form-styles';
 
 const Footer = () => {
     return(
+        <Wrapper>
             <FooterWrapper>
-                <ThreeByThreeSec >
-                    <FooterCard>
-                        <SmallWhiteTitle style={{paddingBottom: '0 .4rem'}}>About</SmallWhiteTitle>
-                        <SmallWhiteText style={{textAlign: 'left', lineHeight: '1.5rem', width: '90%'}}>
-                            Cloud5 was created with the idea that innovative and creative thinkers will change the game. <br/>
-                            We wanted to integrate the freelance market with the reach and capabilities of a corporation. <br/>
-                            The success of our company is shown with the success of the clients we serve, and we don’t stop until its perfect!
-                        </SmallWhiteText>
-                    </FooterCard>
-
-                    <FooterCard style={{marginTop: '1.5rem'}}>
-                        {/* <SmallWhiteTitle>Contact Us</SmallWhiteTitle> */}
-
-                        <ContactUs>
-                            <FontAwesomeIcon icon={faMapMarkerAlt} className='map'/>                
+                    <FooterCard contact >
+                    <SmallWhiteTitle>Contact Us</SmallWhiteTitle>
+                    <ContactUs>
                         <AddressContent>
-                            <SmallWhiteText style={{textAlign: 'left', marginBottom: '.5rem', fontWeight: '550'}}>Visit Us At The Office</SmallWhiteText>
-                            <SmallWhiteText style={{lineHeight: '1.5rem', textAlign: 'left'}}>
-                                <address style={{fontStyle: 'normal'}}>
-                                701 Brazos St. <br/> Austin, TX 78701 <br/>
-                                </address>
-                                Mon-Fri, 9:30-4:00
+                            <a href="mailto:support@cloud5hub.io">
+                            <SmallWhiteText  style={{lineHeight: '1.3rem', textAlign: 'left'}}>                            
+                             <FontAwesomeIcon  icon={faEnvelope} className='icon'/>                
+                             support@cloud5hub.io                           
+                              </SmallWhiteText>
+                            </a>
+                        </AddressContent>
+                        </ContactUs>  
+                    
+                        <ContactUs>
+                        <AddressContent>
+                            <SmallWhiteText  style={{lineHeight: '1.5rem', textAlign: 'left'}}>                            
+                             <FontAwesomeIcon icon={faMapMarkerAlt} className='icon'/>                
+                                Visit Us At The Office
                             </SmallWhiteText>
+                                <address style={{fontStyle: 'normal', marginLeft: '2rem'}}>
+                                <SmallWhiteText style={{lineHeight: '1.5rem', textAlign: 'left'}}>
+
+                                701 Brazos St. <br/> Austin, TX 78701 <br/>
+                                </SmallWhiteText>
+                                </address>
+                           
+                            <SmallWhiteText style={{lineHeight: '1.5rem', textAlign: 'left',  marginLeft: '1.7rem'}}> Mon-Fri, 9:30-4:00</SmallWhiteText>
                         </AddressContent>
                         </ContactUs>      
 
-                          <ContactUs style={{width: '73%', marginTop: '1rem'}}>
-                            <FontAwesomeIcon icon={faPhone} className='map'/>                
+                        <ContactUs>
                         <AddressContent>
-                            <SmallWhiteText style={{textAlign: 'left', marginBottom: '.5rem', fontWeight: '550'}}>Give Us A Ring</SmallWhiteText>
+                        <SmallWhiteText  style={{lineHeight: '1.5rem', textAlign: 'left'}}>                            
+                             <FontAwesomeIcon icon={faPhone} className='icon' style={{fontSize: '1.2rem'}}/>                
+                             Give Us A Ring
+                        </SmallWhiteText>
                             <SmallWhiteText style={{lineHeight: '1.5rem', textAlign: 'left'}}>
-                                <PhoneNumber href='tel:+1512-588-5554'>(512) 588-5554</PhoneNumber>
+                            <PhoneNumber href='tel:+1512-588-5554'>(512) 588-5554</PhoneNumber>
                             </SmallWhiteText>
                         </AddressContent>
-                        </ContactUs>               
+                        </ContactUs>  
                     </FooterCard>
 
                     <FooterCard>
-                        <SmallWhiteTitle>Navigation</SmallWhiteTitle>
+                        <SmallWhiteTitle>About</SmallWhiteTitle>
                         <FooterLinks>
 
                         <NavLink className='link' activeClassName='activeRoute' exact to='/'>
                             <SmallWhiteText>Home</SmallWhiteText>
                         </NavLink>
-                        <NavLink className='link' activeClassName='activeRoute' to='/services'>
-                            <SmallWhiteText>Services</SmallWhiteText>
-                        </NavLink>
-                        <NavLink className='link' activeClassName='activeRoute' to='/specialproject'>
-                            <SmallWhiteText>Special Projects</SmallWhiteText>
-                        </NavLink>
+                        
                         <NavLink className='link' activeClassName='activeRoute' to='/portfolio'>
                             <SmallWhiteText>Portfolio</SmallWhiteText>
                         </NavLink>
                         <NavLink className='link' activeClassName='activeRoute' to='/careers'>
                             <SmallWhiteText>Careers</SmallWhiteText>
                         </NavLink>
+                        <NavLink className='link' activeClassName='activeRoute' to='/about'>
+                            <SmallWhiteText>About Us</SmallWhiteText>
+                        </NavLink>
                         </FooterLinks>
                     </FooterCard>
-                </ThreeByThreeSec>
+
+                    <FooterCard>
+                        <SmallWhiteTitle>Services</SmallWhiteTitle>
+                        <FooterLinks>
+                        <NavLink className='link' activeClassName='activeRoute' to='/marketing'>
+                            <SmallWhiteText>Marketing</SmallWhiteText>
+                        </NavLink>
+                        <NavLink className='link' activeClassName='activeRoute' to='/development'>
+                            <SmallWhiteText>Development</SmallWhiteText>
+                        </NavLink>
+                        <NavLink className='link' activeClassName='activeRoute' to='/specialprojects'>
+                            <SmallWhiteText>Special Projects</SmallWhiteText>
+                        </NavLink>
+                        </FooterLinks>
+                    </FooterCard>
+                    <FooterCard>
+                        <SmallWhiteTitle>Subscribe to Newsletter</SmallWhiteTitle>
+                        <SmallWhiteText small>
+                            Join our newsletter to receive monthly updates about Cloud5 and to get 
+                            special deals and promotions on all Cloud5 services.
+                        </SmallWhiteText>
+                        <NewsLetterForm>
+              <ContactFormLabel htmlFor='email' style={{color: 'white'}}></ContactFormLabel>
+                  <NewsLetter name='email' id='email'  type='email' placeholder='Your Email'  />
+                  <button type='submit'>
+                    <FontAwesomeIcon icon={faEnvelope} className='icon'/>
+                  </button>
+                        </NewsLetterForm>
+                    </FooterCard>
             </FooterWrapper>
+            </Wrapper>
     )
 };
 

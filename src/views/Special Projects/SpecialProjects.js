@@ -1,41 +1,26 @@
 import React from 'react';
-import LazyLoad from 'react-lazy-load';
 import Aux from './../../HOC/Aux';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import {faTwitter, faLinkedinIn, faGithub, faFacebookF} from '@fortawesome/fontawesome-free-brands';
-import {
-    Wrapper, 
-    ImageHeader, 
-    Content, DarkTitle,
-    LightText,
-    HeaderImage,
-    OverlayLight,
-    SmallSubTitle,
-} from './../../global-styles';
-
+import {Header, LightOverlay, Wrapper, HeaderImage, ContentArea, DarkTitle, LightText, SmallSubTitle} from './../../Global_Styles/global-styles';
 
 const SpecialProjects = () => {
     return (
         <Aux>
-            <ImageHeader >
-                <OverlayLight></OverlayLight>
-                <LazyLoad  
-                    debounce={false}
-                    offsetVertical={500}>
-                        <HeaderImage src={require('./../../assets/about_image.jpg')} alt='Special Projects'/>
-                </LazyLoad>
-            </ImageHeader>
+            <Header >
+                <LightOverlay></LightOverlay>
+                    <HeaderImage src={require('./../../assets/about_image.jpg')} alt='image'/>
+            </Header>
                 <Wrapper>
-                    <Content>
+                    <ContentArea>
                         <header>
                             <DarkTitle>Welcome To Our Special Projects Division</DarkTitle>
                         </header>
                         <LightText>
-                        Most Agencies only provide marketing, most development firms only provide development.
-  We call ourselves a digital Innovation agency because we do everything!!!!
-  But we don’t just work with clients we have our own ideas. And what better way to show clients how successful we can make them then to build our own projects, who needs case studies when you can have real time examples. We’re super excited for the world to see our ideas. We have the the developers, we have the marketers... honestly why wouldn’t we?
-  Check out some of the projects we’re currently working on. All projects under our special projects devision are Cloud5 concepts.  We’ve found ways to innovate on a whole new level and we cant wait for you to see what we have cooking.
-
+                            Most Agencies only provide marketing, most development firms only provide development.
+                            We call ourselves a digital Innovation agency because we do everything!!!!
+                            But we don’t just work with clients we have our own ideas. And what better way to show clients how successful we can make them then to build our own projects, who needs case studies when you can have real time examples. We’re super excited for the world to see our ideas. We have the the developers, we have the marketers... honestly why wouldn’t we?
+                            Check out some of the projects we’re currently working on. All projects under our special projects devision are Cloud5 concepts.  We’ve found ways to innovate on a whole new level and we cant wait for you to see what we have cooking.
                         </LightText>
                         <SmallSubTitle>What We Focus On</SmallSubTitle>
                         <LightText>
@@ -84,7 +69,7 @@ const SpecialProjects = () => {
                             If you’re interested in partnering up with us, or if you have some ideas to help us make our projects even better then they already are. Please reach out to our CTO we’re always open to suggestions.
                             Latifah@cloud5hub.io
                         </LightText>                                */}
-                    </Content>                   
+                    </ContentArea>                   
                 </Wrapper>
         </Aux>
     )

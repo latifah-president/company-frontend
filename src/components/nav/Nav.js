@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import { NavLink } from 'react-router-dom';
-import MobileNav from './MobileNav';
+// import MobileNav from './MobileNav';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faChevronDown, faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+import {faChevronDown,  } from '@fortawesome/free-solid-svg-icons';
 import { 
     NavWrapper, 
     NavLinks, 
@@ -11,15 +11,12 @@ import {
     DropDownMenu,
     DropDown,
     ListItem,
-    Menu,
-    CloseMenu, 
 } from './nav-styles';
-
 
 const Nav = (props) => {
     const [openMenu, setOpenMenu] = useState(false);
     //FOR MOBILE
-    const [openNav, setopenNav] = useState(false);
+ 
 
   const toggle = () => {
     setOpenMenu(!openMenu);
@@ -27,14 +24,15 @@ const Nav = (props) => {
   }
 
 
-  const toggleMobileNav = () => {
-      setopenNav(!openNav);
-      // console.log('toggling', openMenu)
-    }
+//   const toggleMobileNav = () => {
+//       setopenNav(!openNav);
+//       // console.log('toggling', openMenu)
+//     }
     return (
         <NavWrapper>
+                        <Logo src={require('./../../assets/Cloud_5_logo_white.png')} alt='cloud 5 logo' />
+
                 <NavLinks>
-                <Logo src={require('./../../assets/Cloud_5_logo_white.png')} alt='cloud 5 logo' />
                     <LinkContainer >
                         <NavLink className='link' activeClassName='activeRoute' exact to='/'>
                             Home
@@ -45,11 +43,22 @@ const Nav = (props) => {
                         <NavLink className='link' activeClassName='activeRoute' to='/contact'>
                             Contact Us
                         </NavLink>
+                        {/* <DropDownMenu class="dropdown">
+    <div class="dropbtn">
+        Services
+        <FontAwesomeIcon icon={faChevronDown} className='chevron' onClick={ () => {toggle()}}/>
+
+      <i class="fa fa-caret-down"></i>
+    </div>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </DropDownMenu>  */}
                         <DropDownMenu aria-expanded='false' aria-haspopup="true" className={openMenu ? 'open' : ''} onClick={ () => {toggle()}}>
-                        {/* <NavLink  className='link' activeClassName='activeRoute' to='/services'> */}
                             Services
                            
-                        {/* </NavLink> */}
 
                         <FontAwesomeIcon icon={faChevronDown} className='chevron' onClick={ () => {toggle()}}/>
                         {openMenu ?                    
@@ -58,7 +67,7 @@ const Nav = (props) => {
                                 <NavLink className='dropdownLink' to='/marketing'>Marketing</NavLink>
                             </ListItem>
                             <ListItem>
-                                <NavLink  className='dropdownLink' to='/webdevelopment'>Web Development</NavLink>
+                                <NavLink  className='dropdownLink' to='/development'>Development</NavLink>
                             </ListItem>
                         </DropDown> : null}
      
@@ -79,16 +88,16 @@ const Nav = (props) => {
                         </NavLink> */}
                     </LinkContainer> 
 
-                    {openNav ? 
+                    {/* {openNav ? 
                     //MAKE CLOSE MENU FADE IN 
                     <CloseMenu onClick={() => {toggleMobileNav()}}> <FontAwesomeIcon icon={faTimes}/></CloseMenu> : 
                      <Menu onClick={() => {toggleMobileNav()}} role='menu' aria-expanded={openNav}  aria-controls='mobile nav'>
                      <FontAwesomeIcon  icon={ faBars }/>
                      
                  </Menu>
-                    }
+                    } */}
                    
-                      {openNav ? <MobileNav open={openNav} aria-label='mobile navigation' id='mobile nave'/> : null}
+                      {/* {openNav ? <MobileNav open={openNav} aria-label='mobile navigation' id='mobile nave'/> : null} */}
                       {/* <MobileNav/> */}
                 </NavLinks>
         </NavWrapper>

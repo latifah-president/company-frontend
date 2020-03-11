@@ -1,5 +1,5 @@
 import styled, {keyframes} from 'styled-components';
-import { accentColor, whiteColor, darkColor, overlayColor, tablet, smrtphn} from '../../global-styles';
+import { accentColor, whiteColor, darkColor, tablet, smrtphn, laptop} from '../../Global_Styles/global-styles';
 
 const slideInRight = keyframes`
     {
@@ -35,16 +35,23 @@ export const NavWrapper = styled.header`
     color: white;
     /* border: 1px solid red; */
 
-    @media only screen and (max-width: ${tablet}) {
-        flex-direction: flex-end;
-        /* border: 1px solid white; */
+ 
+
+    @media only screen and (max-width: ${smrtphn}) and (max-width: ${tablet}) {
+     
+        display: none;
+        margin: 0 auto;
+
     }
 
-    @media only screen and (min-width: ${smrtphn}) {
-        flex-direction: flex-end;
-        /* border: 1px solid orange; */
-    }
-
+/* @media only screen and (min-width: ${laptop}) {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    z-index: 5;
+    color: white;
+} */
 `;
 
 export const Logo = styled.img`
@@ -55,7 +62,8 @@ export const Logo = styled.img`
 export const NavLinks = styled.section`
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-end;
+    /* justify-content: space-between; */
     width: 100%;
     font-family: 'Montserrat' sans-serif;
     margin: 1rem 1.7rem;
@@ -66,6 +74,7 @@ export const NavLinks = styled.section`
     .open {
         display: block;
     }
+   
 `;
 
 export const LinkContainer = styled.nav`
@@ -75,9 +84,9 @@ export const LinkContainer = styled.nav`
     justify-content: space-around;
     align-items: center;
     /* border: 1px solid green; */
-    @media only screen and (max-width: ${tablet}) {
+    @media only screen and (max-width: ${smrtphn}){
         display: none;
-        /* border: 1px solid red;     */
+        /* padding: 0; */
 }
 
     .link {
@@ -91,10 +100,25 @@ export const LinkContainer = styled.nav`
     border-bottom: 1.5px solid ${accentColor};
  }
 
+@media only screen and (max-width: ${tablet}) {
+    /* border: 1px solid red;
+    width:95%; */
+    display: none;
+}
 `;
 
 export const DropDown = styled.ul`
-    background: #ffffffa1;
+display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+ 
+  /* &:hover .dropdown-content {
+  display: block;
+} */
+    /* background: #ffffffa1;
     list-style-type: none;
     position: absolute;
     top: 8rem;
@@ -103,14 +127,11 @@ export const DropDown = styled.ul`
     flex-direction: column;
     padding: 0;
     width: 10%;
-    /* align-items: center; */
     justify-content: space-around;
     align-self: center;
     border-radius: .5rem;
     height: 100px;
-    box-shadow: 0 16px 10px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
-    /* border: 1.5px solid #ffffff81; */
-    /* border: 1px solid red; */
+    box-shadow: 0 16px 10px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2); */
   
 `;
 
@@ -139,71 +160,143 @@ export const DropDownMenu = styled.button`
      /* border: 2px solid orange; */
  }
 
+
 `;
 
 export const Menu = styled.button`
+    background: none;
+    font-size: 1.5rem;
     /* border: 1px solid red; */
-    display: none;
+    /* display: none; */
     z-index: 6;
-
+    border: none;
     .close {
         display: none;
     }
-    @media only screen and (max-width: ${tablet}) {
-        display: block;
-        /* border: 1px solid red; */
+
+    .closeButton {
+        color: ${darkColor};
+        align-self: flex-end;
+        /* border: 1px solid green; */
+        margin-top: 1rem;
+        right: 2rem;
+        position: absolute;
+    }
+
+    .openButton {
+        color: ${whiteColor};
+        margin-right: 2rem;
+        /* border: 1px solid orange; */
+
+    }
+    /* @media only screen and (max-width: ${smrtphn}) { */
+     
+        /* background: none;
+        color: ${whiteColor};
+        font-size: 1.5rem;  */
+
+     
+/* } */
+
+/* @media only screen and (max-width: ${laptop}) {
         background: none;
         color: ${whiteColor};
-        font-size: 1.5rem;    
-}
-
+        font-size: 1.5rem; 
+} */
 `;
 
 export const MobileMenu = styled.nav`
+  /* overflow: hidden; */
+  /* background-color: #333; */
+  display: none;
+ 
+    /* flex-direction: column; */
+    /* align-items: center; */
+    position: absolute;
+    width: 100%;
+    z-index: 5;
     /* border: 1px solid green; */
-    display: flex;
-    flex-direction: column;
+    /* display: flex; */
+    /* flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    font-family: 'Montserrat' sans-serif;
-    left: 53rem;
-    top: 0;
-    height: 91.2vh;
-    animation: ${slideInRight} 1s ease-in-out forwards;
-    padding-top: 1.5rem;
+    font-family: 'Montserrat' sans-serif; */
+  
+  
+
     /* margin: 1rem 1.7rem; */
-    position: absolute;
-    background: ${whiteColor};
+    /* position: absolute;
+    background: ${whiteColor}; */
     /* top: 10rem; */
-    z-index: 4;
+     z-index: 4;
 
-    width: 50%;
-    .link {
-        text-decoration: none;
-        color: ${darkColor};
-        padding: 0 1rem .5rem;
+    /* width: 50%; */ 
+    margin: 0 auto;
 
-        /* border: 1px solid white; */
-    }
     .activeRoute {
     border-bottom: 1.5px solid ${accentColor};
  }
-    @media only screen and (min-width: ${smrtphn}) {
-        left: 17rem;
-        height: 56.2rem;
-
+    @media only screen and (max-width: ${smrtphn}) and (max-width: ${tablet}) {
+        /* left: 17rem;
+        height: 56.2rem; */
+        /* display: block; */
+        /* border: 1px solid white; */
+        display: flex;
+  /* padding: 1rem; */
+  /* width: 90%; */
+  justify-content: space-between;
     }
+    
 `;
 
 export const MobileLinks = styled.section`
-    margin-top: 5rem;
+    /* margin-top: 5rem;
     height: 60%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
-    /* border: 1px solid black; */
+    align-items: center; */
+    margin: 0;
+    color: ${darkColor};
+     position: absolute;
+     /* top: 38px; */
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     height: 58vh;
+     width: 100%;
+     justify-content: space-between;
+     background-color: ${whiteColor};
+     border: 1px solid ${darkColor};
+     animation: ${slideInRight} 1s ease-in-out forwards;
 
+/*      
+    @media only screen and (min-width: ${smrtphn}) {
+     color: ${darkColor};
+     position: absolute;
+     top: 38px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     height: 38vh;
+     width: 100%;
+     justify-content: space-between;
+     background-color: ${whiteColor};
+     border: 1px solid red;
+
+    } */
+    .link {
+        font-size: 1.3rem;
+        text-decoration: none;
+        color: ${darkColor};
+        padding: .5rem 1rem;
+
+        /* border: 1px solid white; */
+    }
+
+    .close {
+        display: none;
+    }
 `;
 
 export const CloseMenu = styled.button`
@@ -216,4 +309,10 @@ export const CloseMenu = styled.button`
     font-size: 1.5rem; 
     z-index: 5;
     /* border: 2px solid green; */
+`;
+
+export const MobileLogo = styled.img`
+    width: 30%;
+    padding-top: 1rem;
+    /* border: 1px solid red; */
 `;

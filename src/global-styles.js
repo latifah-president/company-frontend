@@ -9,7 +9,8 @@ const lightGrayColor = '#999';
 const overlayColor = '#6378cc80';
 
 //MEDIA QUERIES SIZES
-const smrtphn = '375px'; //iphone 6 size
+// min-width do something when the screen is greater than or equal to 375px
+const smrtphn = '980px'; //iphone 6 size
 const tablet = '1227px';
 const laptop = '1440px';
 
@@ -120,8 +121,11 @@ const Content = styled.article`
     flex-direction: column;
     align-items: center;
     margin-top: 5rem;
-    margin-bottom: 2rem;
+    margin-bottom:2rem;
     /* border: 1px solid black; */
+    @media only screen and (max-width: ${smrtphn}) {
+        margin-bottom: 1rem;
+    }
 `;
 
 const LightText = styled.p`
@@ -132,6 +136,7 @@ const LightText = styled.p`
     font-family: 'Roboto';
     width: 50%;
     font-weight: 300;
+    border: 1px solid orange;
     @media only screen and (min-width: ${smrtphn}) {
         width: 80%;
     }
@@ -212,7 +217,7 @@ export const CardContent = styled.section`
     line-height: 1.5rem;
     z-index: 1;
     width: 100%;
-    /* border: 1.5px solid green; */
+    border: 1.5px solid green;
 `;
 
 export const CardTitle = styled.h4`
@@ -245,6 +250,10 @@ export const SmallSubTitle = styled.h4`
     font-weight: 700;
     margin: 1.5rem 0 0 0;
     letter-spacing: .2rem;
+    @media only screen and (max-width: ${smrtphn})  {
+        text-align: center;
+        /* border: 1px solid red; */
+    }
 `;
 
 export const SmallCardDes = styled.h6`
@@ -395,12 +404,11 @@ grid-row-gap: 20px;
 width: 70%;
 margin: 0 auto;
 /* border: 2px solid teal; */
-color: red;
+/* color: red; */
 }
 
 @media only screen and (min-width: ${laptop}) {
  
-    display: flex;
   justify-content: space-between;
 /* border: 3px solid brown; */
 display: grid;
