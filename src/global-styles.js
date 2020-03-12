@@ -136,7 +136,7 @@ const LightText = styled.p`
     font-family: 'Roboto';
     width: 50%;
     font-weight: 300;
-    border: 1px solid orange;
+    /* border: 1px solid orange; */
     @media only screen and (min-width: ${smrtphn}) {
         width: 80%;
     }

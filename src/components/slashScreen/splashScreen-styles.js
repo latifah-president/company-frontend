@@ -114,7 +114,7 @@ export const TagLineContent = styled.h1`
     @media only screen and (max-width: ${tabletsm}) {
         font-size: 4.5rem;
         line-height: 10px;
-        border: 1px solid orange;
+        /* border: 1px solid orange; */
     }
    
     @media only screen and (max-width: ${smrtphn}) {

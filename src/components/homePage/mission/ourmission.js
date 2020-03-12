@@ -1,5 +1,5 @@
 import React from 'react';
-import {Wrapper, ContentArea, DarkTitle, LightText, } from './../../../Global_Styles/global-styles';
+import {Wrapper, ContentArea, DarkTitle, LightText, } from '../../../Global_Styles/global-styles';
 
 const OurMission = () => {
     return (

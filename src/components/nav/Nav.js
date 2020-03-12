@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { NavLink } from 'react-router-dom';
 // import MobileNav from './MobileNav';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -12,9 +12,12 @@ import {
     DropDown,
     ListItem,
 } from './nav-styles';
+import { DarkTitle } from '../../Global_Styles/global-styles';
+// import './../../App.css';
 
 const Nav = (props) => {
     const [openMenu, setOpenMenu] = useState(false);
+    const [moved, setMoved] = useState(false);
     //FOR MOBILE
  
 
@@ -23,16 +26,43 @@ const Nav = (props) => {
     console.log('toggling', openMenu)
   }
 
+  const [ scrolled, setScrolled ] = useState()
 
-//   const toggleMobileNav = () => {
-//       setopenNav(!openNav);
-//       // console.log('toggling', openMenu)
-//     }
+  useEffect(_ => {
+      const handleScroll = document.addEventListener('scroll', e => {
+          let scrolled = document.scrollingElement.scrollTop;
+          
+          if (scrolled >= 128) {
+              setMoved(true)
+          } else {
+              setMoved(false)
+          }
+      })
+
+      document.removeEventListener('scroll', handleScroll)
+  }, [])
+
+
+
     return (
-        <NavWrapper>
-                        {/* <Logo src={require('./../../assets/Cloud_5_logo_white.png')} alt='cloud 5 logo' /> */}
-
-                <NavLinks>
+      
+        <NavWrapper style={{display: moved ? 'none' : null}}>
+       <DarkTitle style={{ color: 'white'}}>Cloud5</DarkTitle>
+       <NavLinks>
+                <NavLink className='link' activeClassName='activeRoute' exact to='/'>
+                    Home
+                </NavLink>
+                    <NavLink className='link' activeClassName='activeRoute' to='/about'>
+                        About 
+                    </NavLink>
+                    <NavLink className='link' activeClassName='activeRoute' to='/contact'>
+                        Services
+                    </NavLink>
+                    <NavLink className='link' activeClassName='activeRoute' to='/contact'>
+                        Contact
+                    </NavLink>
+                    </NavLinks>
+                {/* <NavLinks>
                     <LinkContainer >
                         <NavLink className='link' activeClassName='activeRoute' exact to='/'>
                             Home
@@ -43,19 +73,8 @@ const Nav = (props) => {
                         <NavLink className='link' activeClassName='activeRoute' to='/contact'>
                             Contact Us
                         </NavLink>
-                        {/* <DropDownMenu class="dropdown">
-    <div class="dropbtn">
-        Services
-        <FontAwesomeIcon icon={faChevronDown} className='chevron' onClick={ () => {toggle()}}/>
+                      
 
-      <i class="fa fa-caret-down"></i>
-    </div>
-    <div class="dropdown-content">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
-    </div>
-  </DropDownMenu>  */}
                         <DropDownMenu aria-expanded='false' aria-haspopup="true" className={openMenu ? 'open' : ''} onClick={ () => {toggle()}}>
                             Services
                            
@@ -86,20 +105,9 @@ const Nav = (props) => {
                         {/* <NavLink className='link' activeClassName='activeRoute' to='/login'>
                             Command Center Login
                         </NavLink> */}
-                    </LinkContainer> 
+                    {/* </LinkContainer> 
 
-                    {/* {openNav ? 
-                    //MAKE CLOSE MENU FADE IN 
-                    <CloseMenu onClick={() => {toggleMobileNav()}}> <FontAwesomeIcon icon={faTimes}/></CloseMenu> : 
-                     <Menu onClick={() => {toggleMobileNav()}} role='menu' aria-expanded={openNav}  aria-controls='mobile nav'>
-                     <FontAwesomeIcon  icon={ faBars }/>
-                     
-                 </Menu>
-                    } */}
-                   
-                      {/* {openNav ? <MobileNav open={openNav} aria-label='mobile navigation' id='mobile nave'/> : null} */}
-                      {/* <MobileNav/> */}
-                </NavLinks>
+                </NavLinks> */} 
         </NavWrapper>
     )
 }

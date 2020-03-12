@@ -32,10 +32,17 @@ p {
   }
 }
 
+/* .changeNav {
+  border: 10px solid green;
+} */
 .colorpicker {
   color: #38468080;
   color: #ffffffa1;
   color: #ffffff81;
+  box-shadow: 0 16px 10px -12px rgba(38, 148, 232, 0.056), 0 4px 25px 0px  rgba(38, 148, 232, 0.12), 0 8px 10px -5px  rgba(38, 148, 232, 0.2);
+
+  box-shadow: 0 16px 10px -12px rgba(37, 232, 121, 0.056), 0 4px 25px 0px rgba(37, 232, 121, 0.12), 0 8px 10px -5px rgba(37, 232, 121, 0.2);
+
 }
 
 .svg {

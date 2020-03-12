@@ -27,31 +27,29 @@ const slideInRight = keyframes`
 
 export const NavWrapper = styled.header`
     display: flex;
-    /* flex-direction: column; */
-    /* align-items: center; */
-    position: absolute;
+    position: fixed;
+    justify-content: space-evenly;
     width: 100%;
-    z-index: 5;
+    margin: 0 auto;
+    z-index: 1;
     color: white;
+    margin-top: 1rem;
     /* border: 1px solid red; */
 
+
+ .changeNav {
+     display: none
+ }
+ 
  
 
     @media only screen and (max-width: ${smrtphn}) and (max-width: ${tablet}) {
      
-        display: none;
-        margin: 0 auto;
+    
 
     }
 
-/* @media only screen and (min-width: ${laptop}) {
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    width: 100%;
-    z-index: 5;
-    color: white;
-} */
+
 `;
 
 export const Logo = styled.img`
@@ -61,10 +59,9 @@ export const Logo = styled.img`
 
 export const NavLinks = styled.section`
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    /* justify-content: space-between; */
-    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    width: ${props => props.inner ? '40%' : '80%'};
     font-family: 'Montserrat' sans-serif;
     margin: 1rem 1.7rem;
     /* border: 1px solid orange; */
@@ -74,35 +71,28 @@ export const NavLinks = styled.section`
     .open {
         display: block;
     }
-   
-`;
-
-export const LinkContainer = styled.nav`
-    width: 60%; 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    /* border: 1px solid green; */
-    @media only screen and (max-width: ${smrtphn}){
-        display: none;
-        /* padding: 0; */
-}
-
+    /*new styles */
     .link {
         text-decoration: none;
-        color: white;
+        color: ${whiteColor};
         padding: 0 1rem .5rem;
-        /* border: 1px solid white; */
+       
     }
 
     .activeRoute {
     border-bottom: 1.5px solid ${accentColor};
  }
+`;
+
+export const LinkContainer = styled.nav`
+    @media only screen and (max-width: ${smrtphn}){
+        display: none;
+        /* padding: 0; */
+}
+
+  
 
 @media only screen and (max-width: ${tablet}) {
-    /* border: 1px solid red;
-    width:95%; */
     display: none;
 }
 `;
@@ -113,26 +103,7 @@ display: none;
   background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
- 
-  /* &:hover .dropdown-content {
-  display: block;
-} */
-    /* background: #ffffffa1;
-    list-style-type: none;
-    position: absolute;
-    top: 8rem;
-    right: 34rem;
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    width: 10%;
-    justify-content: space-around;
-    align-self: center;
-    border-radius: .5rem;
-    height: 100px;
-    box-shadow: 0 16px 10px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2); */
-  
+  z-index: 1; 
 `;
 
 export const ListItem = styled.li`
@@ -167,7 +138,6 @@ export const Menu = styled.button`
     background: none;
     font-size: 1.5rem;
     /* border: 1px solid red; */
-    /* display: none; */
     z-index: 6;
     border: none;
     .close {
@@ -189,77 +159,29 @@ export const Menu = styled.button`
         /* border: 1px solid orange; */
 
     }
-    /* @media only screen and (max-width: ${smrtphn}) { */
-     
-        /* background: none;
-        color: ${whiteColor};
-        font-size: 1.5rem;  */
-
-     
-/* } */
-
-/* @media only screen and (max-width: ${laptop}) {
-        background: none;
-        color: ${whiteColor};
-        font-size: 1.5rem; 
-} */
 `;
 
 export const MobileMenu = styled.nav`
-  /* overflow: hidden; */
-  /* background-color: #333; */
   display: none;
- 
-    /* flex-direction: column; */
-    /* align-items: center; */
     position: absolute;
     width: 100%;
     z-index: 5;
-    /* border: 1px solid green; */
-    /* display: flex; */
-    /* flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    font-family: 'Montserrat' sans-serif; */
-  
-  
-
-    /* margin: 1rem 1.7rem; */
-    /* position: absolute;
-    background: ${whiteColor}; */
-    /* top: 10rem; */
-     z-index: 4;
-
-    /* width: 50%; */ 
     margin: 0 auto;
 
     .activeRoute {
     border-bottom: 1.5px solid ${accentColor};
  }
     @media only screen and (max-width: ${smrtphn}) and (max-width: ${tablet}) {
-        /* left: 17rem;
-        height: 56.2rem; */
-        /* display: block; */
-        /* border: 1px solid white; */
         display: flex;
-  /* padding: 1rem; */
-  /* width: 90%; */
   justify-content: space-between;
     }
     
 `;
 
 export const MobileLinks = styled.section`
-    /* margin-top: 5rem;
-    height: 60%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center; */
     margin: 0;
     color: ${darkColor};
      position: absolute;
-     /* top: 38px; */
      display: flex;
      flex-direction: column;
      align-items: center;
@@ -269,22 +191,6 @@ export const MobileLinks = styled.section`
      background-color: ${whiteColor};
      border: 1px solid ${darkColor};
      animation: ${slideInRight} 1s ease-in-out forwards;
-
-/*      
-    @media only screen and (min-width: ${smrtphn}) {
-     color: ${darkColor};
-     position: absolute;
-     top: 38px;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     height: 38vh;
-     width: 100%;
-     justify-content: space-between;
-     background-color: ${whiteColor};
-     border: 1px solid red;
-
-    } */
     .link {
         font-size: 1.3rem;
         text-decoration: none;
@@ -303,7 +209,6 @@ export const CloseMenu = styled.button`
     color: pink;
     background: none;
     position: absolute;
-    /* top: 3.8rem; */
     right: 2rem;
     color: ${darkColor};
     font-size: 1.5rem; 
@@ -315,4 +220,27 @@ export const MobileLogo = styled.img`
     width: 30%;
     padding-top: 1rem;
     /* border: 1px solid red; */
+`;
+
+/*INNER NAV */
+
+export const InnerNavWrapper = styled.nav`
+    background-color: ${whiteColor};
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    /* box-shadow:  0px 4px 15px rgba(0, 0, 0, 0.07); */
+    box-shadow: 0 16px 10px -12px rgba(38, 148, 232, 0.056), 0 4px 25px 0px  rgba(38, 148, 232, 0.12), 0 8px 10px -5px  rgba(38, 148, 232, 0.2);
+
+    z-index: 1000;
+    /* box-shadow: 0 16px 10px -12px rgba(37, 232, 121, 0.056), 0 4px 25px 0px rgba(37, 232, 121, 0.12), 0 8px 10px -5px rgba(37, 232, 121, 0.2); */
+    .link {
+        text-decoration: none;
+        color:  ${darkColor};
+        padding: 0 1rem .5rem;
+    }
+
+  
 `;

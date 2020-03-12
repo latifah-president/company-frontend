@@ -10,11 +10,7 @@ const LandingPage = () => {
           <Tag>
             <TagLineContent>We Build</TagLineContent>
             <TagLineContent bottom id='bottom' ></TagLineContent>
-            {/* <h4 className='content_body'>
-
-                
-            </h4>
-            <a href='/contact' className='content_cta-btn'>Let's Get Started</a> */}
+           
 
         </Tag>
 
