@@ -1,7 +1,7 @@
 import React from 'react';
 import Aux from './../../HOC/Aux';
-import SocialMediaIcon from './Icons/SocialMedia';
-import SEO from './Icons/SEO';
+import SocialMediaIcon from './../../components/Icons/SocialMedia';
+import SEO from './../../components/Icons/SocialMedia';
 import {
     Header,
     HeaderImage,

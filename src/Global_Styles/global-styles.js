@@ -12,17 +12,16 @@ const paraFont = 'Robot'
 
 //NEW SITE
 
-const darkBlueColor = '#2594e8';
-const accentColor = '#25e87a';
+const darkBlueColor = '#002ACC';
+const accentColor = '#EDBD4C';
 const orangeColor = '#ff691e';
 
 //MEDIA QUERIES SIZES
 // min-width do something when the screen is greater than or equal to 375px
 //max-width do something when the screen is less than or equal to 375px
 const tablet = '1024px';
-const tabletsm = '750px'
-const smrtphn = '375px'; 
-
+const tabletsm = '675px'
+const smrtphn = '450px'; 
 const laptop = '1440px';
 
 const pulse = keyframes`
@@ -67,10 +66,45 @@ const spin = keyframes`
 }
 `;
 
+export const fly = keyframes`
+  0% {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+  
+  }
+
+  50% {
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: rotate3d(-20, -20, 0 -45deg);
+    transform: rotate3d(-20, -20, 0  -45deg);
+   
+  }
+  100%{
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: rotate3d(-500, -500, 0 -45deg);
+    transform: rotate3d(-50, -50, 0  -45deg);
+  }
+ /* 0% {
+      bottom: -600px;   */
+      /* -moz-transform:rotate(-1200deg);
+    -ms-transform:rotate(-120deg);
+    -o-transform:rotate(-120deg);
+    -webkit-transform:rotate(-120deg); */
+    /* transform-origin:left top; */
+    /* } */
+    /* 100% {
+      bottom: 100%;
+    } */
+`;
+
+
 export const Wrapper = styled.main`
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 2rem;
     /* border: 1px solid red; */
 `;
 
@@ -120,19 +154,17 @@ export const ContentArea = styled.section`
     justify-content: ${props => props.horizontal ? 'space-around' : null};
     margin-top: 5rem;
     margin-bottom: 2rem;
-    width: ${props => props.horizontal ? '80%' : null};
+    width: ${props => props.horizontal ? '80%' : '60%'};
     /* border: 1px solid green; */
-    @media only screen and (max-width: ${smrtphn}) {
-        width: 90%;
-        display: flex;
-        flex-direction: ${props => props.reverse ? 'column-reverse' : 'column'};
-        margin: ${props => props.about ? '2rem auto' : null};
-        /* border: 1px solid black; */
+    @media only screen and (max-width: ${tablet}) {
+        border: 3px solid green;
+        
+        /* flex-direction: column; */
     }
-
     svg {
-        width: 50%;
-        /* border: 1px solid red; */
+        /* width: 50%; */
+        margin: 0 auto;
+        border: 1px solid black;
     }
    
 `;
@@ -143,7 +175,6 @@ export const ThreeColumnGrid = styled.article`
     grid-column-gap: 20px;
     grid-row-gap: 0px;  
     width: 70%;
-    /* border: 1px solid purple; */
     @media only screen and (max-width: ${smrtphn}) {
         width: 90%;
         display: flex;
@@ -172,9 +203,9 @@ export const LightText = styled.p`
     font-size: 1.2rem;
     line-height: 1.75rem;
     margin-top: 1.8rem;
-    width: 50%;
-    @media only screen and (max-width: ${smrtphn}) {
-        width: 90%;
+    /* width: 50%; */
+    @media only screen and (max-width: ${tablet}) {
+        width: 100%;
         /* border: 1px solid green; */
     }
 `;
@@ -287,10 +318,11 @@ export const CardContent = styled.section`
     align-items: center;
     justify-content: center;
     line-height: 1.5rem;
-    z-index: 1;
-    width: 100%;
+    height: 300px;
+    /* z-index: 1; */
+    width: 200px;
     text-align: center;
-    /* border: 1.5px solid green; */
+    border: 1.5px solid green;
 `;
 
 export const SmallCardDes = styled.h6`
@@ -355,14 +387,6 @@ export const HomeWrapper = styled.section`
 export const Tag = styled.header`
    display: flex;
     flex-direction: column;
-    /* align-items: center;
-    justify-content: center; */
-   /* width: 100%; */
-    /* top: 50%;
-        left: 50%; 
-          transform: translate(-50%, -50%); */
-    /* animation: ${props => props.bottom ? 'spin 5s linear infinite' : null}; */
-
 #bottom {
 	animation: ${pulse} 7s forwards infinite;
 }
@@ -374,6 +398,14 @@ export const Tag = styled.header`
 border: 1px solid red;
 `;
 
+export const Graphic = styled.img`
+    width: 60%;
+    margin-left: 2rem;
+    /* position: absolute;
+  bottom: -600px; */
+  /* left:35%; */
+  /* animation: ${fly} 3s .5s ease-in; */
+`;
 export const TagLineContent = styled.h1`
    letter-spacing: .3rem;
     text-transform: uppercase;
@@ -381,6 +413,30 @@ export const TagLineContent = styled.h1`
     margin:0px;
     line-height:30px;
     font-size: 5rem;
+`;
+
+export const CardArea = styled.section`
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+    width: 100%;
+    /* flex-direction: column; */
+`;
+
+export const CardImage = styled.div`
+   border: 1px solid red;
+   width: 90%;
+   height: 150px;
+text-align: center;
+display: block;
+    margin: auto;
+.svg {
+   
+}
+
+  
 `;
 export {
     darkColor,

@@ -161,21 +161,10 @@ const ThreeByThreeSec = styled.section`
 `;
 
 const Card = styled.section`
-    /* display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%; */
     @media only screen and (min-width: ${laptop}) {
-        /* flex-direction: row; */
-        /* border: 1px solid orange; */
         display: grid;
 grid-template-columns: repeat(2, 1fr);
-/* justify-items: center; */
-/* grid-template-rows: repeat(5, 1fr); */
 grid-column-gap: 20px;
-/* grid-row-gap: 0px; */
-/* border: 1px solid pink; */
 width: 80%;
 
     }
@@ -357,16 +346,6 @@ export const CardDesLink = styled.a`
 `;
 
 export const ImageWithSubTitle = styled.section`
-    /* display: grid;
-grid-template-columns: repeat(3, 1fr);
-grid-template-rows: repeat(5, 1fr);
-grid-column-gap: 10px; 
- grid-row-gap: 0px; */
-/* display: grid;
-grid-template-columns: repeat(3, 1fr);
-grid-template-rows: repeat(2, 1fr);
-grid-column-gap:1 0px;
-grid-row-gap: 10px; */
 @media only screen and (min-width: ${smrtphn}) {
     /* display: grid;
 grid-template-columns: repeat(3, 1fr);
@@ -388,11 +367,6 @@ width: 100%;
 `;
 
 export const ThreeColumnGrid = styled.section`
-    /* grid-template-columns: repeat(2, 1fr); 
-grid-template-rows: repeat(5, 1fr);
-grid-column-gap: 20px;
-grid-row-gap: 0px;
-width: 50%; */
 
 
 @media only screen and (min-width: ${smrtphn}) {

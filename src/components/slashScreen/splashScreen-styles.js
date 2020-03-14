@@ -8,13 +8,13 @@ const pulse = keyframes`
   0% {
 	color: ${accentColor};
 	}
-	20% {
+	50% {
 		color: ${accentColor};
 	}
-	40% {
+	100% {
 		color: ${accentColor};
 	}
-	60% {
+	/* 60% {
 		color: ${accentColor};
 	}
 	80% {
@@ -22,21 +22,21 @@ const pulse = keyframes`
 	}
 	100% {
 		color: ${accentColor};
-	}
+	} */
 `;
 
 /*TODO: FIX ANIMATION TIMING BETWEEN DREAMS AND BUSINESSES */
 const spin = keyframes`
  0% { 
-  content: 'DREAMS'; 
+  content: 'DREAMERS'; 
 }
-30% {
-  content: 'BUSINESSES';
+50% {
+  content: 'BUILDERS';
 }
-40% {
-  content: 'BRANDS';
+100% {
+  content: 'LISTENERS';
 }
-60% {
+/* 60% {
   content: ' GROWTH';
 }
 80% {
@@ -44,7 +44,7 @@ const spin = keyframes`
 }
 100% {
   content: 'LONGEVITY';
-}
+} */
 `;
 
 
@@ -64,14 +64,10 @@ export const HomeWrapper = styled.section`
 export const Tag = styled.header`
    display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 80%;
     line-height: 1rem;
-   /* color: ${whiteColor}; */
-  
-
-
-/* border: 1px solid red; */
-#bottom {
+    border: 1px solid red;
+/* #bottom {
   -webkit-animation-name: ${pulse};
   -webkit-animation-duration: 7s;
   -webkit-animation-timing-function: infinite;
@@ -88,7 +84,7 @@ export const Tag = styled.header`
   -webkit-animation-fill-mode: forwards;
   animation:${spin} 7s forwards infinite;
    
-}
+} */
  
 @media only screen and (max-width: ${tablet}) {
         width: 90%;
@@ -105,21 +101,17 @@ export const TagLineContent = styled.h1`
    letter-spacing: .3rem;
     text-transform: uppercase;
     color: ${whiteColor};
-    margin:0px;
+    text-align: center;
     line-height:30px;
     font-size: 6.5rem;
-    margin-top: ${props => props.bottom ? '5rem' : null};
-    border-bottom: ${props => props.bottom ? null : `1rem solid ${orangeColor}`};
-    padding-bottom: ${props => props.bottom ? null : '3rem'};
-    @media only screen and (max-width: ${tabletsm}) {
-        font-size: 4.5rem;
-        line-height: 10px;
-        /* border: 1px solid orange; */
+    margin: 0 auto;
+    span {
+      color: ${accentColor};
     }
+  
    
     @media only screen and (max-width: ${smrtphn}) {
         font-size: 3rem;
-        margin-top: ${props => props.bottom ? '2rem' : null};
         align-self: center;
         /* border: 1px solid green; */
     }

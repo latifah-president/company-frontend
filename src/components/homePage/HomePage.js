@@ -10,7 +10,7 @@ import {MainContent, } from './homepage-styles';
 const HomePage = () => {
     return (
         <MainContent>
-            <InnerNav/>
+            {/* <InnerNav/> */}
              <Mission/>
             <Services/>
             <Different/>

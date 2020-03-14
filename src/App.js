@@ -1,7 +1,6 @@
 import React, { Component, } from 'react';
 import { Route, Switch, } from 'react-router-dom';
 import Nav from './components/nav/Nav';
-import MobileNav from './components/nav/MobileNav';
 import Footer from './components/Footer/Footer';
 import LandingPage from './components/landingPage/LandingPage';
 import AboutPage from './views/about/About';
@@ -27,7 +26,7 @@ class App extends Component  {
     return (
     <div className="App">
       <Nav/>
-      <MobileNav/>
+      {/* <MobileNav/> */}
       <Switch>
       <Route 
         exact path='/' 
