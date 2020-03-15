@@ -58,10 +58,10 @@ background: rgba(0, 0, 0, 0.5); /* Black see-through */
 `;
 export const DarkTitle = styled.h2`
     color: #3B4858;
-    font-size: 2.25rem;
+    font-size: 2rem;
     font-weight: 700;
-    letter-spacing: .3rem;
     line-height: 1.5rem;
+    font-family:  sans-serif;
     /* border: 1px solid teal; */
     @media only screen and (min-width: ${smrtphn}) {
         width: 100%;

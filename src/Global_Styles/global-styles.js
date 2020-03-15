@@ -103,14 +103,22 @@ export const fly = keyframes`
 
 export const Wrapper = styled.main`
     display: flex;
-    flex-direction: column;
+    flex-direction: ${props => props.column ? 'column' : null};
     align-items: center;
     margin-bottom: 2rem;
+    width: 90%;
     /* border: 1px solid red; */
 `;
 
 
-
+export const Container = styled.section`
+    display: flex;
+    flex-direction: ${props => props.column ? 'column' : null};
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem 0;
+    width: 90%;
+`;
 export const Header = styled.header`
     height: 45vh;
     min-height: 45vh;
@@ -186,30 +194,52 @@ export const ThreeColumnGrid = styled.article`
 
 export const DarkTitle = styled.h2`
     color: ${darkColor};
-    font-size: 2.25rem;
+    font-size: 3rem;
     font-weight: 700;
-    letter-spacing: .3rem;
-    line-height: 1.5rem;
+    line-height: 5rem;
     text-align: center;
-    /* border: 1px solid red; */
-    @media only screen and (max-width: ${smrtphn}) {
+    font-family: 'Lato', sans-serif;
+    @media only screen and (max-width: ${tabletmd}) {
         width: 100%;
-        line-height: 2.5rem;
-        /* border: 1px solid green; */
+        line-height: 3.5rem;
+        font-size: 2.3rem;
+    }
+    @media only screen and (max-width: ${tabletsm}) {
+        font-size: 3rem;
+        line-height: 4rem;
+    }
+    @media only screen and (max-width: ${smrtphn}) {
+        font-size: 1.178rem;
+        line-height: 2rem;
     }
 `;
 
 export const LightText = styled.p`
-    color: ${lightGrayColor};
+    color: ${darkColor};
     font-size: 1.2rem;
-    line-height: 1.75rem;
+    line-height: 1.95rem;
+    text-align: center;
     margin-top: 1.8rem;
-    /* width: 50%; */
+    width: ${props => props.small ? '50%' : null};
     @media only screen and (max-width: ${tablet}) {
-        width: 100%;
-        /* border: 1px solid green; */
+       width: 65%;
+    }
+    @media only screen and (max-width: ${tabletmd}) {
+       width: 95%;
     }
 `;
+
+export const ImageCard = styled.img`
+/* border: 1px solid red; */
+    width: 30%;
+    /* height: 15rem; */
+    /* border-radius: .2rem; */
+    box-shadow: 0 16px 10px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+    @media only screen and (max-width: ${tabletsm}) {
+       display: ${props => props.mobile ? 'none' : null}
+    }
+`;
+
 export const JobsContainer = styled.article`
     width: 50%;
     margin-bottom: 3rem;
@@ -268,12 +298,7 @@ export const JobDescArea = styled.section`
     }
 `; 
 
-export const ImageCard = styled.img`
-    width: 99.9%;
-    height: 15rem;
-    border-radius: .2rem;
-    box-shadow: 0 16px 10px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
-`;
+
 
 export const SmallImageCard = styled.img`
     width: ${props => props.about ? '50%' : '30%'};

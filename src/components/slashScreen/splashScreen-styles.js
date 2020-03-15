@@ -6,6 +6,7 @@ import {
   darkBlueColor, 
   whiteColor, 
   accentColor,
+  smrtphn,
 } from '../../Global_Styles/global-styles';
 
 export const HomeWrapper = styled.section`
@@ -50,5 +51,8 @@ export const TagLineContent = styled.h1`
     }
     @media only screen and (max-width: ${tabletsm}) {
       font-size: 4rem;
+    }
+    @media only screen and (max-width: ${smrtphn}) {
+      font-size: 3.5rem;
     }
 `;

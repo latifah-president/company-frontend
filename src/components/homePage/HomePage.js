@@ -9,8 +9,8 @@ import {MainContent, } from './homepage-styles';
 const HomePage = () => {
     return (
         <MainContent>
-             {/* <Mission/>
-            <Services/>
+             <Mission/>
+            {/* <Services/>
             <Different/>
             <FeaturedClients/>
             <SpecialProjects/> */}
