@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import { HomeWrapper, Tag, TagLineContent} from './splashScreen-styles';
 import './splashScreen.css'
+
 const LandingPage = () => {
     const [header, setHeader] = useState('Dreamers');
 
@@ -21,11 +22,11 @@ const LandingPage = () => {
     <HomeWrapper>
           <Tag>
             <TagLineContent>WE ARE <span>{header}</span></TagLineContent>
+            <TagLineContent mobile>WE ARE <br/> <br/> <br/> <span>{header}</span></TagLineContent>
         </Tag>
     </HomeWrapper>
     )
 }
-
 
 export default LandingPage;
 

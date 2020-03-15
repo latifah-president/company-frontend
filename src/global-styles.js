@@ -206,7 +206,7 @@ export const CardContent = styled.section`
     line-height: 1.5rem;
     z-index: 1;
     width: 100%;
-    border: 1.5px solid green;
+    /* border: 1.5px solid green; */
 `;
 
 export const CardTitle = styled.h4`
@@ -405,7 +405,7 @@ grid-template-columns: repeat(2, 1fr);
 grid-column-gap: 20px;
 grid-row-gap: 0px;  
 width: 90%;
-border: 1px solid green;
+/* border: 1px solid green; */
 } 
 `;
 

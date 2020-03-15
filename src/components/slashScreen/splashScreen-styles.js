@@ -1,54 +1,12 @@
-import styled, {keyframes} from 'styled-components';
-import { blackColor, } from '../../global-styles';
-import { tablet, tabletsm, smrtphn, darkBlueColor, whiteColor, accentColor, orangeColor} from '../../Global_Styles/global-styles';
-
-
-
-const pulse = keyframes`
-  0% {
-	color: ${accentColor};
-	}
-	50% {
-		color: ${accentColor};
-	}
-	100% {
-		color: ${accentColor};
-	}
-	/* 60% {
-		color: ${accentColor};
-	}
-	80% {
-		color: ${accentColor};
-	}
-	100% {
-		color: ${accentColor};
-	} */
-`;
-
-/*TODO: FIX ANIMATION TIMING BETWEEN DREAMS AND BUSINESSES */
-const spin = keyframes`
- 0% { 
-  content: 'DREAMERS'; 
-}
-50% {
-  content: 'BUILDERS';
-}
-100% {
-  content: 'LISTENERS';
-}
-/* 60% {
-  content: ' GROWTH';
-}
-80% {
-  content: 'PROFITS';
-}
-100% {
-  content: 'LONGEVITY';
-} */
-`;
-
-
-
+import styled from 'styled-components';
+import { 
+  tablet, 
+  tabletmd, 
+  tabletsm, 
+  darkBlueColor, 
+  whiteColor, 
+  accentColor,
+} from '../../Global_Styles/global-styles';
 
 export const HomeWrapper = styled.section`
   height: 100vh;
@@ -58,6 +16,7 @@ export const HomeWrapper = styled.section`
   justify-content: center;
   align-items: center;
     /* border: 1px solid red; */
+  
 
 `;
 
@@ -66,77 +25,30 @@ export const Tag = styled.header`
     flex-direction: column;
     width: 80%;
     line-height: 1rem;
-    border: 1px solid red;
-/* #bottom {
-  -webkit-animation-name: ${pulse};
-  -webkit-animation-duration: 7s;
-  -webkit-animation-timing-function: infinite;
-  -webkit-animation-fill-mode: forwards;
-  animation: ${pulse} 7s forwards infinite;
-  
-
-}
-    #bottom:after {
-  content: 'Dreams';
-  -webkit-animation-name: ${spin};
-  -webkit-animation-duration: 7s;
-  -webkit-animation-timing-function: infinite;
-  -webkit-animation-fill-mode: forwards;
-  animation:${spin} 7s forwards infinite;
-   
-} */
- 
-@media only screen and (max-width: ${tablet}) {
-        width: 90%;
-        /* border: 1px solid black; */
-    }
-    @media only screen and (max-width: ${smrtphn}) {
-        width: 90%;
-       
-        /* border: 1px solid green; */
+  @media only screen and (max-width: ${tablet}) {
+        width: 100%;
     }
 `;
 
 export const TagLineContent = styled.h1`
-   letter-spacing: .3rem;
+   letter-spacing: .2rem;
     text-transform: uppercase;
     color: ${whiteColor};
     text-align: center;
     line-height:30px;
-    font-size: 6.5rem;
-    margin: 0 auto;
+    font-size: 6rem;
+    display: ${props => props.mobile ? 'none' : null};
     span {
       color: ${accentColor};
     }
-  
-   
-    @media only screen and (max-width: ${smrtphn}) {
-        font-size: 3rem;
-        align-self: center;
-        /* border: 1px solid green; */
+    @media only screen and (max-width: ${tablet}) {
+        font-size: 5rem;
     }
-`;
-
-export const Overlay = styled.div`
-        &:before {
-        background: ${blackColor}
-      }
-      &:after,&:before {
-        position: absolute;
-        z-index: 1;
-        width: 100%;
-        height: 100%;
-        display: block;
-        left: 0;
-        top: 0;
-        /* border: 2px solid orange; */
-        }
-`;
-
-export const MobileHeader = styled.article`
-display: none;
-@media only screen and (min-width: ${smrtphn}) {
-      display: block;
+    @media only screen and (max-width: ${tabletmd}) {
+        font-size: 5.5rem;
+        display: ${props => props.mobile ? 'block' : 'none'};
     }
-
+    @media only screen and (max-width: ${tabletsm}) {
+      font-size: 4rem;
+    }
 `;

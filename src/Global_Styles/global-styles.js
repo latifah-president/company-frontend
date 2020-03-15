@@ -19,7 +19,8 @@ const orangeColor = '#ff691e';
 //MEDIA QUERIES SIZES
 // min-width do something when the screen is greater than or equal to 375px
 //max-width do something when the screen is less than or equal to 375px
-const tablet = '1024px';
+const tablet = '1175px';
+const tabletmd = '975px';
 const tabletsm = '675px'
 const smrtphn = '450px'; 
 const laptop = '1440px';
@@ -447,6 +448,7 @@ export {
     laptop,
     tablet,
     tabletsm,
+    tabletmd,
     accentColor,
     grayGradient,
     overlayColor,

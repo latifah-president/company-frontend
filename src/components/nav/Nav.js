@@ -13,23 +13,27 @@ import {
 const Nav = () => {
     const [openMenu, setOpenMenu] = useState(false);
     const toggle = () => {
+       
     setOpenMenu(!openMenu);
-    console.log('toggling', openMenu)
+    console.log('nav open?', openMenu)
   }
     return (
         <InnerNavWrapper id='nav'>
+            <NavLink className='link' activeClassName='activeRoute' to='/'>
             <TempLogo>cloud5</TempLogo>
+            </NavLink>
+            
             <NavLinks>
-                <NavLink className='link' activeClassName='activeRoute' to='/about'>
+                <NavLink  className='link' activeClassName='activeRoute' to='/about'>
                     About 
                 </NavLink>
-                <NavLink className='link' activeClassName='activeRoute' to='/contact'>
+                <NavLink  className='link' activeClassName='activeRoute' to='/services'>
                     Services
                 </NavLink>
                 <NavLink className='link' activeClassName='activeRoute' exact to='/specialprojects'>
                     Special Projects
                 </NavLink>
-                <NavLink className='link' activeClassName='activeRoute' to='/contact'>
+                <NavLink  className='link' activeClassName='activeRoute' to='/contact'>
                     Contact
                 </NavLink>
             </NavLinks>
@@ -45,16 +49,16 @@ const Nav = () => {
               <FontAwesomeIcon icon={faBars} className='icon'/>
           </Menu>
           <MobileLinks className={openMenu ? 'open' : 'close'}>
-                <NavLink className='mobilelink' activeClassName='activeRoute' to='/about'>
+                <NavLink onClick={ () => {toggle()}} className='mobilelink' activeClassName='activeRoute' to='/about'>
                     About 
                 </NavLink>
-                <NavLink className='mobilelink' activeClassName='activeRoute' to='/contact'>
+                <NavLink onClick={ () => {toggle()}} className='mobilelink' activeClassName='activeRoute' to='/development'>
                     Services
                 </NavLink>
-                <NavLink className='mobilelink' activeClassName='activeRoute' exact to='/specialprojects'>
+                <NavLink onClick={ () => {toggle()}} className='mobilelink' activeClassName='activeRoute' exact to='/specialprojects'>
                     Special Projects
                 </NavLink>
-                <NavLink className='mobilelink' activeClassName='activeRoute' to='/contact'>
+                <NavLink onClick={ () => {toggle()}} className='mobilelink' activeClassName='activeRoute' to='/contact'>
                     Contact
                 </NavLink>
             </MobileLinks>
