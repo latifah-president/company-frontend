@@ -9,7 +9,9 @@ h4 {
 }
 
 
-
+.color {
+  color: '#F5A623'
+}
 p {
   font-family: 'Montserrat';
 }
@@ -161,4 +163,36 @@ p {
           bottom: 100%;
         }
   
+}
+
+svg {
+  display: block;
+  text-align: center;
+}
+
+@media only screen and (max-width: 1175px) {
+  .svg {
+   /* padding: 2rem; */
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 975px) {
+  .svg {
+   /* padding: 2rem; */
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .svg {
+    width: 18%;
+    /* border: 1px solid green; */
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .svg {
+    width: 30%;
+  }
 }

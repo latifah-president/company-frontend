@@ -22,7 +22,6 @@ const Careers = (props) => {
     return (
         <Aux>
             <Header>
-                <LightOverlay></LightOverlay>
                 <HeaderImage src={require('./../../assets/Views/careers_page.jpg')} alt='Careers'/>
             </Header>
             <Wrapper>

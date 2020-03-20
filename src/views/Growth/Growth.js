@@ -16,7 +16,6 @@ const Growth = () => {
     return (
         <Aux>
              <Header >
-                <LightOverlay></LightOverlay>
                         <HeaderImage src={require('./../../assets/Views/Growth/PlantGrowthSmall.jpg')} alt='About Us'/>
             </Header>
             <DarkTitle>

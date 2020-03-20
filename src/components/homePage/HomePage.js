@@ -1,19 +1,21 @@
 import React from 'react';
-import FeaturedClients from './FeaturedClients/FeaturedClients.js';
-import SpecialProjects from './SpecialProjects/SpecialProjects.js';
+import Marketing from './Marketing/Marketing';
+import Contact from './Contact/Contact';
 import Mission from './Mission/OurMission';
-import Different from './Different/Different';
+import Development from './Development/Development';
 import Services from './Services/Services';
+import OurClients from './OurClients/OurClients';
 import {MainContent, } from './homepage-styles';
 
 const HomePage = () => {
     return (
         <MainContent>
              <Mission/>
-            {/* <Services/>
-            <Different/>
-            <FeaturedClients/>
-            <SpecialProjects/> */}
+            <Services/>
+            <OurClients/>
+            <Development/>
+            <Marketing/>
+            <Contact/>
         </MainContent>
     )
 };

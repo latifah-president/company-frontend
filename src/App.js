@@ -7,7 +7,7 @@ import AboutPage from './views/about/About';
 import PortfolioPage from './views/Portfolio/Portfolio';
 import SpecialProjectsPage from './views/Special Projects/SpecialProjects';
 import MarketingPage from './views/Marketing/Marketing';
-import DevelopmentPage from './views/Development/Development';
+import ServicesPage  from './views/Services/Services';
 import ContactPage from './views/Contact/Contact';
 import CareersPage from './views/Careers/Careers';
 import AgentPage from './views/Careers/Sections/Agent/Agent';
@@ -69,9 +69,9 @@ class App extends Component  {
           }
         />
          <Route 
-          exact path='/development' 
+          exact path='/services' 
           render={props => 
-          <DevelopmentPage 
+          <ServicesPage 
             {...props}
             />
           }

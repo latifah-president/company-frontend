@@ -8,7 +8,6 @@ const SpecialProjects = () => {
     return (
         <Aux>
             <Header >
-                <LightOverlay></LightOverlay>
                     <HeaderImage src={require('./../../assets/about_image.jpg')} alt='image'/>
             </Header>
                 <Wrapper>

@@ -52,7 +52,7 @@ const Nav = () => {
                 <NavLink onClick={ () => {toggle()}} className='mobilelink' activeClassName='activeRoute' to='/about'>
                     About 
                 </NavLink>
-                <NavLink onClick={ () => {toggle()}} className='mobilelink' activeClassName='activeRoute' to='/development'>
+                <NavLink onClick={ () => {toggle()}} className='mobilelink' activeClassName='activeRoute' to='/services'>
                     Services
                 </NavLink>
                 <NavLink onClick={ () => {toggle()}} className='mobilelink' activeClassName='activeRoute' exact to='/specialprojects'>

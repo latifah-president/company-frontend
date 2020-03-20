@@ -1,17 +1,26 @@
 import styled from 'styled-components';
-import {lightGrayColor, darkColor, whiteColor, } from '../../views/Careers/careers-styles';
+import {lightGrayColor, darkColor, whiteColor, darkBlueColor, tabletsm, smrtphn, tabletmd} from '../../Global_Styles/global-styles';
 
 export const FormWrapper = styled.section`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 5rem;
-    margin-bottom: 2rem;
-    width: 100%;
-    /* border: 1px solid red; */
+    width: 70%;
+    /* border: 1px solid blue; */
+
+    @media only screen and (max-width: ${tabletmd}) {
+        width: 100%;
+    }
+    @media only screen and (max-width: ${tabletsm}) {
+        width: 100%;
+    }
+  
+    @media only screen and (max-width: ${smrtphn}) {
+        width: 100%;
+    }
 `;
 export const Form = styled.form`
-    width: 80%;
+    width: 100%;
     /* border: 1px solid teal; */
 `;
 
@@ -20,7 +29,7 @@ export const FormGroup = styled.section`
     flex-direction: column;
     margin: 0 auto;
     height: 10vh;
-    width: 70%;
+    /* width: 70%; */
     /* border: 1px solid black; */
 
     @media only screen and (max-width: 600px) {
@@ -39,15 +48,21 @@ export const FormLabel = styled.label`
 `;
 
 export const FormInput = styled.input`
-  width: 70%;
-  height: 50px; 
-  padding: 1rem 0;
-  font-size: .7rem;
-    @media only screen and (max-width: 600px) {
-        width: 100%;
-        height: 500px;
-        /* border: 1px solid blue; */
-    }
+  width: 60%;
+  border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  font-size: .8rem;
+  border-left: 1px solid ${lightGrayColor};
+    border-right: none;
+    border-top: .9px solid ${lightGrayColor};
+    border-bottom: .9px solid ${lightGrayColor};
+  /* border: 1px solid green; */
+padding: .8rem;
+height: 1rem;
+  /* height: 50px;  */
+
+
+   
     
 `;
 
@@ -57,23 +72,22 @@ export const SubmitButton = styled.button`
     cursor: pointer;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 1.5rem;
     line-height: 1.875rem;
     letter-spacing: 0.125rem;
     text-transform: uppercase;
-    border: 1px solid white;
-    border-image: initial;
+    align-self: flex-end;
+    border-radius: .5rem;
+    /* border: 1px solid white; */
+    /* border-image: initial; */
     text-decoration: none;
-    background-color: #B0001E;
-    background-repeat:no-repeat;
-    overflow: hidden;
-    height: 50px;
-    /* width: 12%; */
-    align-self: flex-start;
-    margin-left: 15.6rem;
-    @media only screen and (max-width: 600px) {
-        display: block;
-        margin: 2rem auto 0 auto;
+    background-color: ${darkBlueColor};
+    /* background-repeat:no-repeat; */
+    /* overflow: hidden; */
+    height: 60px;
+    width: 30%;
+    @media only screen and (max-width: ${tabletsm}) {
+       width: 100%;
     }
 `;
 
@@ -85,46 +99,67 @@ export const TextArea = styled.input`
 
 export const ContactFormGroup = styled.section`
     display: flex;
-    justify-content: ${props => props.idea ? null : 'space-around'};
-    margin: 0 auto;
-    height: 10vh;
-    width: ${props => props.idea ? '63%' : '70%'};
-    /* border: 1px solid black; */
+   justify-content: space-around;
+   text-align: ${props => props.radio ? 'center' : null};
+   justify-content: ${props => props.radio ? 'center': null};
+   flex-direction: ${props => props.radio ? 'column' : null};
+   width: ${props => props.radio ? '20%' : null};
 
-    @media only screen and (max-width: 600px) {
-        width: 100%;
-       
-    }
+    margin: 0 auto;
+ 
     
 `;
 
-export const GroupOne = styled.section`
+export const RadioContainer = styled.div`
     display: flex;
-    flex-direction: column;
-    width: ${props => props.idea ? '100%' : '40%'};
-    height: ${props => props.idea ? '100px' : null};
-    /* border: 1px solid orange; */
+    margin: 2rem 0;
+ 
 `;
+// export const GroupOne = styled.section`
+//     display: flex;
+//     flex-direction: column;
+//     width: 100%;
+//     height: ${props => props.idea ? '100px' : null};
+//     border: 1px solid orange;
+// `;
 
 export const ContactFormInput = styled.input`
   padding: 1rem 0;
   font-size: .7rem;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-bottom: 1px solid ${lightGrayColor};
-    @media only screen and (max-width: 600px) {
-        width: 100%;
-        height: 500px;
-        /* border: 1px solid blue; */
-    }
+  background: none;
+  width: ${props => props.large ? '90%' : '40%'};
+  border-radius: .5rem;
+  padding: 1rem;
+  margin-top: ${props => props.margin ? '1rem' : null};
+  font-size: 1rem;
+  border: .5px solid #374785;
+  
     
 `;
 
+export const RadioInput = styled.input`
+    margin: 0 auto;
+    border: 10px solid red;
+    
+    .chkbox {
+        border-radius: 50%;
+    }
+  
+`;
 
+export const RadioLabel = styled.label`
+  height: 40px;
+  margin-top: 1rem;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+    /* border: 1px solid black; */
+`;
 export const ContactFormLabel = styled.label`
     color: ${darkColor};
     font-size: 1rem;
+
     /* border: 1px solid pink; */
     @media only screen and (max-width: 600px) {
        margin-top: ${props => props.message ? '2rem' : null};
@@ -133,15 +168,17 @@ export const ContactFormLabel = styled.label`
 `;
 
 export const ContactTextArea = styled.textarea`
-  width: 100%;
+  width: 97%;
   padding: 12px 20px;
+  height: 150px;
   box-sizing: border-box;
+  background: none;
   resize: none;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-bottom: 1px solid ${lightGrayColor};
-  margin-bottom: 2rem;
+  border-radius: .5rem;
+  padding: 1rem;
+  border: .5px solid #374785;
+  margin-top: 2rem;
+  font-size: 1rem;
 `;
 
 export const SelectBudget = styled.select`

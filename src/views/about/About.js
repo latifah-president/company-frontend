@@ -25,7 +25,6 @@ const About = () => {
     return (
         <Aux>
             <Header >
-                <LightOverlay></LightOverlay>
                         <HeaderImage src={require('./../../assets/about_image.jpg')} alt='About Us'/>
             </Header>
                 <Wrapper>

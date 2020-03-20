@@ -1,43 +1,73 @@
-import React from 'react';
+import React, {useState, } from 'react';
 import {
     FormWrapper,
     Form,
     ContactFormInput,
-    SubmitButton,
     ContactFormGroup,
-    GroupOne,
-    ContactFormLabel,
+    RadioInput,
+    RadioLabel,
     ContactTextArea,
+    RadioContainer
 } from './form-styles';
+import {Container, SubmitButton} from './../../Global_Styles/global-styles';
 
 const ContactUs = () => {
+    const [isChecked, setChecked] = useState(false);
+    const [options, setOptions] = useState([]);
+
+    const handleChange = (event) => {
+        // event.preventDefault()
+        // let chkbox = []
+        // chkbox.push(...event.target.value)
+        console.log(event.target.value)
+        setOptions(...options, event.target.value)
+    }
+
+
+
+    console.log(options, 'options')
   return (
       <FormWrapper >
           <Form form="contactform">
           <ContactFormGroup>
-              <GroupOne>
-              <ContactFormLabel for='name'>Name</ContactFormLabel>
-                  <ContactFormInput name='name' id='name'  type='text'/>
-              </GroupOne>
-              <GroupOne>
-              <ContactFormLabel for='email'>Email</ContactFormLabel>
-                  <ContactFormInput name='email' id='email'  type='email'/>
-              </GroupOne>
-                 
-              </ContactFormGroup>
-              <ContactFormGroup idea>
-                  <GroupOne idea>
-                    <ContactFormLabel message for='idea'>Pitch Us Your Idea</ContactFormLabel>
-                    <ContactTextArea name='idea' id='idea'  type='text' />
-                  </GroupOne>
-                  
-              </ContactFormGroup>
-            
-              
-              {/* <Select/> */}
+                <ContactFormInput name='firstName' id='name'  type='text' placeholder='First Name'/>
+                <ContactFormInput name='lastName' id='name'  type='text' placeholder='Last Name'/>
+        </ContactFormGroup>
 
+        <ContactFormGroup>
+            <ContactFormInput large margin name='email' id='name'  type='text' placeholder='Email'/>
+        </ContactFormGroup>
+
+        <ContactFormGroup>
+            <ContactTextArea name='idea' id='idea'  type='text' placeholder='Your Message' />
+        </ContactFormGroup>
+
+        <RadioContainer radio around style={{width: '100%'}}>
+
+            <ContactFormGroup radio >
+                <RadioInput className='chkbox' type='checkbox' id='development' name='service_needed' value='Development' onClick={handleChange}/>
+                <RadioLabel htmlFor='development'>Development</RadioLabel>
+            </ContactFormGroup>
+
+            <ContactFormGroup radio>
+                <RadioInput type='checkbox' id='marketing' name='service_needed' value='Marketing' onClick={handleChange}/>
+                <RadioLabel htmlFor='marketing'>Marketing</RadioLabel>
+            </ContactFormGroup>
+
+            <ContactFormGroup radio>
+                <RadioInput type='checkbox' id='specialProjects' name='service_needed' value='Special Projects'  onClick={handleChange}/>
+                <RadioLabel htmlFor='specialProjects'>Special Projects</RadioLabel>
+            </ContactFormGroup>
+
+            <ContactFormGroup radio>
+                <RadioInput type='checkbox' id='bussinessDev' name='service_needed' value='Bussiness Development'  onClick={handleChange}/>
+                <RadioLabel htmlFor='bussinessDev'>Bussiness <br/>Development</RadioLabel>
+            </ContactFormGroup>
+
+        </RadioContainer>
+  
           </Form>
-          <ContactFormGroup>
+          {/* <ContactFormGroup>
                   <GroupOne>
                   <ContactFormLabel for="budget">Choose Your Budget:</ContactFormLabel>
             < select  id="budget" name="budgetlist" form="contactform">
@@ -50,7 +80,7 @@ const ContactUs = () => {
             <option value="$10,000 +">$10,000 +</option>
             </ select >
                   </GroupOne>
-              </ContactFormGroup>
+              </ContactFormGroup> */}
               <SubmitButton type='submit'>Submit</SubmitButton>
 
       </FormWrapper>

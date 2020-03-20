@@ -301,6 +301,10 @@ export const WhiteTitle = styled.h2`
     font-weight: 700;
     letter-spacing: .3rem;
     line-height: 1.5rem;
+
+    @media only screen and (max-width: ${smrtphn}) {
+        font-size: 1.5rem;
+    }
 `;
 
 export const SmallWhiteTitle = styled.h2`

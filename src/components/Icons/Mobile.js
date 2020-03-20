@@ -3,7 +3,7 @@ import './../../App.css';
 
 const Mobile = () => {
     return (
-        <svg classname='svg' style={{border: '10px solid red', display: 'block', margin: 'auto', width: '50%'}}  id="Layer_5" enable-background="new 0 0 64 64" height="512" viewBox="0 0 64 64" width="512" xmlns="http://www.w3.org/2000/svg">
+        <svg className='svg' height='172' width='172' id="Layer_5" enableBackground="new 0 0 64 64"  viewBox="0 0 64 64"  xmlns="http://www.w3.org/2000/svg">
 	<circle cx="11" cy="48" fill="#ff826e" r="2"/>
 <circle cx="57" cy="16" fill="#ff826e" r="2"/>
 <path d="m17 35.19v6.81h-6l-.68-2.71c-.1-.04-.2-.07-.3-.12l-2.38 1.44-4.25-4.25 1.44-2.38c-.05-.1-.08-.2-.12-.3l-2.71-.68v-6l2.71-.68c.04-.1.07-.2.12-.3l-1.44-2.38 4.25-4.25 2.38 1.44c.1-.05.2-.08.3-.12l.68-2.71h6v6.81c-.88-.51-1.91-.81-3-.81-3.31 0-6 2.69-6 6s2.69 6 6 6c1.09 0 2.12-.3 3-.81z" fill="#ffc729"/>

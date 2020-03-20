@@ -17,10 +17,9 @@ const Contact = () => {
     return (
         <Aux>
             <Header >
-                <LightOverlay></LightOverlay>
                         <HeaderImage src={require('./../../assets/Views/development/development.jpg')} alt='image'/>
             </Header>
-                <Wrapper>
+                <Wrapper column>
                     <ContentArea>
                         <DarkTitle>Get In Touch</DarkTitle>
                         <LightText >	

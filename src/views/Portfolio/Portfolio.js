@@ -22,7 +22,6 @@ const Portfolio = () => {
     return (
         <Aux>
             <Header>
-                <LightOverlay></LightOverlay>
                 <HeaderImage src={require('./../../assets/portfolio_header.jpg')} alt='Our Portfolio'/>
             </Header>
                 <Wrapper>
