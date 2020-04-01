@@ -22,7 +22,7 @@ const Marketing= () => {
 
             <Container cards mobile>
                 <CardContent white outline shadow shrink>
-                    <SmallImageCard src={require('./../../../assets/Marketing/cosmetic surgeon.jpg')} alt='luxxly co image'/>
+                    <SmallImageCard src={require('./../../../assets/Marketing/cosmetic surgeon.jpg')} alt='seo cosmetic surgeon'/>
                    
                         <SmallCardDes>
                             SEO for Plastic Surgeon Office
@@ -30,15 +30,15 @@ const Marketing= () => {
                 
                     <Button href='/plastic-surgean-casestudy'><SmallWhiteTitle>VIEW RESULTS</SmallWhiteTitle></Button>
                 </CardContent>
-                <CardContent white outline shadow shrink>
+                {/* <CardContent white outline shadow shrink>
                     <SmallImageCard src={require('./../../../assets/Marketing/Gaming-wandermonkey-feature-image.jpg')} alt='luxxly co image'/>
                         <SmallCardDes>
                             Marketing for Audio Game
                         </SmallCardDes>
-                </CardContent>
+                </CardContent> */}
 
                 <CardContent white outline shadow shrink>
-                    <SmallImageCard src={require('./../../../assets/Marketing/eye clinic.jpg')} alt='luxxly co image'/>
+                    <SmallImageCard src={require('./../../../assets/Marketing/eye clinic.jpg')} alt='eye clinic seo'/>
                         <SmallCardDes>
                             SEO for Eye Doctor's Office
                         </SmallCardDes>
@@ -47,12 +47,12 @@ const Marketing= () => {
                 </CardContent>
 
                 <CardContent white outline shadow shrink>
-                    <SmallImageCard src={require('./../../../assets/Marketing/luxxlyinfluencer_marketing.jpg')} alt='luxxly co image'/>
+                    <SmallImageCard src={require('./../../../assets/Marketing/funkmeyers_brand.png')} alt='social media management for funkmeyers'/>
                         <SmallCardDes>
-                            Infulencer Campaign for Luxxly Co.
+                        Social Media Management Funkmeyers Rec Room following
                         </SmallCardDes>
-
                 </CardContent>
+
                 {/* <CardContent white outline shadow margin style={{zIndex: 100}}>
                     <SmallImageCard src={require('./../../../assets/Marketing/cosmetic surgeon.jpg')} alt='luxxly co image'/>
                         <SmallCardDes>

@@ -547,8 +547,8 @@ export const AddressContainer = styled.article`
 `;
 
 export const SmallImageCard = styled.img`
-    width: 90%;
-    margin-top: 1rem;
+    width: 100%;
+    /* margin-top: 1rem; */
    
 
     @media only screen and (max-width: ${tabletsm}) {

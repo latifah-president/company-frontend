@@ -58,7 +58,7 @@ const Services = () => {
                     <BusinessDevIcon/>
 
                     <NavLink to='/services' className='link' >
-                      Bussiness Development
+                    Business Development
                     </NavLink>
                     </CardContent>
                     </Container>

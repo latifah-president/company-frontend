@@ -61,7 +61,7 @@ const ContactUs = () => {
 
             <ContactFormGroup radio>
                 <RadioInput type='checkbox' id='bussinessDev' name='service_needed' value='Bussiness Development'  onClick={handleChange}/>
-                <RadioLabel htmlFor='bussinessDev'>Bussiness </RadioLabel>
+                <RadioLabel htmlFor='bussinessDev'>Business</RadioLabel>
             </ContactFormGroup>
 
         </RadioContainer>

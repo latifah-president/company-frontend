@@ -32,7 +32,7 @@ const Development = () => {
                 </CardContent>
 
                 <CardContent white outline shrink>
-                    <SmallImageCard  src={require('./../../../assets/Development/fullscalemedia_dev.jpg')} alt='luxxly co image'/>
+                    <SmallImageCard  src={require('./../../../assets/Development/fullscalemedia_dev.jpg')} alt='fulls cale media'/>
                     <div style={{lineHeight: '.1px'}}>
                         <SmallCardDes>
                             Full Scale Media
@@ -44,7 +44,7 @@ const Development = () => {
                 </CardContent>
 
                 <CardContent white outline shrink>
-                    <SmallImageCard src={require('./../../../assets/Development/piccadlygroup_dev.jpg')} alt='luxxly co image'/>
+                    <SmallImageCard src={require('./../../../assets/Development/piccadlygroup_dev.jpg')} alt='piccadly group'/>
                     <div style={{lineHeight: '.1px'}}>
                         <SmallCardDes>
                             Piccadilly Group

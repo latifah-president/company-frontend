@@ -24,7 +24,7 @@ const SpecialProjects = () => {
 
                             <SmallCardDes>
 
-                                support@cloud5hub.io</SmallCardDes>
+                                contact@cloud5hub.io</SmallCardDes>
                         </a>
                         <address className='contact'>
                         <FontAwesomeIcon className='icon' icon={faMapMarkerAlt}/>
@@ -35,12 +35,12 @@ const SpecialProjects = () => {
                                 Austin, TX 78701
                             </SmallCardDes>
                         </address>
-                            <a a href='tel:5125885554' className='contact'> 
+                            <a a href='tel:8554774825' className='contact'> 
                             <FontAwesomeIcon className='icon' icon={faPhone}/>
 
                             <SmallCardDes >
 
-                                (512) 588-5554
+                                (855) 477-4825
                             </SmallCardDes></a>
                     </AddressContainer>
                     <ContactForm/>

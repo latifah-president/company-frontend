@@ -30,7 +30,7 @@ const Footer = () => {
                 <FooterCard center column  >
                     <a href='mailto:support@cloud5hub.io'>
                         <SmallCardDes >
-                            contact@cloud5hub.io
+                           contact@cloud5hub.io
                         </SmallCardDes>
                     </a>
                     <address>

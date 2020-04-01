@@ -175,7 +175,7 @@ export const ContactFormLabel = styled.label`
 `;
 
 export const ContactTextArea = styled.textarea`
-  width: 100%;
+  width: 95%;
   padding: 12px 20px;
   height: 150px;
   box-sizing: border-box;
