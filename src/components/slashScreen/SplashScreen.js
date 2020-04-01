@@ -6,7 +6,7 @@ const LandingPage = () => {
     const [header, setHeader] = useState('Dreamers');
 
     useEffect(() => {
-      const headers = [ 'visionaries', 'implementers', 'builders', 'dreamers']
+      const headers = [ 'visionaries', 'builders', 'dreamers']
       let i = 0;
       setInterval(function() {
         setHeader(headers[i])

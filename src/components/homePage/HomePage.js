@@ -8,10 +8,10 @@ import {MainContent, } from './homepage-styles';
 const HomePage = () => {
     return (
         <MainContent>
-             <Mission/>
-            <Services/>
+           <Mission/> 
+           <Services/> 
             {/* <Element> */}
-                <OurClients />
+                <OurClients /> 
             {/* </Element> */}
             
             {/* <Element name='development'>

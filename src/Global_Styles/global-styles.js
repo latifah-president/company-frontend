@@ -134,10 +134,7 @@ export const Wrapper = styled.section`
     }
 }
 /* @media only screen and (max-width: ${smrtphn}) {
-    .box {
-        top: 5450px;
-        transform: rotate(70deg);
-    }
+    border: 1px solid red;
 } */
 `;
 
@@ -150,7 +147,8 @@ export const Container = styled.article`
     justify-content: ${props => props.around ? 'space-around': 'space-between'};
     margin: ${props => props.margin ? '2rem 0 4rem 0' : '2rem 0'};
     width: ${props => props.small ? '60%' : '90%'};
-                                                                                                             /* border: 1px solid red; */
+    
+    /* border: 1px solid red; */
       .link {
         text-decoration: none;
         color: ${darkColor};
@@ -165,7 +163,11 @@ export const Container = styled.article`
         /* border: 1px solid orange; */
     }
     @media only screen and (max-width: ${tablet}) {
-        width: ${props => props.small || props.icon ? '100%' : null};
+        width: ${props => props.small || props.icon ? '70%' : null};
+        flex-wrap: wrap;
+        /* border: ${props => props.icon ? '1px solid red' : null}; */
+        /* width ${props => props.icon ? '70%' : null}; */
+
         /* justify-content: ${props => props.icon ? 'center' : null}; */
     }
 
@@ -173,6 +175,7 @@ export const Container = styled.article`
         width: 95%;
         flex-direction: ${props => props.contact ? 'column' : null};
         justify-content: ${props => props.icon ? 'center' : null};
+        flex-wrap: wrap;
         .small {
             width: 20%
         }
@@ -215,7 +218,11 @@ export const Container = styled.article`
         align-items: ${props => props.brands ? 'center' : null};
         grid-row-gap: ${props => props.brands ? '5px' : null};
         display: ${props => props.radio ? 'flex' : null};
-        
+        /* border: ${props => props.icon ? '1px solid red' : null}; */
+        /* width ${props => props.icon ? '70%' : null}; */
+
+        /* width: 80%; */
+        /* border: 1px solid red; */
     }
  
 `;
@@ -228,21 +235,30 @@ export const DarkTitle = styled.h2`
     font-family: Arial, Helvetica, sans-serif;
     text-align: ${props => props.left ? 'left' : 'center'};
     width: ${props => props.small ? '80%' : '100%'};
+    padding-left: ${props => props.pad ? '11rem': null};
+    /* border: 1px solid red; */
     @media only screen and (max-width: ${tablet}) {
         text-align: ${props => props.left ? 'center' : null};
+        padding-left: 0;
     }
        @media only screen and (max-width: ${tabletmd}) {
         width: 100%;
         line-height: 3.5rem;
         font-size: 2.3rem;
+        padding-left: 0;
+       
     }
     @media only screen and (max-width: ${tabletsm}) {
         font-size: 3rem;
         line-height: 4rem;
+        padding-left: 0;
     }
     @media only screen and (max-width: ${smrtphn}) {
-        font-size: 1.178rem;
+        font-size: 1.578rem;
         line-height: 2rem;
+        width: 70%;
+        /* border: 1px solid red; */
+
     }
 `;
 
@@ -253,8 +269,8 @@ export const LightText = styled.p`
     text-align: ${props => props.left ? 'left' : 'center'};
     width: ${props => props.small ? '55%' : '99%'};
     @media only screen and (max-width: ${tablet}) {
-       width: 100%;
-       text-align: ${props => props.left ? 'center' : null};
+       width: 75%;
+       text-align: ${props => props.left ? 'center' : 'justify'};
     }
     @media only screen and (max-width: ${tabletmd}) {
        width: 95%;
@@ -279,17 +295,26 @@ export const SmallCardDes = styled.h4`
 export const ImageCard = styled.img`
 /* border: 1px solid red; */
     width: ${props => props.small ? '26%' : '30%'};
-    box-shadow: 0 16px 10px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
-    @media only screen and (max-width: ${tabletsm}) {
+    box-shadow: 0 16px 10px -12px rgba(0, 0, 0, 0.56), 
+    0 4px 25px 0px rgba(0, 0, 0, 0.12), 
+    0 8px 10px -5px rgba(0, 0, 0, 0.2);
+    &:hover {
+        transform: ${props => props.brand ? 'scale(1.2)' : null};
+    }
+    @media only screen and (max-width: ${tablet}) {
        display: ${props => props.mobile ? 'none' : null};
-       width: ${props => props.brand ? '40%' : null};
+       width: ${props => props.brand ? '85%' : null};
+    }
+    @media only screen and (max-width: ${tabletmd}) {
+       display: ${props => props.mobile ? 'none' : null};
+       width: ${props => props.brand ? '85%' : null};
     }
     @media only screen and (max-width: ${tabletsm}) {
-       width: ${props => props.brand ? '65%' : null};
+       width: ${props => props.brand ? '85%' : null};
     }
     @media only screen and (max-width: ${smrtphn}) {
        display: ${props => props.mobile ? 'none' : null};
-       width: ${props => props.brand ? '90%' : null};
+       width: ${props => props.brand ? '100%' : null};
     }
 `;
 
@@ -309,7 +334,10 @@ export const CardContent = styled.article`
     z-index: 900;
  
     @media only screen and (max-width: ${tablet}) {
-        width: ${props => props.icon ? '100%' : '30%'};
+        width: ${props => props.icon ? '40%' : '30%'};
+        margin-bottom: 2rem;
+        /* border: ${props => props.icon ? `1px solid red` : null}; */
+
     }
 
     
@@ -318,7 +346,9 @@ export const CardContent = styled.article`
         width: ${props => props.icon ? '10%' : '80%'};
         margin-top: ${props => props.margin ? '0' : null};
         margin-bottom: 3rem;
-        /* height: ${props => props.icon ? '50px' : '500px'}; */
+        height: ${props => props.shrink ? '350px' : '500px'};
+
+        /* height: ${props => props.shrink ? '650px' : null}; */
         /* border: ${props => props.icon ? '1px solid blue' : null}; */
 
     }
@@ -327,12 +357,29 @@ export const CardContent = styled.article`
         width: 90%;
         margin-bottom: 1.5rem;
         justify-content: flex-start;
-        height: ${props => props.shrink ? '50px' : '500px'};
-        /* border: ${props => props.shrink ? '1px solid white' : null}; */
+        height: ${props => props.shrink ? '400px' : null};
+        width: ${props => props.icon ? '40%' : '90%'};
+
+        /* border: ${props => props.icon ? '1px solid red' : null}; */
 
         .shrink {
             height: 50px;
-            border: 1px solid blue;
+            /* border: 1px solid blue; */
+        }
+
+    }
+    @media only screen and (max-width: ${smrtphnsm}) {
+        width: 90%;
+        margin-bottom: 1.5rem;
+        justify-content: flex-start;
+        height: ${props => props.shrink ? '370px' : null};
+        width: ${props => props.icon ? '40%' : '90%'};
+
+        /* border: ${props => props.icon ? '1px solid red' : null}; */
+
+        .shrink {
+            height: 50px;
+            /* border: 1px solid blue; */
         }
 
     }
@@ -502,8 +549,12 @@ export const AddressContainer = styled.article`
 export const SmallImageCard = styled.img`
     width: 90%;
     margin-top: 1rem;
-    border-radius: .2rem;
+   
 
+    @media only screen and (max-width: ${tabletsm}) {
+        width: 100%;
+       margin-top: 0;
+    }
     @media only screen and (max-width: ${smrtphn}) {
         width: 100%;
         margin-top: 0;

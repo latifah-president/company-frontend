@@ -10,6 +10,8 @@ export const LandingPageWrapper = styled.section`
     /* height: 100vh; */
     /* display: flex; */
     flex-direction: column;
+    overflow: hidden;
+    
     /* border: 1px solid red; */
 `;
 export const Overlay = styled.div`

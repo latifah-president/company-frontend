@@ -13,13 +13,13 @@ import {
 const Development = () => {
     return (
          <Wrapper column style={{ marginTop: '2rem'}}>
-            <DarkTitle left smallFont style={{ paddingLeft: '2rem'}}>WEB &amp; MOBILE DEVELOPMENT</DarkTitle>
+            <DarkTitle left smallFont pad>WEB &amp; MOBILE DEVELOPMENT</DarkTitle>
             {/* <LightText  >
                We take pride in building websites that look good and perform even better. 
                 We turn your ideas and vision into reality. 
              </LightText> */}
             <Container>
-                <CardContent white outline >
+                <CardContent white outline shrink>
                     <SmallImageCard src={require('./../../../assets/Development/luxxlyco_dev.jpg')} alt='luxxly co image'/>
                     <div style={{lineHeight: '.1px'}}>
                         <SmallCardDes>
@@ -31,7 +31,7 @@ const Development = () => {
                     </div>
                 </CardContent>
 
-                <CardContent white outline >
+                <CardContent white outline shrink>
                     <SmallImageCard  src={require('./../../../assets/Development/fullscalemedia_dev.jpg')} alt='luxxly co image'/>
                     <div style={{lineHeight: '.1px'}}>
                         <SmallCardDes>
@@ -43,7 +43,7 @@ const Development = () => {
                     </div>
                 </CardContent>
 
-                <CardContent white outline >
+                <CardContent white outline shrink>
                     <SmallImageCard src={require('./../../../assets/Development/piccadlygroup_dev.jpg')} alt='luxxly co image'/>
                     <div style={{lineHeight: '.1px'}}>
                         <SmallCardDes>

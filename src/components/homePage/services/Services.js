@@ -22,7 +22,7 @@ const Services = () => {
     return (
         <Wrapper column blue>
                 <header>
-                     <DarkTitle>Our Services</DarkTitle>
+                     <DarkTitle style={{width: '100%'}}>Our Services</DarkTitle>
                 </header>
                  <LightText small>
                       We’re a one stop shop for all your creation needs.  
@@ -30,8 +30,8 @@ const Services = () => {
                       We cater our services to your needs because you’re a big deal and know it. 
                       Click below and explore what we can do for you.
                 </LightText>
-                <Container icon >
-                  <CardContent icon className='grow'>
+                <Container icon>
+                  <CardContent icon shrink>
                   {/* <ScrollAnimation animateIn='slideInUp'> */}
                   <WebIcon/>
                       <NavLink to='/services' className='link' >
@@ -40,21 +40,21 @@ const Services = () => {
                   {/* </ScrollAnimation> */}
                   </CardContent>
 
-                    <CardContent icon className='grow'>
+                    <CardContent icon shrink>
                         <MobileIcon/>
                         <NavLink to='/services' className='link' >
                           App <br/> Development
                       </NavLink>
                     </CardContent>
                  
-                 <CardContent icon className='grow'>
+                 <CardContent icon shrink>
                     <MarketingIcon/>
                     <NavLink to='/services' className='link' >
                       Digital <br/> Marketing
                     </NavLink>
                  </CardContent>
                     
-                    <CardContent icon className='grow'>
+                    <CardContent icon shrink>
                     <BusinessDevIcon/>
 
                     <NavLink to='/services' className='link' >

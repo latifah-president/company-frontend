@@ -29,9 +29,9 @@ const ContactUs = () => {
   return (
       <FormWrapper >
           <Form form="contactform">
-          <ContactFormGroup>
+          <ContactFormGroup column>
                 <ContactFormInput name='firstName' id='name'  type='text' placeholder='First Name'/>
-                <ContactFormInput name='lastName' id='name'  type='text' placeholder='Last Name'/>
+                <ContactFormInput margin name='lastName' id='name'  type='text' placeholder='Last Name'/>
         </ContactFormGroup>
 
         <ContactFormGroup>

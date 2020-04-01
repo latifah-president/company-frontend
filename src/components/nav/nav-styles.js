@@ -39,6 +39,8 @@ export const InnerNavWrapper = styled.nav`
     box-shadow: 0 16px 10px -12px rgba(38, 148, 232, 0.056), 0 4px 25px 0px  rgba(38, 148, 232, 0.12), 0 8px 10px -5px  rgba(38, 148, 232, 0.2);
     width: 100%;
     z-index: 1000;
+    /* border: 1px solid red; */
+
     .link {
         text-decoration: none;
         color:  ${darkColor};
@@ -51,14 +53,18 @@ export const InnerNavWrapper = styled.nav`
    .close {
        display: none;
    }
+   /* @media only screen and (max-width: ${smrtphn})  {
+        width: 80%;
+    } */
 `;
 
 export const TempLogo = styled.h2`
     color: ${darkColor};
     margin-left: 2rem;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 300;
+    /* border: 1px solid black; */
 `;
 
 export const NavLinks = styled.section`

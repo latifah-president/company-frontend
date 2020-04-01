@@ -3,7 +3,8 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import Development from './../Development/Development';
 import Marketing from './../Marketing/Marketing';
 import {Wrapper, Container, ImageCard, LightText, DarkTitle, } from '../../../Global_Styles/global-styles';
-import {BrandsContainer} from  './our-clients-style'
+import {BrandsContainer, ClientsTitle} from  './our-clients-style';
+
 const OurClients = () => {
     return (
             <Wrapper column style={{position: 'relative', marginBottom: '2rem'}}>
@@ -15,10 +16,10 @@ const OurClients = () => {
                 </LightText>
                 <Development/>
                 <Marketing/>
-                <DarkTitle  small smallFont style={{ marginTop: '6rem', width: '40%', lineHeight: '2.5rem'}}>
+                <ClientsTitle >
                     OUR WORK SPEAKS FOR ITSELF, 
                 CHECK OUT WHO ELSE WORKED WITH US
-                </DarkTitle>
+                </ClientsTitle>
 
                 <BrandsContainer large  small brands>
                     <ImageCard brand src={require('./../../../assets/Brands/precision_brand.png')} atl='precision painting plus'/>

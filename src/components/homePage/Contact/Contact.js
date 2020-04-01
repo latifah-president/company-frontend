@@ -17,7 +17,7 @@ const SpecialProjects = () => {
                 <SmallCardDes small style={{margin: '2rem 0 0 0'}}>Get In Touch</SmallCardDes>
                 <DarkTitle style={{width: '100%', margin: '0'}}>WE WANT TO MEET YOU</DarkTitle>
             </header>
-                <Container contact  icon around top style={{padding: '0', width: '70%'}}>
+                <Container contact   around top style={{padding: '0', width: '80%'}}>
                     <AddressContainer>
                         <a a href="mailto:support@cloud5hub.io.com" className='contact'>
                         <FontAwesomeIcon className='icon' icon={faEnvelope} />

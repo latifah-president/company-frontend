@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {lightGrayColor, darkColor, whiteColor, darkBlueColor, tabletsm, smrtphn, tabletmd} from '../../Global_Styles/global-styles';
+import {lightGrayColor, darkColor, whiteColor, darkBlueColor, tabletsm, smrtphn, smrtphnsm, tabletmd} from '../../Global_Styles/global-styles';
 
 export const FormWrapper = styled.section`
     display: flex;
@@ -107,6 +107,10 @@ export const ContactFormGroup = styled.section`
 
     margin: 0 auto;
  
+    @media only screen and (max-width: ${smrtphn}) {
+        flex-direction: ${props => props.column ? 'column' : null};
+       
+    }
     
 `;
 
@@ -133,7 +137,10 @@ export const ContactFormInput = styled.input`
   margin-top: ${props => props.margin ? '1rem' : null};
   font-size: 1rem;
   border: .5px solid #374785;
-  
+  @media only screen and (max-width: ${smrtphn}) {
+        width: ${props => props.name ? '90%' : null};
+       
+    }
     
 `;
 
@@ -168,7 +175,7 @@ export const ContactFormLabel = styled.label`
 `;
 
 export const ContactTextArea = styled.textarea`
-  width: 97%;
+  width: 100%;
   padding: 12px 20px;
   height: 150px;
   box-sizing: border-box;

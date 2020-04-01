@@ -14,14 +14,14 @@ import {
 const Marketing= () => {
     return (
         <Wrapper column  style={{zIndex: '2', marginTop: '4rem'}}>
-            <DarkTitle left smallFont style={{ paddingLeft: '2rem'}}>DIGITAL MARKETING</DarkTitle>
+            <DarkTitle left smallFont pad>DIGITAL MARKETING</DarkTitle>
             {/* <LightText left style={{width: '82%'}}>
                 Our job is to ensure the highest quality product, and a seamless 
                 design that will showcase your company brand the way it deserves to be showcased.
             </LightText> */}
 
             <Container cards mobile>
-                <CardContent white outline shadow>
+                <CardContent white outline shadow shrink>
                     <SmallImageCard src={require('./../../../assets/Marketing/cosmetic surgeon.jpg')} alt='luxxly co image'/>
                    
                         <SmallCardDes>
@@ -30,14 +30,14 @@ const Marketing= () => {
                 
                     <Button href='/plastic-surgean-casestudy'><SmallWhiteTitle>VIEW RESULTS</SmallWhiteTitle></Button>
                 </CardContent>
-                <CardContent white outline shadow>
-                    <SmallImageCard style={{width: '90%'}} src={require('./../../../assets/Marketing/Gaming-wandermonkey-feature-image.jpg')} alt='luxxly co image'/>
+                <CardContent white outline shadow shrink>
+                    <SmallImageCard src={require('./../../../assets/Marketing/Gaming-wandermonkey-feature-image.jpg')} alt='luxxly co image'/>
                         <SmallCardDes>
                             Marketing for Audio Game
                         </SmallCardDes>
                 </CardContent>
 
-                <CardContent white outline shadow>
+                <CardContent white outline shadow shrink>
                     <SmallImageCard src={require('./../../../assets/Marketing/eye clinic.jpg')} alt='luxxly co image'/>
                         <SmallCardDes>
                             SEO for Eye Doctor's Office
@@ -46,7 +46,7 @@ const Marketing= () => {
 
                 </CardContent>
 
-                <CardContent white outline shadow margin>
+                <CardContent white outline shadow shrink>
                     <SmallImageCard src={require('./../../../assets/Marketing/luxxlyinfluencer_marketing.jpg')} alt='luxxly co image'/>
                         <SmallCardDes>
                             Infulencer Campaign for Luxxly Co.
