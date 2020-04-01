@@ -30,94 +30,51 @@ const Services = () => {
                       We cater our services to your needs because you’re a big deal and know it. 
                       Click below and explore what we can do for you.
                 </LightText>
-             <Container icon >
-
-                <NavLink to='/services' className='link' >
-                  <CardContent icon  className='grow'>
-                  <ScrollAnimation animateIn='slideInUp' style={{height: '0 !important'}}>
-                          <WebIcon />
-                      <LightText>
-                        Web Development
-                      </LightText>
-                      </ScrollAnimation>
+                <Container icon >
+                  <CardContent icon className='grow'>
+                  {/* <ScrollAnimation animateIn='slideInUp'> */}
+                  <WebIcon/>
+                      <NavLink to='/services' className='link' >
+                          Web <br/> Development
+                    </NavLink>
+                  {/* </ScrollAnimation> */}
                   </CardContent>
-                </NavLink>
 
-                <NavLink to='/services' className='link'>
-                  <CardContent  icon >
-                      <ScrollAnimation animateIn='slideInUp'>
-                      <SpecialProjectsIcon/>
-                      <LightText>
-                          Special Projects
-                      </LightText>
-                      </ScrollAnimation>
-                    
-                  </CardContent>
-                </NavLink>
-
-                <NavLink to='/services' className='link'>
-                  <CardContent icon >
-                    <ScrollAnimation animateIn='slideInUp'>
+                    <CardContent icon className='grow'>
                         <MobileIcon/>
-                        <LightText>
-                            Mobile Development
-                        </LightText>
-                    </ScrollAnimation>
-                  </CardContent>
-                </NavLink>
+                        <NavLink to='/services' className='link' >
+                          App <br/> Development
+                      </NavLink>
+                    </CardContent>
+                 
+                 <CardContent icon className='grow'>
+                    <MarketingIcon/>
+                    <NavLink to='/services' className='link' >
+                      Digital <br/> Marketing
+                    </NavLink>
+                 </CardContent>
+                    
+                    <CardContent icon className='grow'>
+                    <BusinessDevIcon/>
 
-                <NavLink to='/services' className='link'>
-                  <CardContent icon >
-                    <ScrollAnimation animateIn='slideInUp' >
-                        <MarketingIcon/>
-                        <LightText>
-                          Marketing
-                        </LightText>
-                    </ScrollAnimation>
-                  </CardContent>
-                </NavLink>
+                    <NavLink to='/services' className='link' >
+                      Bussiness Development
+                    </NavLink>
+                    </CardContent>
+                   
+                   {/* <CardContent icon className='grow'>
+                   <SpecialProjectsIcon/>
 
-                <NavLink  to='/services' className='link small'>
-                  <CardContent icon >
-                    <ScrollAnimation animateIn='slideInUp'>
-                        <BusinessDevIcon/>
-                        <LightText>
-                          Business Development
-                        </LightText>
-                    </ScrollAnimation>
-                  </CardContent>
-                </NavLink>
-
-             </Container>
-        {/* <Slider {...settings}>
-          <div>
-            <h3>1</h3>
-          </div>
-          <div>
-            <h3>2</h3>
-          </div>
-          <div>
-            <h3>3</h3>
-          </div>
-          <div>
-            <h3>4</h3>
-          </div>
-          <div>
-            <h3>5</h3>
-          </div>
-          <div>
-            <h3>6</h3>
-          </div>
-          <div>
-            <h3>7</h3>
-          </div>
-          <div>
-            <h3>8</h3>
-          </div>
-          <div>
-            <h3>9</h3>
-          </div>
-        </Slider> */}
+                   <NavLink to='/services' className='link' >
+                     Special Projects
+                 </NavLink>
+                   </CardContent> */}
+                   
+                    
+                        
+                       
+                    </Container>
+            
       </Wrapper>        
     )
 };

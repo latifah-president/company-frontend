@@ -14,6 +14,7 @@ const OurMission = () => {
                          spy={true} 
                          smooth={true} 
                          duration={500}
+                         offset={-55}
                          className='link'
                     >
                         Development
@@ -25,6 +26,7 @@ const OurMission = () => {
                          spy={true} 
                          smooth={true} 
                          duration={500}
+                         offset={-55}
                          className='link'
                     >
                              Marketing
@@ -32,10 +34,11 @@ const OurMission = () => {
                 </li>
                 <li>
                     <Link
-                         to='design' 
+                         to='marketing' 
                          spy={true} 
                          smooth={true} 
                          duration={500}
+                         offset={-55}
                          className='link'
                     >
                         Design
@@ -43,7 +46,8 @@ const OurMission = () => {
                 </li>
                 <li>
                     <Link
-                         to='businessdevelopment' 
+                         to='marketing' 
+                         offset={-55}
                          spy={true} 
                          smooth={true} 
                          duration={500}
@@ -53,11 +57,10 @@ const OurMission = () => {
                     </Link>
                 </li>
             </ServiceLink>
-            <DarkTitle>We're A Full Service Digital Agency <br/> That Builds Dreams</DarkTitle>
+            <DarkTitle>We're a Full-Service Digital Agency</DarkTitle>
             <LightText small>
-                Cloud5 has been successful because of our affordability, creative freethinkers, 
-                youthful excitement and the drive to overachieve 
-                while beating the deadline! <a href='/about' style={{color: '#76A5AF'}}>Learn more</a>
+            Whether you're looking to set up your web presence, or a marketing strategy to bring your business to the next level, 
+            here at Cloud5 we help you get everything done in one place. <a href='/about' style={{color: '#76A5AF'}}>Learn more</a>
             </LightText>
             <Container>
                 <ImageCard mobile src={require('./../../../assets/Mission/nesa-by-makers-IgUR1iX0mqM-unsplash.jpg')} alt='co-workers'/>

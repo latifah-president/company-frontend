@@ -8,11 +8,12 @@ import {
   accentColor,
   smrtphn,
 } from '../../Global_Styles/global-styles';
-
+import {ripples} from './../../assets/ripples.png'                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
 export const HomeWrapper = styled.section`
   height: 100vh;
   display: flex;
   flex-direction: column;
+  /* background-image: url(require(${ripples})); */
   background-color: ${darkBlueColor};
   justify-content: center;
   align-items: center;

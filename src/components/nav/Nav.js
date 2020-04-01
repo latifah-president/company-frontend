@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import { NavLink, withRouter } from 'react-router-dom';
+import { Link, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { 
@@ -20,7 +21,7 @@ const Nav = () => {
     return (
         <InnerNavWrapper id='nav'>
             <NavLink className='link' activeClassName='activeRoute' to='/'>
-            <TempLogo>cloud5</TempLogo>
+            <TempLogo>CLOUD5</TempLogo>
             </NavLink>
             
             <NavLinks>
@@ -30,8 +31,18 @@ const Nav = () => {
                 <NavLink  className='link' activeClassName='activeRoute' to='/services'>
                     Services
                 </NavLink>
+                {/* <Link 
+                         to='our-clients' 
+                         spy={true} 
+                         smooth={true} 
+                         duration={500}
+                         offset={-55}
+                         className='link'
+                    >
+                             Portfolio
+                    </Link> */}
                 <NavLink className='link' activeClassName='activeRoute' exact to='/specialprojects'>
-                    Special Projects
+                    Our Brands 
                 </NavLink>
                 <NavLink  className='link' activeClassName='activeRoute' to='/contact'>
                     Contact

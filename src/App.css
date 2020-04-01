@@ -4,9 +4,6 @@
   /* color: white; */
 }
 
-h4 {
-  color: white;
-}
 
 
 .color {
@@ -165,20 +162,24 @@ p {
   
 }
 
-svg {
+.svg {
   display: block;
   text-align: center;
+  margin: 0;
+  width: 90%;
 }
 
-@media only screen and (max-width: 1175px) {
+@media only screen and (max-width: 1024px) {
   .svg {
-   /* padding: 2rem; */
-    width: 75%;
+  /* border: 1px solid green; */
+    width: 60%;
+    margin: 0;
   }
 }
 
 @media only screen and (max-width: 975px) {
   .svg {
+   
    /* padding: 2rem; */
     width: 75%;
   }
@@ -186,13 +187,14 @@ svg {
 
 @media only screen and (max-width: 768px) {
   .svg {
-    width: 18%;
+    width: 98%;
+    margin: 0;
     /* border: 1px solid green; */
   }
 }
 
 @media only screen and (max-width: 414px) {
   .svg {
-    width: 30%;
+    width: 70%;
   }
 }

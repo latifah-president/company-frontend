@@ -56,6 +56,9 @@ export const InnerNavWrapper = styled.nav`
 export const TempLogo = styled.h2`
     color: ${darkColor};
     margin-left: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3rem;
+    font-weight: 300;
 `;
 
 export const NavLinks = styled.section`
@@ -68,6 +71,9 @@ export const NavLinks = styled.section`
     border-bottom: 1.5px solid ${accentColor};
  }
 
+.link {
+    cursor: pointer;
+}
     @media only screen and (max-width: ${tablet}) {
         width: 60%;
     }
@@ -103,6 +109,9 @@ export const Menu = styled.button`
 export const MobileLinks = styled.section`
    display: none;
    
+   @media only screen and (max-width: ${tablet}) {
+        display: none;
+    }
     @media only screen and (max-width:  ${smrtphn} ){
         display: flex;
         flex-direction: column;
@@ -126,9 +135,7 @@ export const MobileLinks = styled.section`
         height: 240px;
         justify-content: space-around;
     }
-    @media only screen and (max-width: ${tablet}) {
-        display: none;
-    }
+  
     .mobilelink {
         font-size: 1.3rem;
         text-decoration: none;

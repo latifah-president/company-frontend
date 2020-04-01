@@ -5,26 +5,23 @@ import SpecialProjectsIcon from './../../components/Icons/SpecialProjects';
 import MarketingIcon from './../../components/Icons/Marketing';
 import BusinessDevIcon from './../../components/Icons/BussinessDev';
 import Aux from './../../HOC/Aux';
-// import Advantages from './../../components/homePage/Advantages/Advantages';
 import {
     Wrapper,
     Container,
-    ContentArea, 
- Header,
+    Header,
     DarkTitle, 
     WhiteTitle,
     LightText,
     HeaderImage,
-   SmallImageCard,
-   ColoredHeader,
-   SmallWhiteText,
-   HeaderText,
-   HeaderTextMobile,
-   PillButton,
+    ColoredHeader,
+    HeaderText,
+    HeaderTextMobile,
+    PillButton,
+    CardContent,
 } from './../../Global_Styles/global-styles';
-import {ServicesLinks, ServicesTitle, ServiceContainer, ServiceContent, Image} from './services-style';
+import {ServicesLinks, ServiceContainer, ServiceContent, Image, ServicesText} from './services-style';
 
-const Development = () => {
+const Services = () => {
 
     return (
         <Aux>
@@ -63,21 +60,36 @@ const Development = () => {
                        <li>Keyword Ranking <span>.</span></li>
                     </ServicesLinks>
                     <Container icon style={{background: '#FBE6C3', width: '100%', padding: '3rem'}}>
-                        <WebIcon/>
-                        <MobileIcon/>
-                        <MarketingIcon/>
+                        <CardContent icon shrink className='grow shrink' >
+                            <WebIcon/>
+                        </CardContent>
+                        <CardContent icon shrink className='grow'>
+                            <MobileIcon/>
+                        </CardContent>
+                        <CardContent icon shrink className='grow'> 
                         <BusinessDevIcon/>
-                        <SpecialProjectsIcon/>
+                        </CardContent>  
+
+                        <CardContent icon shrink  className='grow'>
+                            <MarketingIcon/>
+                        </CardContent> 
+
+                        <CardContent icon shrink className='grow'>
+                            <SpecialProjectsIcon/>
+
+                        </CardContent>                                                                                         
+                       
+                       
                     </Container>
 
                     <ServiceContainer reverse>
 
                         <ServiceContent>
                             <DarkTitle left>WEB DEVELOPMENT</DarkTitle>
-                            <LightText left small>
+                            <ServicesText left>
                                 We will build a custom user friendly website for your business/brand. We work with you to create engaging content for your site, 
                                 and all of our designs are custom to help you stand out from the competition. Connect with us today and we can provide you with a custom quote.
-                            </LightText>
+                            </ServicesText>
                             <PillButton href='/contact'>Let's Chat</PillButton>
                         </ServiceContent>
                         <ServiceContent image>
@@ -92,10 +104,10 @@ const Development = () => {
                         </ServiceContent>
                             <ServiceContent >
                             <DarkTitle left>APP DEVELOPMENT</DarkTitle>
-                            <LightText left small>
+                            <ServicesText left >
                                 Our app development team has created countless high performance mobile applications on both IOS and Android We pride ourselves on delivering products quickly and on time. 
                                 Let’s talk more about your amazing App idea.
-                            </LightText>
+                            </ServicesText>
                             <PillButton  href='/contact'>Get in Touch</PillButton>
                         </ServiceContent>
                     </ServiceContainer>
@@ -103,11 +115,11 @@ const Development = () => {
                      <ServiceContainer reverse >
                             <ServiceContent>
                             <DarkTitle left>MARKETING</DarkTitle>
-                            <LightText left small>
+                            <ServicesText left >
                             The beginning of your marketing journey to grow your company doesn’t have to cost thousands 
                             of dollars and a team of experts to help you. Social media campaigns, ads, 
-                            SEO & keyword ranking, we do it all. Let’s grow your business together.
-                            </LightText>
+                            SEO &amp; keyword ranking, we do it all. Let’s grow your business together.
+                            </ServicesText>
                             <PillButton href='/contact'>Let's Grow</PillButton>
                         </ServiceContent>
                         <ServiceContent image>
@@ -115,21 +127,21 @@ const Development = () => {
                         </ServiceContent>
                     </ServiceContainer>
 
-                    <ServiceContainer>
+                    <ServiceContainer none>
                         <ServiceContent image>
                             <Image src={require('./../../assets/Views/Services/workflow.jpg')} alt='bussiness development image' />
                         </ServiceContent>
-                            <ServiceContent >
+                            <ServiceContent  >
                             <DarkTitle left>BUSSINESS DEVELOPMENT</DarkTitle>
-                            <LightText left small>
+                            <ServicesText left >
                                 If you have a dream of owning and running your own business. 
                                 Here at Cloud5 we can make that dream a reality. Let us help you build your business from the ground up. The sooner you reach out, 
                                 the quicker you can turn that dream into a reality.
-                            </LightText>
+                            </ServicesText>
                             <PillButton href='/contact'>Let's Do It</PillButton>
                         </ServiceContent>
                     </ServiceContainer>
-                    <ServiceContainer reverse style={{border: 'none'}}>
+                    {/* <ServiceContainer reverse style={{border: 'none'}}>
                             <ServiceContent >
                             <DarkTitle left>SPECIAL PROJECTS</DarkTitle>
                             <LightText left small>
@@ -143,55 +155,10 @@ const Development = () => {
                         <ServiceContent image>
                         <Image src={require('./../../assets/Views/Services/goals.jpg')} alt=' goals image' />
                         </ServiceContent>
-                    </ServiceContainer>
-                    {/* <ContentArea>
-                        <DarkTitle>Website Design and Development</DarkTitle>
-                        <ContentArea column reverse>
-                            <LightText small >
-                            Cloud5 will build a custom  user friendly website for your business/ brand. We work with you to create engaging content for your site, and all of our designs are custom. We like to make sure Cloud5 clients stand out from their competition. Let the little guys work with themes, we want to build you a site as unique as your business. 
-                            Contact us today and we can provide you with a custom quote and work out a payment arrangement to fit your budget.
-                            </LightText>
-                            <SmallImageCard  src={require('./../../assets/wordpress-ex1.png')} atl='image' />
-
-                        </ContentArea>
-                    </ContentArea> */}
-
-                    {/* <ContentArea>
-                        <DarkTitle>E commerce Design and Development</DarkTitle>
-                        <ContentArea horizontal>
-                            <SmallImageCard horizontal src={require('./../../assets/shopify_ex1.png')} atl='image' />
-                            <LightText horizontal >
-                            E-commerce is a very competitive market. Our aim as a developer is not only to build a custom 
-                            store front  that will outshine your competition. But to assist you in building a   Strategic plan on how to beat out your competitors. In the e-commerce realm it’s not enough to have a beautiful site anymore. You also have to think about the market, what product to choose, distribution, product creation, marketing, manufacturing, venders, and so on. With our partners and experience. We don’t just help you build your store, we help you build your business. 
-                            Reach out to one of our agents to learn more.                            
-                            </LightText>
-                        </ContentArea>
-                    </ContentArea>
-
-                    <ContentArea>
-                        <DarkTitle>Mobile App Creation</DarkTitle>
-                        <ContentArea horizontal reverse>
-                            <LightText horizontal >
-                                We have a lot of fun building mobile apps. We like getting the creative clients with a bold idea.
-                                Our team can assist you in conceptualizing, developing, marketing, launching, and even managing your mobile app. What most people don’t realize is mobile app creation is like building a micro business that is going to have allot of moving parts like any business. By choosing Cloud5, you’re choosing a partner that understands not only the technical side of things, but also the business as well. We take you by the hand and help you build a masterpiece, and we assist in implementing multiple forms of monetization. 
-                                You just don’t get this from any other developer.                           
-                            </LightText>
-                            <SmallImageCard horizontal src={require('./../../assets/featured_client2.png')} atl='image' />
-
-                        </ContentArea>
-                    </ContentArea>
-
-                    <ContentArea>
-                        <DarkTitle>Lets Create Something Amazing Together</DarkTitle>
-                            <LightText>
-                            Here at Cloud5, we can build a pretty product on IOS, Android or web, and we can promise you this. You won’t be walking away with an app. You’ll be walking away with a business. 
-                            Reach out to us for a custom quote, we cant wait to hear about your idea.                 
-                            </LightText>
-                            <Contact/>
-                    </ContentArea> */}
+                    </ServiceContainer> */}
                 </Wrapper>
                 </Aux>
     )
 }
 
-export default Development
+export default Services;

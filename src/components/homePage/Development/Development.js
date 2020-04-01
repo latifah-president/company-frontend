@@ -12,12 +12,12 @@ import {
 
 const Development = () => {
     return (
-        <Wrapper column blue>
-            <DarkTitle style={{paddingLeft: '2rem'}}>Development</DarkTitle>
-            <LightText  >
-                We take pride in building websites that look good and perform even better. 
+         <Wrapper column style={{ marginTop: '2rem'}}>
+            <DarkTitle left smallFont style={{ paddingLeft: '2rem'}}>WEB &amp; MOBILE DEVELOPMENT</DarkTitle>
+            {/* <LightText  >
+               We take pride in building websites that look good and perform even better. 
                 We turn your ideas and vision into reality. 
-            </LightText>
+             </LightText> */}
             <Container>
                 <CardContent white outline >
                     <SmallImageCard src={require('./../../../assets/Development/luxxlyco_dev.jpg')} alt='luxxly co image'/>

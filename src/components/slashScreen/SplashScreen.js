@@ -6,7 +6,7 @@ const LandingPage = () => {
     const [header, setHeader] = useState('Dreamers');
 
     useEffect(() => {
-      const headers = [ 'builders', 'listeners', 'Growers', 'dreamers']
+      const headers = [ 'visionaries', 'implementers', 'builders', 'dreamers']
       let i = 0;
       setInterval(function() {
         setHeader(headers[i])
@@ -19,7 +19,7 @@ const LandingPage = () => {
     }, [])
 
     return (
-    <HomeWrapper>
+    <HomeWrapper >
           <Tag>
             <TagLineContent>WE ARE <span>{header}</span></TagLineContent>
             <TagLineContent mobile>WE ARE <br/> <br/> <br/> <span>{header}</span></TagLineContent>

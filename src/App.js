@@ -1,9 +1,10 @@
 import React, { Component, } from 'react';
 import { Route, Switch, } from 'react-router-dom';
+import { Element, animateScroll as scroll } from "react-scroll";
 import Nav from './components/nav/Nav';
 import Footer from './components/Footer/Footer';
 import LandingPage from './components/landingPage/LandingPage';
-import AboutPage from './views/about/About';
+import AboutPage from './views/About/About';
 import PortfolioPage from './views/Portfolio/Portfolio';
 import SpecialProjectsPage from './views/Special Projects/SpecialProjects';
 import MarketingPage from './views/Marketing/Marketing';
@@ -16,6 +17,7 @@ import SeoManagerPage from './views/Careers/Sections/SEOManager/SeoManager';
 import SalesRepPage from './views/Careers/Sections/SalesRep/SalesRep';
 import AssistantPage from './views/Careers/Sections/Assistant/Assistant';
 import GrowthPage from './views/Growth/Growth';
+import PageNotFound from './views/404/404';
 import './App.css';
 
 //Contaners  folder will hold statefull data
@@ -25,8 +27,9 @@ class App extends Component  {
   render () {
     return (
     <div className="App">
+      {/* <Switch> */}
       <Nav/>
-      {/* <MobileNav/> */}
+      
       <Switch>
       <Route 
         exact path='/' 
@@ -140,7 +143,12 @@ class App extends Component  {
             />
           }
         />
+         <Route path='*' component={PageNotFound}/>
+
         </Switch>
+       
+        
+        {/* </Switch> */}
         <Footer/>
      </div>
   )};

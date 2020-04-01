@@ -1,3 +1,4 @@
+//eslint-disable jsx-a11y/alt-text
 import React from 'react';
 import { 
     Wrapper, 
@@ -14,12 +15,12 @@ import {
 
 const Marketing= () => {
     return (
-        <Wrapper column style={{position: 'relative'}}>
-            <DarkTitle>Marketing</DarkTitle>
-            <LightText left style={{width: '82%'}}>
+        <Wrapper column  style={{zIndex: '2', marginTop: '4rem'}}>
+            <DarkTitle left smallFont style={{ paddingLeft: '2rem'}}>DIGITAL MARKETING</DarkTitle>
+            {/* <LightText left style={{width: '82%'}}>
                 Our job is to ensure the highest quality product, and a seamless 
                 design that will showcase your company brand the way it deserves to be showcased.
-            </LightText>
+            </LightText> */}
 
             <Container cards mobile>
                 <CardContent white outline shadow>
@@ -29,7 +30,7 @@ const Marketing= () => {
                             SEO for Plastic Surgeon Office
                         </SmallCardDes>
                 
-                    <Button href='/plastic-surgean-casestudy'><SmallWhiteTitle>View Case Study</SmallWhiteTitle></Button>
+                    <Button href='/plastic-surgean-casestudy'><SmallWhiteTitle>VIEW RESULTS</SmallWhiteTitle></Button>
                 </CardContent>
                 <CardContent white outline shadow>
                     <SmallImageCard style={{width: '90%'}} src={require('./../../../assets/Marketing/Gaming-wandermonkey-feature-image.jpg')} alt='luxxly co image'/>
@@ -43,7 +44,7 @@ const Marketing= () => {
                         <SmallCardDes>
                             SEO for Eye Doctor's Office
                         </SmallCardDes>
-                        <Button href='/plastic-surgean-casestudy'><SmallWhiteTitle>View Case Study</SmallWhiteTitle></Button>
+                        <Button href='/plastic-surgean-casestudy'><SmallWhiteTitle>VIEW RESULTS</SmallWhiteTitle></Button>
 
                 </CardContent>
 
@@ -62,8 +63,8 @@ const Marketing= () => {
                 </CardContent> */}
 
             </Container>
-            <div className='box'></div>
-        </Wrapper>
+             {/* <div className='box'></div> */}
+         </Wrapper>
     )
 };
 

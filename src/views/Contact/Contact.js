@@ -3,7 +3,7 @@ import ContactForm from './../../container/Forms/ContactForm';
 import Aux from './../../HOC/Aux';
 import {
     Wrapper,
-    ContentArea, 
+    Container, 
     Header,
     LightOverlay, 
     DarkTitle, 
@@ -20,14 +20,14 @@ const Contact = () => {
                         <HeaderImage src={require('./../../assets/Views/development/development.jpg')} alt='image'/>
             </Header>
                 <Wrapper column>
-                    <ContentArea>
+                    <Container column>
                         <DarkTitle>Get In Touch</DarkTitle>
                         <LightText >	
                         Contact us today and we can provide you with a 
                         custom quote and work out a payment arrangement to fit your budget
                         </LightText>
                        
-                    </ContentArea>
+                    </Container>
                         <ContactForm/>
                 </Wrapper>
                 </Aux>

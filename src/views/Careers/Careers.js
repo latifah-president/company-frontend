@@ -8,7 +8,7 @@ import {
     LightOverlay, 
     HeaderImage, 
     Wrapper, 
-    ContentArea,
+    Container,
     DarkTitle, 
     LightText,
     JobsContainer,
@@ -24,24 +24,17 @@ const Careers = (props) => {
             <Header>
                 <HeaderImage src={require('./../../assets/Views/careers_page.jpg')} alt='Careers'/>
             </Header>
-            <Wrapper>
-                <ContentArea>
+            <Wrapper column>
+                <Container column>
                     <DarkTitle>Join Us</DarkTitle>
                     <LightText>
-                        Cloud5 is growing at an exponential rate.  Because of this, we are consistently 
+                        Cloud5 is growing at an exponential rate. Because of this, we are consistently 
                         looking for experienced applicants to join our team. 
-                      
-                       
                     </LightText>
                     <LightText>
                             If you’re interested in joining a fast paced, high performing team. 
                             And helping to grow a unique small business. Please browse the jobs we have available below 
                             and send us an email with your resume.
-                        </LightText>
-                        <LightText>
-                            A member of our team will reach out to you to set up an interview. 
-                            Thank you for considering Cloud5 as your new corporate family. We hope to see you on the other side.
-                            Let’s create the future together.
                         </LightText>
                         <JobsContainer>
                             <DarkSubtitle style={{fontSize: '1.3rem', padding: '.5rem'}}> Available Position</DarkSubtitle>
@@ -76,7 +69,7 @@ const Careers = (props) => {
                                 </JobsLink>
                             </JobsLinks>
                         </JobsContainer>
-                </ContentArea>
+                </Container>
             </Wrapper>
         </Aux>
     )

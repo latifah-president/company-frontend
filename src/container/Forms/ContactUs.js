@@ -9,7 +9,7 @@ import {
     ContactTextArea,
     RadioContainer
 } from './form-styles';
-import {Container, SubmitButton} from './../../Global_Styles/global-styles';
+import {SubmitButton} from './../../Global_Styles/global-styles';
 
 const ContactUs = () => {
     const [isChecked, setChecked] = useState(false);
@@ -46,22 +46,22 @@ const ContactUs = () => {
 
             <ContactFormGroup radio >
                 <RadioInput className='chkbox' type='checkbox' id='development' name='service_needed' value='Development' onClick={handleChange}/>
-                <RadioLabel htmlFor='development'>Development</RadioLabel>
+                <RadioLabel htmlFor='development'>Web</RadioLabel>
             </ContactFormGroup>
 
             <ContactFormGroup radio>
                 <RadioInput type='checkbox' id='marketing' name='service_needed' value='Marketing' onClick={handleChange}/>
-                <RadioLabel htmlFor='marketing'>Marketing</RadioLabel>
+                <RadioLabel htmlFor='marketing'>Mobile</RadioLabel>
             </ContactFormGroup>
 
             <ContactFormGroup radio>
                 <RadioInput type='checkbox' id='specialProjects' name='service_needed' value='Special Projects'  onClick={handleChange}/>
-                <RadioLabel htmlFor='specialProjects'>Special Projects</RadioLabel>
+                <RadioLabel htmlFor='specialProjects'>Marketing</RadioLabel>
             </ContactFormGroup>
 
             <ContactFormGroup radio>
                 <RadioInput type='checkbox' id='bussinessDev' name='service_needed' value='Bussiness Development'  onClick={handleChange}/>
-                <RadioLabel htmlFor='bussinessDev'>Bussiness <br/>Development</RadioLabel>
+                <RadioLabel htmlFor='bussinessDev'>Bussiness </RadioLabel>
             </ContactFormGroup>
 
         </RadioContainer>
@@ -81,7 +81,7 @@ const ContactUs = () => {
             </ select >
                   </GroupOne>
               </ContactFormGroup> */}
-              <SubmitButton type='submit'>Submit</SubmitButton>
+              <SubmitButton type='submit'>Send</SubmitButton>
 
       </FormWrapper>
   );

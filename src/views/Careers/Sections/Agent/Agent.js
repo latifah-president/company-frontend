@@ -18,7 +18,7 @@ const Agent = () => {
             <Header>
                 <HeaderImage src={require('../../../../assets/Views/careers_page.jpg')} alt='Careers'/>
             </Header>
-            <Wrapper>
+            <Wrapper column>
                     <DarkTitle>Cloud5 Agent/Project Manager</DarkTitle>
                     <JobDescArea style={{alignItems: 'flex-start'}}>
                         <DarkSubtitle>Description</DarkSubtitle>

@@ -12,12 +12,13 @@ const paraFont = 'Robot'
 
 //NEW SITE
 
-const darkBlueColor = '#002ACC';
+const darkBlueColor = '#3480CC';
 // const accentColor = '#EDBD4C';
 const orangeColor = '#ff691e';
 const lightBackgroundColor ='#F0F6FB';
 const serviceColor = '#f5a623f2'; //THIS COLOR IS TRANSPARRENT
 const accentColor = '#F5A623';
+const numberColor = '#4BBF6B';
 //MEDIA QUERIES SIZES
 // min-width do something when the screen is greater than or equal to 375px
 //max-width do something when the screen is less than or equal to 375px
@@ -33,13 +34,13 @@ const accentColor = '#F5A623';
 
     
 */
+const laptop = '1440px';
 const tablet = '1024px';
 const tabletmd = '975px';
 const tabletsm = '768px'
 const smrtphn = '414px'; 
 const smrtphnsm = '375px'; 
-const smrtphnxs = '320px'; 
-const laptop = '1440px';
+const smrtphnxs = '360px'; 
 
 const pulse = keyframes`
   0% {
@@ -117,7 +118,7 @@ export const Wrapper = styled.section`
     .box {
         position: absolute;
         height: 2250px;
-        width: 390px;
+        width: 850px;
         background-color: ${lightBackgroundColor};
         top: 40px;
         transform: rotate(80deg);
@@ -128,10 +129,16 @@ export const Wrapper = styled.section`
 
 @media only screen and (max-width: ${tabletsm}) {
     .box {
-        top: 1450px;
+        top: 2950px;
         transform: rotate(70deg);
     }
 }
+/* @media only screen and (max-width: ${smrtphn}) {
+    .box {
+        top: 5450px;
+        transform: rotate(70deg);
+    }
+} */
 `;
 
 
@@ -143,22 +150,23 @@ export const Container = styled.article`
     justify-content: ${props => props.around ? 'space-around': 'space-between'};
     margin: ${props => props.margin ? '2rem 0 4rem 0' : '2rem 0'};
     width: ${props => props.small ? '60%' : '90%'};
-    flex-wrap: ${props => props.icon ? 'nowrap' : 'wrap'};
-    /* border: 1px solid red; */
-    height: ${props => props.large ? '650px' : null};
-    .link {
+                                                                                                             /* border: 1px solid red; */
+      .link {
         text-decoration: none;
+        color: ${darkColor};
+        font-size: 1rem;
+        /* width: 100%; */
     }
     .small {
         width: 10%
     }
     .grow {
-        width: 65%;
+        width: 30%;
         /* border: 1px solid orange; */
     }
     @media only screen and (max-width: ${tablet}) {
-        width: ${props => props.small || props.icon ? '90%' : null};
-        justify-content: ${props => props.icon ? 'center' : null};
+        width: ${props => props.small || props.icon ? '100%' : null};
+        /* justify-content: ${props => props.icon ? 'center' : null}; */
     }
 
     @media only screen and (max-width: ${tabletmd}) {
@@ -171,14 +179,8 @@ export const Container = styled.article`
     }
 
     @media only screen and (max-width: ${tabletsm}) {
-        flex-direction: column;
-        justify-content: center;
-        .small {
-            width: 100%;
-        }
-        .grow {
-            width: 100%;
-        }
+        flex-direction: ${props => props.icon ? 'row' : null};
+
     }
 
     @media only screen and (max-width: ${tabletsm})   {
@@ -193,6 +195,14 @@ export const Container = styled.article`
         grid-row-gap: ${props => props.brands ? '5px' : null};
         display: ${props => props.icon ? 'flex' : null};
         flex-direction: ${props => props.icon ? 'row' : null};
+        flex-direction: ${props => props.icon ? 'row' : 'column'};
+        justify-content: ${props => props.icon ? 'space-between' : 'center'};
+        .small {
+            width: 100%;
+        }
+        .grow {
+            width: 15%;
+        }
     }
     @media only screen and (max-width: ${smrtphn})   {
         flex-direction: ${props => props.mobile ? 'column' : null};
@@ -212,7 +222,7 @@ export const Container = styled.article`
 
 export const DarkTitle = styled.h2`
     color: ${props => props.white ? `${whiteColor}` : `${darkColor}`};
-    font-size: 3rem;
+    font-size: ${props => props.smallFont ? '1.8rem': '3rem'};
     font-weight: 300;
     line-height: 5rem;
     font-family: Arial, Helvetica, sans-serif;
@@ -250,8 +260,8 @@ export const LightText = styled.p`
        width: 95%;
     }
     @media only screen and (max-width: ${smrtphn}) {
-       width: 100%;
-       text-align: center;
+       width: 90%;
+       text-align: justify;
        /* border: 1px solid red; */
     }
 `;
@@ -297,27 +307,34 @@ export const CardContent = styled.article`
     height: 368px;
     text-align: center;
     z-index: 900;
-    /* border: 1px solid red; */
+ 
     @media only screen and (max-width: ${tablet}) {
-        width: 30%;
+        width: ${props => props.icon ? '100%' : '30%'};
     }
 
-    @media only screen and (max-width: ${tabletmd}) {
-        width: ${props => props.icon ? 'auto' : '30%'};
-    }
+    
 
     @media only screen and (max-width: ${tabletsm}) {
-        width: ${props => props.icon ? '100%' : '80%'};
+        width: ${props => props.icon ? '10%' : '80%'};
         margin-top: ${props => props.margin ? '0' : null};
         margin-bottom: 3rem;
-        height: 500px;
+        /* height: ${props => props.icon ? '50px' : '500px'}; */
+        /* border: ${props => props.icon ? '1px solid blue' : null}; */
+
     }
 
     @media only screen and (max-width: ${smrtphn}) {
         width: 90%;
         margin-bottom: 1.5rem;
         justify-content: flex-start;
-        height: 390px;
+        height: ${props => props.shrink ? '50px' : '500px'};
+        /* border: ${props => props.shrink ? '1px solid white' : null}; */
+
+        .shrink {
+            height: 50px;
+            border: 1px solid blue;
+        }
+
     }
 `;
 
@@ -519,20 +536,23 @@ export const ColoredHeader = styled.header`
      height: 350px;
      text-align: center;
      @media only screen and (max-width: ${tablet}) {
-         width: 60%;
-        margin: 38rem auto 0 3rem; 
+        width: 60%;
+        margin: 45rem auto 0 3rem; 
      }
      @media only screen and (max-width: ${tabletmd}) {
         width: 65%;
         margin: 24rem auto 0 .5rem;
+    }
+    @media only screen and (max-width: ${tabletsm}) {
+        margin: 28rem auto 0 .5rem;
     }
      @media only screen and (max-width: ${smrtphn}) {
         margin: 20rem auto 0 1rem;
         width: 80%;
     }
     @media only screen and (max-width: ${smrtphnsm}) {
-        margin: 16.6rem auto 0 .2rem;
-        width: 70%;
+        margin: 20.6rem auto 0 .2rem;
+        width: 72%;
         /* border: 1px solid red; */
     }
     @media only screen and (max-width: ${smrtphnxs}) {
@@ -862,5 +882,6 @@ export {
     overlayColor,
     blackColor,
     darkBlueColor,
-    orangeColor
+    orangeColor,
+    numberColor
 }

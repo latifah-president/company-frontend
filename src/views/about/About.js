@@ -1,104 +1,122 @@
 import React from 'react';
-import Aux from './../../HOC/Aux';
+import Aux from '../../HOC/Aux';
 import './../../App.css';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import {faTwitter, faLinkedinIn, faGithub, faFacebookF} from '@fortawesome/fontawesome-free-brands';
 
 import {
     Header, 
-    LightOverlay, 
+    ColoredHeader,
+    WhiteTitle,
+    HeaderText,
+    HeaderTextMobile, 
     Wrapper, 
     HeaderImage, 
+    Container,
     ContentArea, 
     DarkTitle, 
     LightText, 
-    SmallSubTitle, 
-    ThreeColumnGrid,
-    ImageContent,
-    CircleImageCard, 
-    CardContent,
-    SmallCardDes,
-} from './../../Global_Styles/global-styles';
-
+} from '../../Global_Styles/global-styles';
+import {AboutTitle, AboutContainer, AboutContent, AboutNumber, AboutText, AboutImage, ImageContainer} from './about-styles';
 
 const About = () => {
     return (
         <Aux>
             <Header >
-                        <HeaderImage src={require('./../../assets/about_image.jpg')} alt='About Us'/>
+                <HeaderImage src={require('./../../assets/Views/About/group-of-people-near-wall-2422290.jpg')} alt='About Us'/>
+                <div className='box' style={{backgroundColor: '#4BBF6B', opacity: '98%'}}>
+                    <ColoredHeader>
+                    <WhiteTitle>ABOUT US</WhiteTitle>
+                    <HeaderText>
+                        Cloud5 was created with the idea that innovative and creative thinkers will change the game. 
+                        We have helped clients build businesses and the experiences that power them.
+                    </HeaderText>
+                    <HeaderTextMobile>
+                        Cloud5 was created with the idea that innovative and creative thinkers will change the game.  
+                        We have helped clients build businesses and the experiences that power them.
+                    </HeaderTextMobile>
+                    </ColoredHeader>
+                </div>
             </Header>
-                <Wrapper>
-                    <ContentArea>
-                        <header>
-                            <DarkTitle>About Us</DarkTitle>
+                <Wrapper column>
+                   <Container column>
+                   <header>
+                            <DarkTitle>OUR MANIFESTO</DarkTitle>
                         </header>
-                        <LightText>
-                            Cloud5 was created with the idea that innovative and creative thinkers will change the game. We wanted to integrate the freelance market with the reach and capabilities of a corporation. The success of our company is shown with the success of the clients we serve, and we don’t stop until its perfect!
+                        <LightText left>
+                            Since the beginning we have been focused on finding the answer to every client’s question, 
+                            “How can I turn my great idea into a business that makes money?” Cloud5 is no ordinary development agency. 
+                            We threw the blue print out the window to create a company that brings the passion and motivation back into building a business. 
+                            We have helped over 300 clients build their dreams into a reality, so the only question left is, how can we help you create your future?                       
                         </LightText>
-                        <LightText>  
-                            In February of 2018 Dailan and Arielle Cooper created a business based on the concept that anyone can change any game, with simply an idea. Cloud5 has been successful because of our affordability, creative freethinkers, youthful excitement, and the drive to overachieve while beating the deadline! When you work with Cloud5, you get access to the most innovative tools and services in the IT industry.
-                        </LightText>
-                        <LightText>
-                            Since the beginning we have been focused on finding the answer to every client’s question,
-                            “How can I turn my great idea into a business that makes money?”
+                   </Container>
 
-                            Cloud5 is no ordinary development agency. We threw the blue print out the window to create a company that brings the passion and motivation back into building a business. We have helped over 300 clients build their dreams into a reality, so the only question left is, how can we help you create your future? 
+                    <Container column style={{backgroundColor: '#F0FFF4', width: '100%', padding: '3rem'}}>
+                        <AboutTitle>A FEW CONTRIBUTING FACTORS TO OUR SUCCESS</AboutTitle>
+                        <AboutContainer>
+                            <AboutContent column>
+                                <AboutNumber>32</AboutNumber>
+                                <AboutText>
+                                     Group Outings
+                                </AboutText>
+                            </AboutContent>
+                    
+                            <AboutContent column>
+                                <AboutNumber>108</AboutNumber>
+                                <AboutText>
+                                    Cups of Coffee Consumed
+                                </AboutText>
+                            </AboutContent>
 
-                        </LightText>
-                        
-                        <header>
-                            <DarkTitle>Meet The Team</DarkTitle>
-                        </header>
-                        
-                        <LightText>
-                            We are based out of the new and fast paced IT paradise of Austin, Texas. But don’t think that we can’t work all over the world, remember that corporate reach? We have worked with clients all over the country, there is no geographical limit on the ideas that can come to life! We have a powerhouse team including CEO Dailan Cooper, CTO Latifah President, CMO Kathryn Domako, and a dedicated team ready to create the future. 
-                        </LightText>
-                        <LightText>
-                            Our team includes over 60 developers with at least 5 years of experience, a marketing team committed to the vision of each and every client, and a growing sales team ready to overcome every challenge thrown their way.
-                        </LightText>
-                            <ThreeColumnGrid>
-                                <ContentArea about>
-                                    <ImageContent>
-                                    <CircleImageCard about src={require('./../../assets/Dailan-Cooper-img.jpg')} alt='CEO: Dailan Cooper'/>
+                            <AboutContent column>
+                                <AboutNumber>593</AboutNumber>
+                                <AboutText>
+                                    Team High-Fives
+                                </AboutText>
+                            </AboutContent>
 
-                                    </ImageContent>
-                                        <CardContent>
-                                        <header>
-                                                <SmallSubTitle>Dailan Cooper</SmallSubTitle>
-                                                <SmallCardDes >Chief Executive Officer</SmallCardDes>
-                                                
-                                            </header>
-                                        </CardContent>
-                                </ContentArea>
-                                
-                                <ContentArea about>
-                                    <ImageContent>
-                                    <CircleImageCard about src={require('./../../assets/Kathryn Domako.jpg')} alt='Our CMO: Kathryn Domako'/>
+                            <AboutContent column>
+                                <AboutNumber>71</AboutNumber>
+                                <AboutText>
+                                    Goals Met
+                                </AboutText>
+                            </AboutContent>
+                            </AboutContainer>
+                    </Container>
+                    <Container column>
+                        <AboutTitle left>MEET OUR INNOVATIVE THINKERS</AboutTitle>
+                        <ImageContainer >
 
-                                    </ImageContent>
-                                <CardContent>
-                                    <header>
-                                        <SmallSubTitle>Kathryn Domako</SmallSubTitle>
-                                        <SmallCardDes >Chief Marketing Officer</SmallCardDes>
-                                    </header>
-                                </CardContent> 
-                                </ContentArea>
-                             
-                            <ContentArea about>
-                                <ImageContent>
-                                <CircleImageCard about src={require('./../../assets/Latifah.jpg')} alt='Our CTO: Latifah President'/>
+                            <AboutContent >
+                                <AboutImage src={require('./../../assets/Views/About/Dailan-Cooper-img.jpg')} alt='dailan cooper ceo'/>
+                                <h4 className='name'>Dailan Cooper</h4>
+                                <h5 className='position'>Chief Executive Officer</h5>
+                            </AboutContent>
 
-                                </ImageContent>
-                                <CardContent>
-                                    <header>
-                                        <SmallSubTitle>Latifah President</SmallSubTitle>
-                                        <SmallCardDes>Chief Technology Officer</SmallCardDes>
-                                        {/* <SmallCardDes >Passion, creativity, and an insatiable hunger for learning. These are the things that drive me everyday. </SmallCardDes> */}
-                                    </header>
-                                </CardContent>
-                            </ContentArea>
-                            </ThreeColumnGrid>
-                    </ContentArea>                   
+                            <AboutContent >
+                                <AboutImage src={require('./../../assets/Views/About/Latifah.jpg')} alt='latifah president cto'/>
+                                <h4 className='name'>Latifah President</h4>
+                                <h5 className='position'>Chief Technology Officer</h5>
+                            </AboutContent>
+
+                            <AboutContent >
+                                <AboutImage src={require('./../../assets/Views/About/PicOfMe-1.jpg')} alt='gary white cso'/>
+                                <h4 className='name'>Gary White</h4>
+                                <h5 className='position'>Chief Sales Officer</h5>
+                            </AboutContent>
+
+                            <AboutContent >
+                                <AboutImage src={require('./../../assets/Views/About/Jo_Anne_Gibson.jpg')} alt='Jo Anne Gibson image'/>
+                                <h4 className='name'>Jo Anne Gibson</h4>
+                                <h5 className='position'>Director of Corporate Relations</h5>
+                            </AboutContent>
+
+                            <AboutContent>
+                                <AboutImage src={require('./../../assets/Views/About/jodi.jpg')} alt='Jodi Mixon '/>
+                                <h4 className='name'>Jodi Mixon</h4>
+                                <h5 className='position'>Director of Marketing</h5>
+                            </AboutContent>
+
+                        </ImageContainer>
+                    </Container>                  
                 </Wrapper>
         </Aux>
     )

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { tablet, tabletmd, tabletsm, smrtphnsm, lightGrayColor, smrtphn } from '../../Global_Styles/global-styles';
+import { tablet, tabletsm, lightGrayColor, smrtphn, smrtphnxs, darkColor, tabletmd } from '../../Global_Styles/global-styles';
 
 export const ServicesLinks = styled.ul`
     display: flex;
@@ -18,17 +18,17 @@ export const ServicesLinks = styled.ul`
             margin: .2rem;
         }
     }
-    @media only screen and (max-width: ${smrtphn}) {
+    /* @media only screen and (max-width: ${smrtphn}) {
         width: 100%;
         span {
             margin: .2rem;
         }
-    }
+    } */
     @media only screen and (max-width: ${smrtphn}) {
-        width: 90%;
-        margin: 2rem 1rem 2rem 0;
+        width: 100%;
+        margin: 2rem 2rem 2rem 0;
         span {
-            margin: 0;
+            margin: .02rem;
         }
     }
 `;
@@ -38,7 +38,7 @@ export const ServiceContainer = styled.div`
     justify-content: space-around;
     padding: 2rem;
     margin: 0 2rem 6rem 2rem;
-    border-bottom: 1px solid ${lightGrayColor};
+    border-bottom: ${props => props.none ? 'none' : `1px solid ${lightGrayColor}`};
     padding-bottom: 4rem;
     width: 90%;
     @media only screen and (max-width: ${tabletsm}) {
@@ -47,7 +47,7 @@ export const ServiceContainer = styled.div`
         align-items: center;
     }
     @media only screen and (max-width: ${smrtphn}) {
-        width: 75%;
+        width: 95%;
     }
     
 `;
@@ -64,8 +64,10 @@ export const ServiceContent = styled.article`
        
     }
     @media only screen and (max-width: ${tabletsm}) {
-        width: 90%;
-       
+        width: 100%;
+    }
+    @media only screen and (max-width: ${smrtphn}) {
+        align-items: center;
     }
   
 `;
@@ -74,5 +76,26 @@ export const Image = styled.img`
     width: 70%;
     @media only screen and (max-width: ${tablet}) {
         width: 100%;
+    }
+`;
+
+export const ServicesText = styled.p`
+       color: ${darkColor};
+    font-size: 1.2rem;
+    line-height: 1.95rem;
+    /* text-align: ${props => props.left ? 'left' : 'center'}; */
+    text-align: justify;
+    width: 90%;
+    @media only screen and (max-width: ${tablet}) {
+       width: 100%;
+       text-align: ${props => props.left ? 'center' : null};
+    }
+    @media only screen and (max-width: ${tabletmd}) {
+       width: 95%;
+    }
+    @media only screen and (max-width: ${smrtphn}) {
+       width: 90%;
+       text-align: justify;
+       /* border: 1px solid red; */
     }
 `;

@@ -1,8 +1,16 @@
 import React from 'react';
 import Aux from './../../HOC/Aux';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import {faTwitter, faLinkedinIn, faGithub, faFacebookF} from '@fortawesome/fontawesome-free-brands';
-import {Header, LightOverlay, Wrapper, HeaderImage, ContentArea, DarkTitle, LightText, SmallSubTitle} from './../../Global_Styles/global-styles';
+import ContactForm from './../../container/Forms/ContactUs';
+
+import {
+    Header, 
+    Wrapper, 
+    HeaderImage, 
+    Container, 
+    DarkTitle, 
+    LightText, 
+    SmallSubTitle
+} from './../../Global_Styles/global-styles';
 
 const SpecialProjects = () => {
     return (
@@ -10,12 +18,12 @@ const SpecialProjects = () => {
             <Header >
                     <HeaderImage src={require('./../../assets/about_image.jpg')} alt='image'/>
             </Header>
-                <Wrapper>
-                    <ContentArea>
+                <Wrapper column>
+                    <Container column>
                         <header>
                             <DarkTitle>Welcome To Our Special Projects Division</DarkTitle>
                         </header>
-                        <LightText>
+                        <LightText left>
                             Most Agencies only provide marketing, most development firms only provide development.
                             We call ourselves a digital Innovation agency because we do everything!!!!
                             But we don’t just work with clients we have our own ideas. And what better way to show clients how successful we can make them then to build our own projects, who needs case studies when you can have real time examples. We’re super excited for the world to see our ideas. We have the the developers, we have the marketers... honestly why wouldn’t we?
@@ -47,8 +55,8 @@ const SpecialProjects = () => {
                         <SmallSubTitle>Have An Idea?</SmallSubTitle>
                         <LightText>
                         If you’re interested in partnering up with us, or if you have some ideas to help us make our projects even better than they already are please reach out to our CTO, we’re always open to suggestions.
-  latifah@cloud5hub.io
                         </LightText>
+                        <ContactForm/>
                         {/* <LightText>
                             Most Agencies only provide marketing, most development firms only provide development.
                             We call ourselves a digital Innovation agency because we do everything!!!!
@@ -68,7 +76,7 @@ const SpecialProjects = () => {
                             If you’re interested in partnering up with us, or if you have some ideas to help us make our projects even better then they already are. Please reach out to our CTO we’re always open to suggestions.
                             Latifah@cloud5hub.io
                         </LightText>                                */}
-                    </ContentArea>                   
+                    </Container>                   
                 </Wrapper>
         </Aux>
     )

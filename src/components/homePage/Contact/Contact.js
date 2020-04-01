@@ -14,10 +14,10 @@ const SpecialProjects = () => {
     return (
         <Wrapper column blue>
             <header>
-                <SmallCardDes small style={{margin: '0'}}>Get In Touch</SmallCardDes>
+                <SmallCardDes small style={{margin: '2rem 0 0 0'}}>Get In Touch</SmallCardDes>
                 <DarkTitle style={{width: '100%', margin: '0'}}>WE WANT TO MEET YOU</DarkTitle>
             </header>
-                <Container contact icon around top style={{padding: '0'}}>
+                <Container contact  icon around top style={{padding: '0', width: '70%'}}>
                     <AddressContainer>
                         <a a href="mailto:support@cloud5hub.io.com" className='contact'>
                         <FontAwesomeIcon className='icon' icon={faEnvelope} />

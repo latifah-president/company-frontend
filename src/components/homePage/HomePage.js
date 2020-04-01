@@ -1,4 +1,5 @@
 import React from 'react';
+import { Element, animateScroll as scroll } from "react-scroll";
 import Marketing from './Marketing/Marketing';
 import Contact from './Contact/Contact';
 import Mission from './Mission/OurMission';
@@ -12,9 +13,18 @@ const HomePage = () => {
         <MainContent>
              <Mission/>
             <Services/>
-            <OurClients/>
-            <Development/>
+            {/* <Element> */}
+                <OurClients />
+            {/* </Element> */}
+            
+            {/* <Element name='development'>
+             <Development/>
+
+            </Element> */}
+            {/* <Element name='marketing'>
             <Marketing/>
+
+            </Element> */}
             <Contact/>
         </MainContent>
     )

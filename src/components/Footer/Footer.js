@@ -19,19 +19,18 @@ const Footer = () => {
                     <FontAwesomeIcon icon={faTwitter} className='icon'/>
                     <FontAwesomeIcon icon={faInstagram} className='icon'/>
                 </FooterCard>
+                
                 <FooterCard center>
                     <form >
                         <FormInput name='email' id='email'  type='text' placeholder='Subscribe to our newsletter'/>
                         <NewsLetterButton type='submit' value='Join' name='subscribe' className='sub'/>
                     </form>
-                    
                 </FooterCard>
 
                 <FooterCard center column  >
-                    {/* <div style={{display: 'flex', flexDirection: 'column', lineHeight: '.5px'}}>  */}
                     <a href='mailto:support@cloud5hub.io'>
                         <SmallCardDes >
-                            support@cloud5hub.io
+                            contact@cloud5hub.io
                         </SmallCardDes>
                     </a>
                     <address>
@@ -39,10 +38,7 @@ const Footer = () => {
                             701 Brazos St. <br/>
                             Austin, TX 78701
                         </SmallCardDes>
-                        
                     </address>
-                    {/* </div> */}
-                 
                 </FooterCard>
             </FooterWrapper>
             </Wrapper>
