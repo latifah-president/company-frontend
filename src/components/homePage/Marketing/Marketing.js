@@ -7,9 +7,7 @@ import {
     SmallImageCard, 
     SmallCardDes,
     DarkTitle,
-    LightText,
     Button,
-    SmallWhiteText,
     SmallWhiteTitle, 
 } from './../../../Global_Styles/global-styles';
 

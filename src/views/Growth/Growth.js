@@ -9,7 +9,6 @@ import {
     LightText, 
     DarkTitle,
     ThreeColumnGrid,
-    LightOverlay
 } from './../../Global_Styles/global-styles';
 
 const Growth = () => {

@@ -10,8 +10,7 @@ import {
     HeaderTextMobile, 
     Wrapper, 
     HeaderImage, 
-    Container,
-    ContentArea, 
+    Container, 
     DarkTitle, 
     LightText, 
 } from '../../Global_Styles/global-styles';
