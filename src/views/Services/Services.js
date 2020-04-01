@@ -60,28 +60,23 @@ const Services = () => {
                        <li>Keyword Ranking <span>.</span></li>
                     </ServicesLinks>
                     <Container icon style={{background: '#FBE6C3', width: '100%', padding: '3rem'}}>
-                        <CardContent icon shrink className='grow shrink' >
-                            <WebIcon/>
-                        </CardContent>
-                        <CardContent icon shrink className='grow'>
-                            <MobileIcon/>
-                        </CardContent>
-                        <CardContent icon shrink className='grow'> 
-                        <BusinessDevIcon/>
-                        </CardContent>  
+                  <CardContent icon shrink>
+                  {/* <ScrollAnimation animateIn='slideInUp'> */}
+                  <WebIcon/>
+                  </CardContent>
 
-                        <CardContent icon shrink  className='grow'>
-                            <MarketingIcon/>
-                        </CardContent> 
-
-                        <CardContent icon shrink className='grow'>
-                            <SpecialProjectsIcon/>
-
-                        </CardContent>                                                                                         
-                       
-                       
+                    <CardContent icon shrink>
+                        <MobileIcon/>
+                    </CardContent>
+                 
+                 <CardContent icon shrink>
+                    <MarketingIcon/>
+                 </CardContent>
+                    
+                    <CardContent icon shrink>
+                    <BusinessDevIcon/>
+                    </CardContent>
                     </Container>
-
                     <ServiceContainer reverse>
 
                         <ServiceContent>
@@ -90,7 +85,7 @@ const Services = () => {
                                 We will build a custom user friendly website for your business/brand. We work with you to create engaging content for your site, 
                                 and all of our designs are custom to help you stand out from the competition. Connect with us today and we can provide you with a custom quote.
                             </ServicesText>
-                            <PillButton href='/contact'>Let's Chat</PillButton>
+                            <PillButton href='/contact'>Start a Project</PillButton>
                         </ServiceContent>
                         <ServiceContent image>
                         <Image src={require('./../../assets/Views/Services/web dev.jpg')} alt='web development image' />
@@ -108,7 +103,7 @@ const Services = () => {
                                 Our app development team has created countless high performance mobile applications on both IOS and Android We pride ourselves on delivering products quickly and on time. 
                                 Let’s talk more about your amazing App idea.
                             </ServicesText>
-                            <PillButton  href='/contact'>Get in Touch</PillButton>
+                            <PillButton  href='/contact'>Start a Project</PillButton>
                         </ServiceContent>
                     </ServiceContainer>
 
@@ -120,7 +115,7 @@ const Services = () => {
                             of dollars and a team of experts to help you. Social media campaigns, ads, 
                             SEO &amp; keyword ranking, we do it all. Let’s grow your business together.
                             </ServicesText>
-                            <PillButton href='/contact'>Let's Grow</PillButton>
+                            <PillButton href='/contact'>Start a Project</PillButton>
                         </ServiceContent>
                         <ServiceContent image>
                         <Image src={require('./../../assets/Views/Services/special projects.jpg')} alt='marketing image' />
@@ -138,7 +133,7 @@ const Services = () => {
                                 Here at Cloud5 we can make that dream a reality. Let us help you build your business from the ground up. The sooner you reach out, 
                                 the quicker you can turn that dream into a reality.
                             </ServicesText>
-                            <PillButton href='/contact'>Let's Do It</PillButton>
+                            <PillButton href='/contact'>Start a Project</PillButton>
                         </ServiceContent>
                     </ServiceContainer>
                     {/* <ServiceContainer reverse style={{border: 'none'}}>

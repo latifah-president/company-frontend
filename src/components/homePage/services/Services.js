@@ -61,18 +61,6 @@ const Services = () => {
                       Bussiness Development
                     </NavLink>
                     </CardContent>
-                   
-                   {/* <CardContent icon className='grow'>
-                   <SpecialProjectsIcon/>
-
-                   <NavLink to='/services' className='link' >
-                     Special Projects
-                 </NavLink>
-                   </CardContent> */}
-                   
-                    
-                        
-                       
                     </Container>
             
       </Wrapper>        

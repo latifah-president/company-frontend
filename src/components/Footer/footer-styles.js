@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {smrtphn, accentColor, lightGrayColor, tablet, tabletmd, tabletsm} from '../../Global_Styles/global-styles';
+import {smrtphn, accentColor, lightGrayColor, tablet, tabletmd, tabletsm, smrtphnsm} from '../../Global_Styles/global-styles';
 import { whiteColor } from '../../global-styles';
 
 export const FooterWrapper = styled.footer`
@@ -28,6 +28,7 @@ justify-content: ${props => props.center ? 'center' : 'space-around'};
 align-items: center;
 flex-direction: ${props => props.column ? 'column' : null};
 height: ${props => props.small ? '90px' : null};
+
 .icon {
     font-size: 1.5rem;
 }
@@ -53,11 +54,21 @@ address {
     }
     }
     @media only screen and (max-width: ${smrtphn}) {
+        margin: ${props => props.icons ? ' 0 auto' : null};
         form {
         width: 100%;
         margin: 2rem auto;
+        display: flex;
+        justify-content: center;
     }
 
+    @media only screen and (max-width: ${smrtphnsm}) {
+        form {
+        width: 100%;
+        margin: 2rem auto;
+       
+    }
+}
     /* border: 1px solid red; */
 
 a {
